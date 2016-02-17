@@ -21,11 +21,6 @@ $(function ($) {
     var header = $('.header'), doc = $(document),
         browserWindow = $(window);
 
-    browserWindow.on('scroll', function () {
-        var scrollLeft = doc.scrollLeft();
-        header.css('marginLeft', (scrollLeft > 0 ? -scrollLeft : 0));
-    });
-
     $('.select2').select2({
         placeholder: "Выберите из списка",
         allowClear: true,
