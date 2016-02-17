@@ -7,12 +7,116 @@ html(lang='ru')
         .wrapper
             .rect_1024
             .base
-                div.header
-                    .section_inner.clearfix
-                        .logo_block
-                            a.logo(href='#')
-                            
-                div.main_content
-                    
+                +header()
 
-            .footer
+                div.main_content
+                    .section_inner
+                        h1.page_title Заявки
+
+                        form(action='#')
+                            .orders_filter_form
+                                .form_row.form_cell_v1
+                                    .form_cell.cell_v1.w_290.select_v1
+                                        select.select2()
+                                            option Все заявки
+                                            option !Все заявки
+                                    .form_cell.w_570
+                                        .input_w
+                                            input.f_input.input_v1(placeholder='Введите ФИО, контакты, автомобиль или банк для поиска нужных заявок')
+
+                                    .form_cell.w_100
+                                        .input_w
+                                            button.btn_v1.yellow_black_btn.search_btn Найти
+
+                            .filter_results
+                                table.gl_table.table_v1
+                                    tr
+                                        th.col_1
+                                            span.sort_order.order_down
+                                            span ID
+                                        th.col_2 Клиент
+                                        th.col_3 Автомобиль
+                                        th.col_4 Дата создания
+                                        th.col_5 Статус заявки
+                                        th.col_6 Управление
+
+                                    tr.orderRowMain
+                                        td.col_1
+                                            a.order_link.openOrderBtn(href='#')
+                                                span.sort_order.order_left
+                                                span.order_id 55483222
+                                        td.col_2
+                                            p: b Константинопольский Константин Константинович
+                                            p + 7 (906) 123-45-67
+                                            p konstantinopolsky_KK@yandex.ru
+                                        td.col_3 Volkswagen Passat CC  <br>   2015
+                                        td.col_4 24.12.2015  <br>16:30
+                                        td.col_5
+                                            span.color_black Получен ответ
+                                        td.col_6
+                                            ul.order_controls
+                                                li.control_item: a.btn_v2.control_btn.control_info(href='#')
+                                                li.control_item: a.btn_v2.control_btn.control_check(href='#')
+                                                li.control_item: a.btn_v2.control_btn.control_rm(href='#')
+                                    tr.orderRowInfo.info_row
+                                        td.col_1
+                                            b Банки:
+                                        td.col_2(colspan=5)
+                                            ul.order_results
+                                                li.order_r_item
+                                                    .bank_name
+                                                        span.bank_icon
+                                                        span Абсолют Банк
+                                                    .bank_programms
+                                                        .programm_name
+                                                            span.programm_icon
+                                                            span Программа “Выгодный автокредит”
+                                                    .bank_answer
+                                                        b.color_red Отказ
+                                                        
+                                                li.order_r_item
+                                                    .bank_name
+                                                        span.bank_icon
+                                                        span Авангард
+                                                    .bank_programms
+                                                        .programm_name
+                                                            span.programm_icon
+                                                            span Стандартный
+                                                        span ;
+                                                        .programm_name
+                                                            span.programm_icon
+                                                            span Абсолютно для всех
+                                                    .bank_answer
+                                                        b.color_green Одобрение
+                                                        
+                                                li.order_r_item
+                                                    .bank_name
+                                                        span.bank_icon
+                                                        span Альфа Банк
+                                                    .bank_programms
+                                                        .programm_name
+                                                            span.programm_icon
+                                                            span Каждому по “жедезному коню”
+                                                        span ;
+                                                        .programm_name
+                                                            span.programm_icon
+                                                            span Автокредит (льготное кредитование) 
+                                                    .bank_answer
+                                                        span Ожидание ответа
+                                                        
+                                                li.order_r_item
+                                                    .bank_name
+                                                        span.bank_icon
+                                                        span Банк Возрождение
+                                                    .bank_programms
+                                                        .programm_name
+                                                            span.programm_icon
+                                                            span Потребительский кредит
+                                                    .bank_answer
+                                                        span Ожидание ответа
+                                                        
+                                                        
+                                        
+                                        
+
+            +footer()

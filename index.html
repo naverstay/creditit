@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>CreditIt главная</title><!-- saved from url=(0014)about:internet -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles/main_global.css" media="all"/>
+    <script src="js/jquery1.10.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="rect_1024"></div>
+      <div class="base">
+        <div class="header">
+          <div class="header_line">
+            <div class="section_inner clearfix">
+              <div class="fl">
+                <div class="mb"><a href="#" class="logo"></a></div>
+              </div>
+              <div class="fr user_menu">
+                <div class="mb"><span>Дилерский центр: СТК сервис</span></div>
+                <div class="mb"><a href="#" class="gl_link color_violet">Выход</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="section_inner">
+            <div class="main_menu_holder">
+              <div class="fl">
+                <div class="mb"><a href="#" class="logo"></a></div>
+              </div>
+              <div class="fr main_menu">
+                <li class="mb"><a href="#" class="menu_link">Оформить заявку</a></li>
+                <li class="mb"><a href="#" class="menu_link active">Заявки</a></li>
+                <li class="mb"><a href="#" class="menu_link">Статистика</a></li>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main_content">
+          <div class="section_inner">
+            <h1 class="page_title">Заявки</h1>
+            <form action="#">
+              <div class="orders_filter_form">
+                <div class="form_row form_cell_v1">
+                  <div class="form_cell cell_v1 w_290 select_v1">
+                    <select class="select2">
+                      <option>Все заявки</option>
+                      <option>!Все заявки</option>
+                    </select>
+                  </div>
+                  <div class="form_cell w_570">
+                    <div class="input_w">
+                      <input placeholder="Введите ФИО, контакты, автомобиль или банк для поиска нужных заявок" class="f_input input_v1">
+                    </div>
+                  </div>
+                  <div class="form_cell w_100">
+                    <div class="input_w">
+                      <button class="btn_v1 yellow_black_btn search_btn">Найти</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter_results">
+                <table class="gl_table table_v1">
+                  <tr>
+                    <th class="col_1"><span class="sort_order order_down"></span><span>ID</span></th>
+                    <th class="col_2">Клиент</th>
+                    <th class="col_3">Автомобиль</th>
+                    <th class="col_4">Дата создания</th>
+                    <th class="col_5">Статус заявки</th>
+                    <th class="col_6">Управление</th>
+                  </tr>
+                  <tr class="orderRowMain">
+                    <td class="col_1"><a href="#" class="order_link openOrderBtn"><span class="sort_order order_left"></span><span class="order_id">55483222</span></a></td>
+                    <td class="col_2">
+                      <p><b>Константинопольский Константин Константинович</b></p>
+                      <p>+ 7 (906) 123-45-67</p>
+                      <p>konstantinopolsky_KK@yandex.ru</p>
+                    </td>
+                    <td class="col_3">Volkswagen Passat CC  <br>   2015</td>
+                    <td class="col_4">24.12.2015  <br>16:30</td>
+                    <td class="col_5"><span class="color_black">Получен ответ</span></td>
+                    <td class="col_6">
+                      <ul class="order_controls">
+                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_info"></a></li>
+                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_check"></a></li>
+                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_rm"></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="orderRowInfo info_row">
+                    <td class="col_1"><b>Банки:</b></td>
+                    <td colspan="5" class="col_2">
+                      <ul class="order_results">
+                        <li class="order_r_item">
+                          <div class="bank_name"><span class="bank_icon"></span><span>Абсолют Банк</span></div>
+                          <div class="bank_programms">
+                            <div class="programm_name"><span class="programm_icon"></span><span>Программа “Выгодный автокредит”</span></div>
+                          </div>
+                          <div class="bank_answer"><b class="color_red">Отказ</b></div>
+                        </li>
+                        <li class="order_r_item">
+                          <div class="bank_name"><span class="bank_icon"></span><span>Авангард</span></div>
+                          <div class="bank_programms">
+                            <div class="programm_name"><span class="programm_icon"></span><span>Стандартный</span></div><span>;</span>
+                            <div class="programm_name"><span class="programm_icon"></span><span>Абсолютно для всех</span></div>
+                          </div>
+                          <div class="bank_answer"><b class="color_green">Одобрение</b></div>
+                        </li>
+                        <li class="order_r_item">
+                          <div class="bank_name"><span class="bank_icon"></span><span>Альфа Банк</span></div>
+                          <div class="bank_programms">
+                            <div class="programm_name"><span class="programm_icon"></span><span>Каждому по “жедезному коню”</span></div><span>;</span>
+                            <div class="programm_name"><span class="programm_icon"></span><span>Автокредит (льготное кредитование) </span></div>
+                          </div>
+                          <div class="bank_answer"><span>Ожидание ответа</span></div>
+                        </li>
+                        <li class="order_r_item">
+                          <div class="bank_name"><span class="bank_icon"></span><span>Банк Возрождение</span></div>
+                          <div class="bank_programms">
+                            <div class="programm_name"><span class="programm_icon"></span><span>Потребительский кредит</span></div>
+                          </div>
+                          <div class="bank_answer"><span>Ожидание ответа</span></div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="section_inner">
+          <div class="fl">
+            <div class="mb">
+              <div class="copyright">&copy; 2015 ООО «Creditit». Все права защищены</div>
+            </div>
+          </div>
+          <div class="fr footer_menu">
+            <div class="mb"><a href="#" class="gl_link color_violet">Оформить заявку</a></div>
+            <div class="mb"><a href="#" class="gl_link color_violet">Заявки</a></div>
+            <div class="mb"><a href="#" class="gl_link color_violet">Статистика</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

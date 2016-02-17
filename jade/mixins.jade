@@ -6,9 +6,42 @@ mixin dev_head(page_title)
         meta(name='viewport', content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet', href='styles/main_global.css', media='all')
         script(src='js/jquery1.10.js')
-        script(src='js/chosen.jquery.js')
-        script(src='js/jquery-ui.js')
+        script(src='js/select2.js')
+        //-script(src='js/jquery-ui.js')
         script(src='js/script.js')
+
+mixin header()
+    div.header
+        .header_line
+            .section_inner.clearfix
+                .fl: .mb
+                    a.logo(href='#')
+                .fr.user_menu
+                    .mb
+                        span Дилерский центр: СТК сервис
+                    .mb
+                        a.gl_link.color_violet(href='#') Выход
+
+        .section_inner
+            .main_menu_holder
+                .fl
+                    .mb: a.logo(href='#')
+
+                .fr.main_menu
+                    li.mb: a.menu_link(href='#') Оформить заявку
+                    li.mb: a.menu_link.active(href='#') Заявки
+                    li.mb: a.menu_link(href='#') Статистика
+                        
+mixin footer()
+    .footer
+        .section_inner
+            .fl
+                .mb: .copyright &copy; 2015 ООО «Creditit». Все права защищены
+
+            .fr.footer_menu
+                .mb: a.gl_link.color_violet(href='#') Оформить заявку
+                .mb: a.gl_link.color_violet(href='#') Заявки
+                .mb: a.gl_link.color_violet(href='#') Статистика
 
 
 mixin loop_while(counter)
