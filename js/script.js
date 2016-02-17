@@ -2,24 +2,15 @@ var body_var,
     global_window_Height,
     popupOrderItem,
     controlPanelBtn,
-    popupBtn,
-    $completed_orders_form,
-    $send_confirmation,
-    $send_to_client,
-    $cart_orders_form,
-    $postpone_orders_form,
-    $contacts_form;
+    popupBtn;
 
 $(function ($) {
 
-    body_var = $('body'),
-        global_window_Height = $(window).height(),
-        popupOrderItem = $('.popup_order_item'),
-        controlPanelBtn = $('.controlPanelBtn'),
-        popupBtn = $('.popupBtn');
-
-    var header = $('.header'), doc = $(document),
-        browserWindow = $(window);
+    body_var = $('body');
+    global_window_Height = $(window).height();
+    popupOrderItem = $('.popup_order_item');
+    controlPanelBtn = $('.controlPanelBtn');
+    popupBtn = $('.popupBtn');
 
     $('.select2').select2({
         placeholder: "Выберите из списка",
