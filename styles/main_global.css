@@ -1,4 +1,4 @@
-.main_menu_holder:after, .order_r_item:after, .order_controls:after, .form_row:after {
+.main_menu_holder:after, .order_r_item:after, .order_controls:after, .pagination_block:after, .form_row:after {
   position: static;
   display: block;
   height: 0;
@@ -228,6 +228,52 @@ textarea:focus::-moz-placeholder {
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: 'credit_it_icons';
+  src: url("../fonts/icons/credit_it_icons.eot?5b1zbd");
+  src: url("../fonts/icons/credit_it_icons.eot?5b1zbd#iefix") format("embedded-opentype"), url("../fonts/icons/credit_it_icons.ttf?5b1zbd") format("truetype"), url("../fonts/icons/credit_it_icons.woff?5b1zbd") format("woff"), url("../fonts/icons/credit_it_icons.svg?5b1zbd#credit_it_icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before, .icon-before:before, .bank_icon:before,
+.programme_icon:before, .btn_v2.control_btn:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'credit_it_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-document:before, .programme_icon:before {
+  content: "\e900";
+}
+
+.icon-label:before, .bank_icon:before {
+  content: "\e901";
+}
+
+.icon-check:before, .btn_v2.control_btn.control_check:before {
+  content: "\e902";
+}
+
+.icon-close:before, .btn_v2.control_btn.control_rm:before {
+  content: "\e903";
+}
+
+.icon-info:before, .btn_v2.control_btn.control_info:before {
+  content: "\e904";
+}
+
+.icon-arrow-right2:before {
+  content: "\e905";
+}
+
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -944,6 +990,15 @@ b {
 
 .logo {
   position: relative;
+  display: block;
+}
+.logo img {
+  display: block;
+  max-width: 150px;
+}
+
+.slogan {
+  font-size: 15px;
 }
 
 .user_menu > .mb {
@@ -1029,7 +1084,12 @@ b {
 
 .page_title {
   font-size: 26px;
+  font-weight: 400;
   margin-bottom: 26px;
+}
+
+.filter_results {
+  margin-bottom: 30px;
 }
 
 .gl_table {
@@ -1072,11 +1132,28 @@ b {
 .gl_table.table_v1 td:last-child {
   padding-right: 0;
 }
-.gl_table.table_v1 td b {
-  color: #000;
-}
 .gl_table.table_v1 td.opened {
   border: 2px solid #e5e6e8;
+}
+.gl_table.table_v1 td.results_cell {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.gl_table.table_v1 tr.opened td {
+  background: #f7f7f7;
+}
+.gl_table.table_v1 tr.opened td:first-child {
+  border-left: 2px solid #e5e6e8;
+}
+.gl_table.table_v1 tr.opened td:last-child {
+  border-right: 2px solid #e5e6e8;
+}
+.gl_table.table_v1 .main_row.opened td {
+  border-top: 2px solid #e5e6e8;
+  border-bottom-style: dashed;
+}
+.gl_table.table_v1 .info_row.opened td {
+  border-bottom: 2px solid #e5e6e8;
 }
 .gl_table.table_v1 .col_1 {
   width: 9.5%;
@@ -1116,7 +1193,53 @@ b {
 }
 
 .order_r_item {
-  border-bottom: 1px solid #e5e6e8;
+  border-top: 1px solid #e5e6e8;
+  padding: 14px 0;
+}
+.order_r_item:first-child {
+  border-top: none;
+}
+
+.bank_name {
+  float: left;
+  width: 23%;
+}
+
+.bank_programmes {
+  float: left;
+  width: 52.5%;
+}
+
+.bank_answer {
+  float: left;
+  width: 24.5%;
+}
+
+.bank_icon,
+.programme_icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.bank_icon {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  font-size: 16px;
+}
+
+.programme_icon {
+  font-size: 16px;
+}
+
+.programme_name {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .order_controls {
@@ -1126,6 +1249,62 @@ b {
 .control_item {
   float: left;
   width: 33%;
+}
+
+.pagination_block {
+  line-height: 36px;
+  margin-bottom: 30px;
+}
+.pagination_block > li {
+  float: left;
+  color: #858585;
+  text-align: center;
+}
+.pagination_block > li .gl_link {
+  display: block;
+  width: 37px;
+  height: 36px;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  border: solid #b7b7b7;
+  border-width: 1px 0;
+}
+.pagination_block > li .gl_link.first_link {
+  border-left-width: 1px;
+}
+.pagination_block > li .gl_link.first_link:before {
+  display: none;
+}
+.pagination_block > li .gl_link.last_link {
+  border-right-width: 1px;
+}
+.pagination_block > li .gl_link:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  width: 1px;
+  background: #e2e2e2;
+}
+.pagination_block > li.active .gl_link {
+  cursor: default;
+  background: #fecd05;
+  border-color: #fecd05;
+}
+.pagination_block > li.pagination_counter {
+  padding-left: 18px;
+}
+.pagination_block > li.pagination_next {
+  padding-left: 5px;
+}
+.pagination_block > li.pagination_next .gl_link {
+  border-width: 1px;
+}
+.pagination_block > li.pagination_next .gl_link:before {
+  display: none;
 }
 
 .form_row.form_cell_v1 .form_cell {
@@ -1190,20 +1369,22 @@ b {
 }
 .btn_v2.control_btn {
   text-align: center;
-  display: block;
-  width: 20px;
+  display: inline-block;
+  vertical-align: top;
   cursor: pointer;
   border-radius: 100%;
   position: relative;
+  text-decoration: none;
+  font-size: 22px;
 }
 .btn_v2.control_btn.control_info {
-  border: 2px solid #a658b1;
+  color: #a658b1;
 }
 .btn_v2.control_btn.control_check {
-  border: 2px solid #a658b1;
+  color: #a658b1;
 }
 .btn_v2.control_btn.control_rm {
-  border: 2px solid #f00;
+  color: #f00;
 }
 
 .yellow_black_btn {
@@ -1268,6 +1449,7 @@ b {
   z-index: 10;
   top: 0;
   left: 50%;
+  display: none;
   width: 1242px;
   bottom: 0;
   margin-left: -621px;

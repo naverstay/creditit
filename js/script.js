@@ -33,10 +33,9 @@ $(function ($) {
         width: '100%'
     });
 
-
     $('.openOrderBtn').on('click', function () {
         var firedEl = $(this);
-        firedEl.find('.sort_order').toggleClass('opened').closest('.orderRowMain').next('.orderRowInfo').toggle();
+        firedEl.find('.sort_order').toggleClass('opened').closest('.orderRowMain').toggleClass('opened').next('.orderRowInfo').toggle().toggleClass('opened');
 
         return false;
     });

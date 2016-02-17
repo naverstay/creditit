@@ -96,6 +96,16 @@ b {
 
 .logo {
   position: relative;
+  display: block;
+
+  img {
+    display: block;
+    max-width: 150px;
+  }
+}
+
+.slogan {
+  font-size: 15px;
 }
 
 // *********  menu
@@ -211,7 +221,12 @@ b {
 
 .page_title {
   font-size: 26px;
+  font-weight: 400;
   margin-bottom: 26px;
+}
+
+.filter_results {
+  margin-bottom: 30px;
 }
 
 .gl_table {
@@ -244,6 +259,7 @@ b {
     }
 
     td {
+      //@include transition_all(background .3s, border .3s);
       color: #858585;
       vertical-align: top;
       padding: 12px 5px 15px;
@@ -262,14 +278,48 @@ b {
         padding-right: 0;
       }
 
-      b {
-        color: $default_t_color;
-      }
-
       &.opened {
         border: 2px solid #e5e6e8;
       }
 
+      &.results_cell {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+    }
+
+    tr.opened {
+      td {
+        background: #f7f7f7;
+
+        &:first-child {
+          border-left: 2px solid #e5e6e8;
+        }
+
+        &:last-child {
+          border-right: 2px solid #e5e6e8;
+        }
+      }
+    }
+
+    .main_row {
+
+      &.opened {
+        td {
+          border-top: 2px solid #e5e6e8;
+          border-bottom-style: dashed;
+        }
+      }
+    }
+
+    .info_row {
+
+      &.opened {
+        td {
+          border-bottom: 2px solid #e5e6e8;
+        }
+      }
     }
 
     .col_1 {
@@ -322,7 +372,55 @@ b {
 
 .order_r_item {
   @extend %clearfix;
-  border-bottom: 1px solid #e5e6e8;
+  border-top: 1px solid #e5e6e8;
+  padding: 14px 0;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.bank_name {
+  float: left;
+  width: 23%;
+}
+
+.bank_programmes {
+  float: left;
+  width: 52.5%;
+}
+
+.bank_answer {
+  float: left;
+  width: 24.5%;
+}
+
+.bank_icon,
+.programme_icon {
+  @extend .icon-before;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.bank_icon {
+  @extend .icon-label;
+  @include transform_rotate(45);
+  font-size: 16px;
+}
+
+.programme_icon {
+  @extend .icon-document;
+  font-size: 16px;
+}
+
+.programme_name {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .order_controls {
@@ -333,6 +431,76 @@ b {
 .control_item {
   float: left;
   width: 33%;
+}
+
+.pagination_block {
+  @extend %clearfix;
+  line-height: 36px;
+  margin-bottom: 30px;
+
+  > li {
+    float: left;
+    color: #858585;
+    text-align: center;
+
+    .gl_link {
+      display: block;
+      width: 37px;
+      height: 36px;
+      position: relative;
+      color: #000;
+      text-decoration: none;
+      text-align: center;
+      border: solid #b7b7b7;
+      border-width: 1px 0;
+
+      &.first_link {
+        border-left-width: 1px;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &.last_link {
+        border-right-width: 1px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        left: 0;
+        width: 1px;
+        background: #e2e2e2;
+      }
+    }
+
+    &.active {
+      .gl_link {
+        cursor: default;
+        background: $gl_yellow;
+        border-color: $gl_yellow;
+      }
+    }
+
+    &.pagination_counter {
+      padding-left: 18px;
+    }
+
+    &.pagination_next {
+      padding-left: 5px;
+
+      .gl_link {
+        border-width: 1px;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 //************  forms
@@ -417,25 +585,30 @@ b {
   height: 20px;
 
   &.control_btn {
+    @extend .icon-before;
     text-align: center;
-    display: block;
-    width: 20px;
+    display: inline-block;
+    vertical-align: top;
     cursor: pointer;
     border-radius: 100%;
     position: relative;
+    text-decoration: none;
+    font-size: 22px;
 
     &.control_info {
-      border: 2px solid $gl_violet;
+      @extend .icon-info;
+      color: $gl_violet;
     }
 
     &.control_check {
-      border: 2px solid $gl_violet;
+      @extend .icon-check;
+      color: $gl_violet;
     }
 
     &.control_rm {
-      border: 2px solid $gl_red;
+      @extend .icon-close;
+      color: $gl_red;
     }
-
   }
 }
 
@@ -510,7 +683,7 @@ $rectWidth: 1242px;
   z-index: 10;
   top: 0;
   left: 50%;
-
+  display: none;
   width: $rectWidth;
   bottom: 0;
   margin-left: -$rectWidth/2;

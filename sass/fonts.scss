@@ -51,3 +51,14 @@
   font-style: normal;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: 'credit_it_icons';
+  src:  url('../fonts/icons/credit_it_icons.eot?5b1zbd');
+  src:  url('../fonts/icons/credit_it_icons.eot?5b1zbd#iefix') format('embedded-opentype'),
+        url('../fonts/icons/credit_it_icons.ttf?5b1zbd') format('truetype'),
+        url('../fonts/icons/credit_it_icons.woff?5b1zbd') format('woff'),
+        url('../fonts/icons/credit_it_icons.svg?5b1zbd#credit_it_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
