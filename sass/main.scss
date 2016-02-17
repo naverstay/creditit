@@ -1,0 +1,201 @@
+$gl_green: #2dcda1;
+$gl_blue: #00b1ff;
+$gl_blue_v1: #24a6df;
+
+html, body {
+  height: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font: 14px/1 $cross_font_Verdana;
+  color: $default_t_color;
+}
+
+.hide {
+  display: none !important;
+}
+
+.clearfix:before, .clearfix:after {
+  display: table;
+
+  content: ' ';
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrapper {
+  position: relative;
+
+  min-width: 960px;
+  min-height: 100%;
+  padding: 100px 0 0;
+}
+
+.base {
+  padding-bottom: 150px;
+}
+
+.section_inner {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+//*************************** header
+
+.header {
+
+}
+
+.logo {
+  position: relative;
+}
+
+.main_slider {
+  text-align: center;
+}
+
+.slide {
+  position: relative;
+
+  display: inline-block;
+
+  vertical-align: top;
+}
+
+.slide_content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  color: #fff;
+}
+
+// *********  menu
+
+.main_menu {
+}
+
+.menu_item {
+  float: left;
+
+  margin: 0 17px;
+}
+
+.menu_link {
+  position: relative;
+
+  display: block;
+
+  padding-left: 32px;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  color: $def_text_color;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    content: '';
+
+    background: url(../i/sprite.png) no-repeat;
+  }
+
+
+}
+
+
+//************  buttons
+
+.btn_v1 {
+  height: 36px;
+
+  &.city_btn {
+    padding: 11px 20px;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+  }
+}
+
+.green_btn {
+  color: #fff;
+
+  background: $gl_green;
+}
+
+// **********  text
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.text_upper {
+  text-transform: uppercase;
+}
+
+$rectWidth: 950px;
+
+.rect_1024 {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+
+  width: $rectWidth;
+  height: 480px;
+  margin-left: -$rectWidth/2;
+
+  pointer-events: none;
+
+  border: 1px solid red;
+}
+
+.rect_1024:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: $rectWidth/2;
+
+  width: 1px;
+
+  content: '';
+
+  background: red;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 150px;
+
+  background: red;
+}
+
+
