@@ -2,6 +2,7 @@ var body_var,
     global_window_Height,
     popupOrderItem,
     controlPanelBtn,
+    order_tabs,
     popupBtn;
 
 $(function ($) {
@@ -17,6 +18,13 @@ $(function ($) {
         allowClear: true,
         minimumResultsForSearch: 20,
         width: '100%'
+    });
+
+    order_tabs = $('.tabBlock').tabs({
+        active: 0,
+        activate: function (e, u) {
+
+        }
     });
 
     $('.openOrderBtn').on('click', function () {

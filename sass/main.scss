@@ -514,6 +514,13 @@ b {
       margin-bottom: 30px;
     }
   }
+  
+  &.form_cell_v2 {
+    .form_cell {
+      float: left;
+      margin-bottom: 15px;
+    }
+  }
 
 }
 
@@ -553,6 +560,10 @@ b {
 
 .w_100 {
   width: 100px;
+}
+
+.w_260 {
+  width: 260px;
 }
 
 .w_290 {
@@ -636,7 +647,21 @@ b {
     }
 
     .select2-selection__arrow {
+      @extend .icon-before;
+      @extend .icon-arrow_down;
       height: 34px;
+      
+      &:before {
+        position: absolute;
+        top: 50%;
+        font-size: 10px;
+        margin-top: -4px;
+        left: 0;
+      }
+      
+      b {
+        display: none;
+      }
     }
   }
 

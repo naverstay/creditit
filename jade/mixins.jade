@@ -1,4 +1,4 @@
-mixin dev_head(page_title)
+mixin dev_head(page_title, index, new_order)
     head
         title=page_title
         | <!-- saved from url=(0014)about:internet -->
@@ -7,10 +7,10 @@ mixin dev_head(page_title)
         link(rel='stylesheet', href='styles/main_global.css', media='all')
         script(src='js/jquery1.10.js')
         script(src='js/select2.js')
-        //-script(src='js/jquery-ui.js')
+        script(src='js/jquery-ui.js')
         script(src='js/script.js')
 
-mixin header()
+mixin header(active_menu)
     div.header
         .header_line
             .section_inner.clearfix
@@ -26,14 +26,28 @@ mixin header()
         .section_inner
             .main_menu_holder
                 .fl
-                    .mb: a.logo(href='#')
-                        img(src='i/logo.svg')
+                    .mb: a.logo(href='index.html')
+                        img(src='i/logo_2.svg')
 
                 ul.fr.main_menu
-                    li.mb: a.menu_link(href='#') Оформить заявку
-                    li.mb: a.menu_link.active(href='#') Заявки
-                    li.mb: a.menu_link(href='#') Статистика
-                        
+                    li.mb: a.menu_link(class = (active_menu == 1 ? 'active' : '') href='new_order.html') Оформить заявку
+                    li.mb: a.menu_link(class = (active_menu == 2 ? 'active' : '') href='#') Заявки
+                    li.mb: a.menu_link(class = (active_menu == 3 ? 'active' : '') href='#') Статистика
+ 
+
+
+mixin input_coposer(w_cls, inp_id, inp_cls, inp_plc) 
+    .input_w(class=w_cls)
+        input.f_input(id=inp_id class=inp_cls placeholder=inp_plc)
+
+
+
+
+mixin select2 (first_option, id)
+    select.select2(id=id)
+        option=first_option
+        option Выбор 2
+
 mixin footer()
     .footer
         .section_inner
@@ -45,7 +59,35 @@ mixin footer()
                 .mb: a.gl_link.color_violet(href='#') Заявки
                 .mb: a.gl_link.color_violet(href='#') Статистика
 
-
+mixin tab_inner()
+    .tab_inner
+        .form_row_caption
+            | 1. 
+            span Общая информация
+            
+        .form_row.form_cell_v2
+            .form_cell.cell_v1.w_290.select_v1
+                .form_label: label(for='relations')
+                    | Отношение к клиенту
+                    span.color_red *
+                +select2('Коллега с места работы', 'relations')
+                
+        .form_row.form_cell_v2
+            .form_cell.cell_v1.w_290.select_v1
+                .form_label: label(for='last_name')
+                    | Пол
+                    span.color_red *
+                +input_coposer('w_260', 'last_name', 'input_v1')
+            
+        .form_row.form_cell_v2
+            .form_cell.cell_v1.w_290.select_v1
+                .form_label: label(for='last_name')
+                    | Фамилия
+                    span.color_red *
+                +input_coposer('w_260', 'last_name', 'input_v1')
+                    
+                    
+                
 mixin loop_while(counter)
     -i=0;
     while i < counter

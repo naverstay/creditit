@@ -1,0 +1,219 @@
+$gl_yellow_2: #fdce0b;
+
+.tab_list_holder {
+  @extend %clearfix;
+  margin-bottom: 40px;
+}
+
+.tab_list {
+  float: left;
+  background: #f7f7f7;
+  min-width: 50%;
+  box-shadow: inset 0 0 1px #e5e6e8, inset 0 -2px 0 0 $gl_yellow;
+
+  .tab_link {
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    &:before {
+      font-size: 56px;
+    }
+  }
+}
+
+.add_controls {
+  float: left;
+  padding-left: 20px;
+
+  .tab_item {
+    margin-left: 10px;
+  }
+
+  .tab_link {
+    font-size: 12px;
+    box-shadow: inset 0 0 1px #e5e6e8, inset 0 -2px 0 0 $gl_yellow;
+
+    &:before {
+      font-size: 40px;
+    }
+  }
+}
+
+.tab_item {
+  float: left;
+  width: 100px;
+}
+
+.tab_link {
+  @extend .icon-before;
+  position: relative;
+  display: table;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  background: #f7f7f7;
+  //border-bottom: 2px solid $gl_yellow;
+  box-shadow: inset 0 -2px 0 0 $gl_yellow;
+  color: $gl_violet;
+
+  &:before {
+    position: absolute;
+    top: 12px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+  }
+
+  .tab_list .ui-tabs-active & {
+    box-shadow: none;
+    color: #000;
+
+    &:after {
+      border: 2px solid $gl_yellow;
+      border-bottom-width: 0;
+    }
+  }
+
+  &.icon-add_client {
+    &:before {
+      top: 15px;
+    }
+  }
+}
+
+.tab_text {
+  display: table-cell;
+  vertical-align: bottom;
+  height: 100px;
+  padding-bottom: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: .4px;
+}
+
+.steps_holder {
+  @extend %clearfix;
+  box-shadow: inset 0 0 0 2px #e5e6e8;
+  margin-bottom: 36px;
+}
+
+.step_list {
+  float: left;
+}
+
+.step_item {
+  float: right;
+  background: #fff;
+  padding-left: 10px;
+
+  &.active_step {
+    .step_link {
+      background: $gl_yellow_2;
+      border-color: $gl_yellow_2;
+      border-bottom-color: #040707;
+
+      &:after {
+        background: $gl_yellow_2;
+        border-color: $gl_yellow_2;
+      }
+
+      &:before {
+        border-color: $gl_yellow_2;
+      }
+    }
+  }
+
+  &:first-child {
+    .step_link {
+      padding: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &:last-child {
+    padding-left: 0;
+
+    .step_link {
+      border-left-width: 2px;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.step_link {
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-decoration: none;
+  //overflow: hidden;
+  border: solid #e5e6e8;
+  border-width: 2px 0;
+  font-size: 13px;
+  letter-spacing: .35px;
+  line-height: 36px;
+  color: #000;
+  height: 42px;
+  font-weight: bold;
+  padding: 0 20px 0 28px;
+  max-width: 170px;
+
+  &:before {
+    @include transform(skewx(-9deg) skewy(-50deg) rotate(-24deg));
+    content: '';
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 48px;
+    margin-top: -24px;
+    left: -7px;
+    border: solid #e5e6e8;
+    border-width: 0 1px 3px 0;
+  }
+
+  &:after {
+    @include transform(skewx(-9deg) skewy(-50deg) rotate(-24deg));
+    content: '';
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 48px;
+    margin-top: -24px;
+    right: -7px;
+    border: solid #e5e6e8;
+    border-width: 0 1px 3px 0;
+
+  }
+
+}
+
+.form_row_caption {
+  font-weight: bold;
+  margin-bottom: 23px;
+  letter-spacing: .45px;
+
+  span {
+    border-bottom: 2px solid $gl_yellow_2;
+  }
+}
+
+.form_label {
+  margin-bottom: 8px;
+  letter-spacing: -.15px;
+}

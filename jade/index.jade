@@ -1,13 +1,13 @@
 include mixins
 doctype html
 html(lang='ru')
-    +dev_head('CreditIt главная')
+    +dev_head('CreditIt главная', true)
 
     body
         .wrapper
             .rect_1024
             .base
-                +header()
+                +header(2)
 
                 div.main_content
                     .section_inner
@@ -17,9 +17,7 @@ html(lang='ru')
                             .orders_filter_form
                                 .form_row.form_cell_v1
                                     .form_cell.cell_v1.w_290.select_v1
-                                        select.select2()
-                                            option Все заявки
-                                            option !Все заявки
+                                        +select2('Все заявки')
                                     .form_cell.w_570
                                         .input_w
                                             input.f_input.input_v1(placeholder='Введите ФИО, контакты, автомобиль или банк для поиска нужных заявок')

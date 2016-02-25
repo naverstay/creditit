@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/main_global.css" media="all"/>
     <script src="js/jquery1.10.js"></script>
     <script src="js/select2.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/script.js"></script>
   </head>
   <body>
@@ -28,11 +29,11 @@
           <div class="section_inner">
             <div class="main_menu_holder">
               <div class="fl">
-                <div class="mb"><a href="#" class="logo"><img src="i/logo.svg"/></a></div>
+                <div class="mb"><a href="index.html" class="logo"><img src="i/logo_2.svg"/></a></div>
               </div>
               <ul class="fr main_menu">
-                <li class="mb"><a href="#" class="menu_link">Оформить заявку</a></li>
-                <li class="mb"><a href="#" class="menu_link active">Заявки</a></li>
+                <li class="mb"><a href="new_order.html" class="menu_link active">Оформить заявку</a></li>
+                <li class="mb"><a href="#" class="menu_link">Заявки</a></li>
                 <li class="mb"><a href="#" class="menu_link">Статистика</a></li>
               </ul>
             </div>
@@ -40,268 +41,77 @@
         </div>
         <div class="main_content">
           <div class="section_inner">
-            <h1 class="page_title">Заявки</h1>
+            <h1 class="page_title">Оформление новой заявки</h1>
             <form action="#">
-              <div class="orders_filter_form">
-                <div class="form_row form_cell_v1">
-                  <div class="form_cell cell_v1 w_290 select_v1">
-                    <select class="select2">
-                      <option>Все заявки</option>
-                      <option>!Все заявки</option>
-                    </select>
-                  </div>
-                  <div class="form_cell w_570">
-                    <div class="input_w">
-                      <input placeholder="Введите ФИО, контакты, автомобиль или банк для поиска нужных заявок" class="f_input input_v1">
+              <div class="new_order_form">
+                <div class="tab_list_holder">
+                  <ul id="tab_list" class="tab_list">
+                    <li class="tab_item"><a href="#tab_unit_1" class="tab_link icon-client"><span class="tab_text">Клиент</span></a></li>
+                    <li class="tab_item"><a href="#tab_unit_2" class="tab_link icon-wife"><span class="tab_text">Супруга</span></a></li>
+                    <li class="tab_item"><a href="#tab_unit_3" class="tab_link icon-bank"><span class="tab_text">Банк</span></a></li>
+                  </ul>
+                  <ul class="add_controls">
+                    <li class="tab_item"><a href="#tab_unit_1" class="tab_link icon-add_client"><span class="tab_text">Добавить созаемщика</span></a></li>
+                    <li class="tab_item"><a href="#tab_unit_2" class="tab_link icon-add_gaurantor"><span class="tab_text">Добавить поручителя</span></a></li>
+                    <li class="tab_item"><a href="#tab_unit_3" class="tab_link icon-wallet"><span class="tab_text">Добавить залогодателя</span></a></li>
+                  </ul>
+                </div>
+                <div class="steps_holder">
+                  <ul class="step_list">
+                    <li class="step_item last_item"><span href="#" class="step_link"> </span></li>
+                    <li class="step_item"><a href="#" class="step_link"><span class="mb">Анкета имущества</span></a></li>
+                    <li class="step_item active_step"><a href="#" class="step_link"><span class="mb">Анкета доходов и расходов</span></a></li>
+                    <li class="step_item"><a href="#" class="step_link"><span class="mb">Анкета основного места работы</span></a></li>
+                    <li class="step_item"><a href="#" class="step_link"><span class="mb">Анкета автокредита</span></a></li>
+                    <li class="step_item"><a href="#" class="step_link"><span class="mb">Анкета довренного лица</span></a></li>
+                    <li class="step_item active_step"><a href="#" class="step_link"><span class="mb">Общая анкета</span></a></li>
+                  </ul>
+                </div>
+                <div data-tab-context="#tab_list" class="tabBlock">
+                  <div id="tab_unit_1">
+                    <div class="tab_inner">
+                      <div class="form_row_caption">1. <span>Общая информация</span></div>
+                      <div class="form_row form_cell_v2">
+                        <div class="form_cell cell_v1 w_290 select_v1">
+                          <div class="form_label">
+                            <label for="relations">Отношение к клиенту<span class="color_red">*</span></label>
+                          </div>
+                          <select id="relations" class="select2">
+                            <option>Коллега с места работы</option>
+                            <option>Выбор 2</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form_row form_cell_v2">
+                        <div class="form_cell cell_v1 w_290 select_v1">
+                          <div class="form_label">
+                            <label for="last_name">Пол<span class="color_red">*</span></label>
+                          </div>
+                          <div class="input_w w_260">
+                            <input id="last_name" class="f_input input_v1"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_row form_cell_v2">
+                        <div class="form_cell cell_v1 w_290 select_v1">
+                          <div class="form_label">
+                            <label for="last_name">Фамилия<span class="color_red">*</span></label>
+                          </div>
+                          <div class="input_w w_260">
+                            <input id="last_name" class="f_input input_v1"/>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="form_cell w_100">
-                    <div class="input_w">
-                      <button class="btn_v1 yellow_black_btn search_btn">Найти</button>
-                    </div>
+                  <div id="tab_unit_2">
+                    <div class="tab_inner">2</div>
+                  </div>
+                  <div id="tab_unit_3">
+                    <div class="tab_inner">3</div>
                   </div>
                 </div>
               </div>
-              <div class="filter_results">
-                <table class="gl_table table_v1">
-                  <tr>
-                    <th class="col_1"><span class="sort_order order_down"></span><span>ID</span></th>
-                    <th class="col_2">Клиент</th>
-                    <th class="col_3">Автомобиль</th>
-                    <th class="col_4">Дата создания</th>
-                    <th class="col_5">Статус заявки</th>
-                    <th class="col_6">Управление</th>
-                  </tr>
-                  <tr class="orderRowMain main_row">
-                    <td class="col_1"><a href="#" class="order_link openOrderBtn"><span class="sort_order order_left"></span><span class="order_id">55483222</span></a></td>
-                    <td class="col_2">
-                      <p><b>Константинопольский Константин Константинович</b></p>
-                      <p>+ 7 (906) 123-45-67</p>
-                      <p>konstantinopolsky_KK@yandex.ru</p>
-                    </td>
-                    <td class="col_3">Volkswagen Passat CC  <br>   2015</td>
-                    <td class="col_4">24.12.2015  <br>16:30</td>
-                    <td class="col_5"><span class="color_black">Получен ответ</span></td>
-                    <td class="col_6">
-                      <ul class="order_controls">
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_info"></a></li>
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_check"></a></li>
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_rm"></a></li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr class="orderRowInfo info_row">
-                    <td class="col_1"><b class="color_black">Банки:</b></td>
-                    <td colspan="5" class="col_2 results_cell">
-                      <ul class="order_results">
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon color_red"></span><span>Абсолют Банк</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Программа “Выгодный автокредит”</span></div>
-                          </div>
-                          <div class="bank_answer"><b class="color_red">Отказ</b></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon color_green"></span><span>Авангард</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Стандартный</span></div><span>;</span>
-                            <div class="programme_name"><span class="programme_icon"></span><span>Абсолютно для всех</span></div>
-                          </div>
-                          <div class="bank_answer"><b class="color_green">Одобрение</b></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon"></span><span>Альфа Банк</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Каждому по “жедезному коню”</span></div><span>;</span>
-                            <div class="programme_name"><span class="programme_icon"></span><span>Автокредит (льготное кредитование) </span></div>
-                          </div>
-                          <div class="bank_answer"><span>Ожидание ответа</span></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon"></span><span>Банк Возрождение</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Потребительский кредит</span></div>
-                          </div>
-                          <div class="bank_answer"><span>Ожидание ответа</span></div>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr class="orderRowMain main_row">
-                    <td class="col_1"><a href="#" class="order_link openOrderBtn"><span class="sort_order order_left"></span><span class="order_id">55483222</span></a></td>
-                    <td class="col_2">
-                      <p><b>Константинопольский Константин Константинович</b></p>
-                      <p>+ 7 (906) 123-45-67</p>
-                      <p>konstantinopolsky_KK@yandex.ru</p>
-                    </td>
-                    <td class="col_3">Volkswagen Passat CC  <br>   2015</td>
-                    <td class="col_4">24.12.2015  <br>16:30</td>
-                    <td class="col_5"><span class="color_black">Получен ответ</span></td>
-                    <td class="col_6">
-                      <ul class="order_controls">
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_info"></a></li>
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_check"></a></li>
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_rm"></a></li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr class="orderRowInfo info_row">
-                    <td class="col_1"><b class="color_black">Банки:</b></td>
-                    <td colspan="5" class="col_2 results_cell">
-                      <ul class="order_results">
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon color_red"></span><span>Абсолют Банк</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Программа “Выгодный автокредит”</span></div>
-                          </div>
-                          <div class="bank_answer"><b class="color_red">Отказ</b></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon color_green"></span><span>Авангард</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Стандартный</span></div><span>;</span>
-                            <div class="programme_name"><span class="programme_icon"></span><span>Абсолютно для всех</span></div>
-                          </div>
-                          <div class="bank_answer"><b class="color_green">Одобрение</b></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon"></span><span>Альфа Банк</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Каждому по “жедезному коню”</span></div><span>;</span>
-                            <div class="programme_name"><span class="programme_icon"></span><span>Автокредит (льготное кредитование) </span></div>
-                          </div>
-                          <div class="bank_answer"><span>Ожидание ответа</span></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon"></span><span>Банк Возрождение</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Потребительский кредит</span></div>
-                          </div>
-                          <div class="bank_answer"><span>Ожидание ответа</span></div>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr class="orderRowMain main_row">
-                    <td class="col_1"><a href="#" class="order_link openOrderBtn"><span class="sort_order order_left"></span><span class="order_id">55483222</span></a></td>
-                    <td class="col_2">
-                      <p><b>Константинопольский Константин Константинович</b></p>
-                      <p>+ 7 (906) 123-45-67</p>
-                      <p>konstantinopolsky_KK@yandex.ru</p>
-                    </td>
-                    <td class="col_3">Volkswagen Passat CC  <br>   2015</td>
-                    <td class="col_4">24.12.2015  <br>16:30</td>
-                    <td class="col_5"><span class="color_black">Получен ответ</span></td>
-                    <td class="col_6">
-                      <ul class="order_controls">
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_info"></a></li>
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_check"></a></li>
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_rm"></a></li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr class="orderRowInfo info_row">
-                    <td class="col_1"><b class="color_black">Банки:</b></td>
-                    <td colspan="5" class="col_2 results_cell">
-                      <ul class="order_results">
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon color_red"></span><span>Абсолют Банк</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Программа “Выгодный автокредит”</span></div>
-                          </div>
-                          <div class="bank_answer"><b class="color_red">Отказ</b></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon color_green"></span><span>Авангард</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Стандартный</span></div><span>;</span>
-                            <div class="programme_name"><span class="programme_icon"></span><span>Абсолютно для всех</span></div>
-                          </div>
-                          <div class="bank_answer"><b class="color_green">Одобрение</b></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon"></span><span>Альфа Банк</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Каждому по “жедезному коню”</span></div><span>;</span>
-                            <div class="programme_name"><span class="programme_icon"></span><span>Автокредит (льготное кредитование) </span></div>
-                          </div>
-                          <div class="bank_answer"><span>Ожидание ответа</span></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon"></span><span>Банк Возрождение</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Потребительский кредит</span></div>
-                          </div>
-                          <div class="bank_answer"><span>Ожидание ответа</span></div>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr class="orderRowMain main_row">
-                    <td class="col_1"><a href="#" class="order_link openOrderBtn"><span class="sort_order order_left"></span><span class="order_id">55483222</span></a></td>
-                    <td class="col_2">
-                      <p><b>Константинопольский Константин Константинович</b></p>
-                      <p>+ 7 (906) 123-45-67</p>
-                      <p>konstantinopolsky_KK@yandex.ru</p>
-                    </td>
-                    <td class="col_3">Volkswagen Passat CC  <br>   2015</td>
-                    <td class="col_4">24.12.2015  <br>16:30</td>
-                    <td class="col_5"><span class="color_black">Получен ответ</span></td>
-                    <td class="col_6">
-                      <ul class="order_controls">
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_info"></a></li>
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_check"></a></li>
-                        <li class="control_item"><a href="#" class="btn_v2 control_btn control_rm"></a></li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr class="orderRowInfo info_row">
-                    <td class="col_1"><b class="color_black">Банки:</b></td>
-                    <td colspan="5" class="col_2 results_cell">
-                      <ul class="order_results">
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon color_red"></span><span>Абсолют Банк</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Программа “Выгодный автокредит”</span></div>
-                          </div>
-                          <div class="bank_answer"><b class="color_red">Отказ</b></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon color_green"></span><span>Авангард</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Стандартный</span></div><span>;</span>
-                            <div class="programme_name"><span class="programme_icon"></span><span>Абсолютно для всех</span></div>
-                          </div>
-                          <div class="bank_answer"><b class="color_green">Одобрение</b></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon"></span><span>Альфа Банк</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Каждому по “жедезному коню”</span></div><span>;</span>
-                            <div class="programme_name"><span class="programme_icon"></span><span>Автокредит (льготное кредитование) </span></div>
-                          </div>
-                          <div class="bank_answer"><span>Ожидание ответа</span></div>
-                        </li>
-                        <li class="order_r_item">
-                          <div class="bank_name"><span class="bank_icon"></span><span>Банк Возрождение</span></div>
-                          <div class="bank_programmes">
-                            <div class="programme_name"><span class="programme_icon"></span><span>Потребительский кредит</span></div>
-                          </div>
-                          <div class="bank_answer"><span>Ожидание ответа</span></div>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-              <ul class="pagination_block">
-                <li class="active"><a href="#" class="gl_link first_link">1</a></li>
-                <li><a href="#" class="gl_link">2</a></li>
-                <li><a href="#" class="gl_link">3</a></li>
-                <li><a href="#" class="gl_link last_link">4</a></li>
-                <li class="pagination_next"><a href="#" class="gl_link"><span class="icon_next icon-before icon-arrow-right2 color_violet"></span></a></li>
-                <li class="pagination_counter"><span>1 – 20 из 140</span></li>
-              </ul>
             </form>
           </div>
         </div>

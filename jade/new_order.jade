@@ -1,130 +1,49 @@
 include mixins
 doctype html
 html(lang='ru')
-    +dev_head('CreditIt новая заявка')
+    +dev_head('CreditIt новая заявка', false, true)
 
     body
         .wrapper
             .rect_1024
             .base
-                +header()
+                +header(1)
 
                 div.main_content
                     .section_inner
-                        h1.page_title Заявки
+                        h1.page_title Оформление новой заявки
 
                         form(action='#')
-                            .orders_filter_form
-                                .form_row.form_cell_v1
-                                    .form_cell.cell_v1.w_290.select_v1
-                                        select.select2()
-                                            option Все заявки
-                                            option !Все заявки
-                                    .form_cell.w_570
-                                        .input_w
-                                            input.f_input.input_v1(placeholder='Введите ФИО, контакты, автомобиль или банк для поиска нужных заявок')
+                            .new_order_form
+                                .tab_list_holder
+                                    ul#tab_list.tab_list
+                                        li.tab_item: a.tab_link.icon-client(href='#tab_unit_1'): span.tab_text Клиент
+                                        li.tab_item: a.tab_link.icon-wife(href='#tab_unit_2'): span.tab_text Супруга
+                                        li.tab_item: a.tab_link.icon-bank(href='#tab_unit_3'): span.tab_text Банк
+                                        
+                                    ul.add_controls
+                                        li.tab_item: a.tab_link.icon-add_client(href='#tab_unit_1'): span.tab_text Добавить созаемщика
+                                        li.tab_item: a.tab_link.icon-add_gaurantor(href='#tab_unit_2'): span.tab_text Добавить поручителя
+                                        li.tab_item: a.tab_link.icon-wallet(href='#tab_unit_3'): span.tab_text Добавить залогодателя
+                                        
+                                .steps_holder
+                                    ul.step_list
+                                        li.step_item.last_item: span.step_link(href='#') 
+                                        li.step_item: a.step_link(href='#'): span.mb Анкета имущества
+                                        li.step_item.active_step: a.step_link(href='#'): span.mb Анкета доходов и расходов
+                                        li.step_item: a.step_link(href='#'): span.mb Анкета основного места работы
+                                        li.step_item: a.step_link(href='#'): span.mb Анкета автокредита
+                                        li.step_item: a.step_link(href='#'): span.mb Анкета довренного лица
+                                        li.step_item.active_step: a.step_link(href='#'): span.mb Общая анкета
+                                        
+                                .tabBlock(data-tab-context='#tab_list')
+                                    #tab_unit_1
+                                        +tab_inner()
+                                            
+                                    #tab_unit_2
+                                        .tab_inner 2
 
-                                    .form_cell.w_100
-                                        .input_w
-                                            button.btn_v1.yellow_black_btn.search_btn Найти
-
-                            .filter_results
-                                table.gl_table.table_v1
-                                    tr
-                                        th.col_1
-                                            span.sort_order.order_down
-                                            span ID
-                                        th.col_2 Клиент
-                                        th.col_3 Автомобиль
-                                        th.col_4 Дата создания
-                                        th.col_5 Статус заявки
-                                        th.col_6 Управление
-                                    +loop_while(4)
-                                        tr.orderRowMain.main_row
-                                            td.col_1
-                                                a.order_link.openOrderBtn(href='#')
-                                                    span.sort_order.order_left
-                                                    span.order_id 55483222
-                                            td.col_2
-                                                p: b Константинопольский Константин Константинович
-                                                p + 7 (906) 123-45-67
-                                                p konstantinopolsky_KK@yandex.ru
-                                            td.col_3 Volkswagen Passat CC  <br>   2015
-                                            td.col_4 24.12.2015  <br>16:30
-                                            td.col_5
-                                                span.color_black Получен ответ
-                                            td.col_6
-                                                ul.order_controls
-                                                    li.control_item: a.btn_v2.control_btn.control_info(href='#')
-                                                    li.control_item: a.btn_v2.control_btn.control_check(href='#')
-                                                    li.control_item: a.btn_v2.control_btn.control_rm(href='#')
-                                        tr.orderRowInfo.info_row
-                                            td.col_1
-                                                b.color_black Банки:
-                                            td.col_2.results_cell(colspan=5)
-                                                ul.order_results
-                                                    li.order_r_item
-                                                        .bank_name
-                                                            span.bank_icon.color_red
-                                                            span Абсолют Банк
-                                                        .bank_programmes
-                                                            .programme_name
-                                                                span.programme_icon
-                                                                span Программа “Выгодный автокредит”
-                                                        .bank_answer
-                                                            b.color_red Отказ
-    
-                                                    li.order_r_item
-                                                        .bank_name
-                                                            span.bank_icon.color_green
-                                                            span Авангард
-                                                        .bank_programmes
-                                                            .programme_name
-                                                                span.programme_icon
-                                                                span Стандартный
-                                                            span ;
-                                                            .programme_name
-                                                                span.programme_icon
-                                                                span Абсолютно для всех
-                                                        .bank_answer
-                                                            b.color_green Одобрение
-    
-                                                    li.order_r_item
-                                                        .bank_name
-                                                            span.bank_icon
-                                                            span Альфа Банк
-                                                        .bank_programmes
-                                                            .programme_name
-                                                                span.programme_icon
-                                                                span Каждому по “жедезному коню”
-                                                            span ;
-                                                            .programme_name
-                                                                span.programme_icon
-                                                                span Автокредит (льготное кредитование) 
-                                                        .bank_answer
-                                                            span Ожидание ответа
-    
-                                                    li.order_r_item
-                                                        .bank_name
-                                                            span.bank_icon
-                                                            span Банк Возрождение
-                                                        .bank_programmes
-                                                            .programme_name
-                                                                span.programme_icon
-                                                                span Потребительский кредит
-                                                        .bank_answer
-                                                            span Ожидание ответа
-
-                            ul.pagination_block
-                                li.active: a.gl_link.first_link(href='#') 1
-                                li: a.gl_link(href='#') 2
-                                li: a.gl_link(href='#') 3
-                                li: a.gl_link.last_link(href='#') 4
-                                li.pagination_next: a.gl_link(href='#')
-                                    span.icon_next.icon-before.icon-arrow-right2.color_violet
-                                li.pagination_counter
-                                    span 1 – 20 из 140
-
-
+                                    #tab_unit_3
+                                        .tab_inner 3
 
             +footer()
