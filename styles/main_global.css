@@ -236,7 +236,7 @@ textarea:focus::-moz-placeholder {
   font-style: normal;
 }
 .icon-before:before, .bank_icon:before,
-.programme_icon:before, .input_w.datepicker_holder .ui-datepicker-trigger:before, .btn_v2.control_btn:before, .select_v1 .select2-selection--single .select2-selection__arrow:before, .tab_link:before, .check_text:before {
+.programme_icon:before, .input_w.datepicker_holder .ui-datepicker-trigger:before, .btn_v2.control_btn:before, .select_v1 .select2-selection--single .select2-selection__arrow:before, .tab_link:before, .check_text:before, .ui-datepicker-prev .ui-icon:before, .ui-datepicker-next .ui-icon:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'credit_it_icons' !important;
   speak: none;
@@ -306,7 +306,7 @@ textarea:focus::-moz-placeholder {
   content: "\e904";
 }
 
-.icon-arrow-right2:before {
+.icon-arrow-right2:before, .ui-datepicker-prev .ui-icon:before, .ui-datepicker-next .ui-icon:before {
   content: "\e905";
 }
 
@@ -2374,6 +2374,29 @@ b {
 
 .step_controls {
   margin: 40px 0;
+}
+
+.ui-datepicker-prev .ui-icon {
+  text-indent: 0;
+  width: 16px;
+  height: 16px;
+}
+.ui-datepicker-prev .ui-icon:before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  font-size: 16px;
+  position: absolute;
+}
+
+.ui-datepicker-next .ui-icon {
+  text-indent: 0;
+  width: 16px;
+  height: 16px;
+}
+.ui-datepicker-next .ui-icon:before {
+  font-size: 16px;
+  position: absolute;
 }
 
 /*# sourceMappingURL=main_global.css.map */

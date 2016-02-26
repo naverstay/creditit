@@ -296,8 +296,42 @@ $gl_yellow_2: #fdce0b;
   line-height: 36px;
 }
 
-
 .step_controls {
   @extend %clearfix;
   margin: 40px 0;
+}
+
+.ui-datepicker-prev {
+
+  .ui-icon {
+    @extend .icon-before;
+    @extend .icon-arrow-right2;
+    text-indent: 0;
+    width: 16px;
+    height: 16px;
+    
+    &:before {
+      @include transform_rotate(180);
+      font-size: 16px;
+      position: absolute;
+
+    }
+  }
+}
+
+.ui-datepicker-next {
+
+  .ui-icon {
+    @extend .icon-before;
+    @extend .icon-arrow-right2;
+    text-indent: 0;
+    width: 16px;
+    height: 16px;
+
+    &:before {
+      font-size: 16px;
+      position: absolute;
+    }
+
+  }
 }
