@@ -1668,6 +1668,7 @@
             beforeShowDay: null, // Function that takes a date and returns an array with
             // [0] = true if selectable, false if not, [1] = custom CSS class name(s) or "",
             // [2] = cell title (optional), e.g. $.datepicker.noWeekends
+            afterShow: null,
             beforeShow: null, // Function that takes an input field and
             // returns a set of custom settings for the date picker
             onSelect: null, // Define a callback function when a date is selected
@@ -2295,7 +2296,7 @@
                 return;
             }
 
-            var inst, beforeShow, beforeShowSettings, isFixed,
+            var inst, beforeShow, beforeShowSettings, afterShow, afterShowSettings, isFixed,
                 offset, showAnim, duration;
 
             inst = $.datepicker._getInst(input);
@@ -2364,6 +2365,11 @@
                 }
 
                 $.datepicker._curInst = inst;
+            }
+            afterShow = $.datepicker._get(inst, "afterShow");
+            afterShowSettings = afterShow ? afterShow.apply(input, [input, inst]) : {};
+            if (afterShowSettings === false) {
+                return;
             }
         },
 

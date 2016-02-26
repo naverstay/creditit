@@ -67,50 +67,785 @@
                     <li class="step_item active_step"><a href="#" class="step_link"><span class="mb">Общая анкета</span></a></li>
                   </ul>
                 </div>
-                <div data-tab-context="#tab_list" class="tabBlock">
-                  <div id="tab_unit_1">
+                <div data-tab-context="#tab_list" class="tabBlock tab_block">
+                  <div id="tab_unit_1" class="tab_unit">
                     <div class="tab_inner">
-                      <div class="form_row_caption">1. <span>Общая информация</span></div>
-                      <div class="form_row form_cell_v2">
-                        <div class="form_cell cell_v1 w_290 select_v1">
-                          <div class="form_label">
-                            <label for="relations">Отношение к клиенту<span class="color_red">*</span></label>
-                          </div>
-                          <select id="relations" class="select2">
-                            <option>Коллега с места работы</option>
-                            <option>Выбор 2</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form_row form_cell_v2">
-                        <div class="form_cell cell_v1 w_290 select_v1">
-                          <div class="form_label">
-                            <label for="last_name">Пол<span class="color_red">*</span></label>
-                          </div>
-                          <div class="input_w w_260">
-                            <input id="last_name" class="f_input input_v1"/>
+                      <div class="form_section">
+                        <div class="form_row_caption">1. <span>Общая информация</span></div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290 select_v1">
+                            <div class="form_label">
+                              <label for="relations">Отношение к клиенту<span class="color_red">*</span></label>
+                            </div>
+                            <select id="relations" class="select2">
+                              <option>Коллега с места работы</option>
+                              <option>Выбор 2</option>
+                            </select>
                           </div>
                         </div>
-                      </div>
-                      <div class="form_row form_cell_v2">
-                        <div class="form_cell cell_v1 w_290 select_v1">
-                          <div class="form_label">
-                            <label for="last_name">Фамилия<span class="color_red">*</span></label>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="gender">Пол<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="gender" class="f_input input_v1"/>
+                            </div>
                           </div>
-                          <div class="input_w w_260">
-                            <input id="last_name" class="f_input input_v1"/>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="last_name">Фамилия<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="last_name" value="Константинопольский" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="first_name">Имя<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="first_name" value="Константин" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="fathers_name">Отчество<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="fathers_name" value="Константинович" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="phone">Телефон<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="phone" value="8-910-123-45-67" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="email">Электронная почта</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="email" value="konstantinopolsky@mail.ru" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="inn">ИНН<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="inn" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="snils">СНИЛС<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="snils" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290 select_v1">
+                            <div class="form_label">
+                              <label for="military_id">Наличие военного билета</label>
+                            </div>
+                            <select id="military_id" class="select2">
+                              <option>Не указано</option>
+                              <option>Выбор 2</option>
+                            </select>
+                          </div>
+                          <div class="form_cell cell_v1 w_580">
+                            <div class="form_label">
+                              <label for="lack_reasons">Причины отсутствия</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="lack_reasons" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_870">
+                            <div class="cut_place"></div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 check_holder">
+                            <div class="fl">
+                              <label class="checkbox_emul">
+                                <input type="checkbox" data-disable="0" class="hidden_input disableChecker"/><span class="check_text">
+                                   
+                                  – ФИО было изменено<span class="color_red">* </span></span>
+                              </label>
+                            </div><span class="form_tip"> (Если ФИО было изменено, то укажите причины изменения)</span>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div data-disable="0" class="form_cell cell_v1 w_580 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="last_name_ch_reason">Причина изменения ФИО</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="last_name_ch_reason" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div data-disable="0" class="form_cell cell_v1 w_290 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="last_name_changed">Фамилия</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="last_name_changed" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div data-disable="0" class="form_cell cell_v1 w_290 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="first_name_changed">Имя</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="first_name_changed" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div data-disable="0" class="form_cell cell_v1 w_290 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="fathers_name_changed">Отчество</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="fathers_name_changed" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_870">
+                            <div class="cut_place"></div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <p>Укажите ФИО латинскими буквами как в загранпаспорте </p>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="last_name_translit">Фамилия латинскими буквами</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="last_name_translit" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="first_name_translit">Имя латинскими буквами</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="first_name_translit" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="fathers_name_translit">Отчество латинскими буквами</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="fathers_name_translit" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_section">
+                        <div class="form_row_caption">2. <span>Фактический адрес</span></div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290 select_v1">
+                            <div class="form_label">
+                              <label for="actual_address">Совпадает с адресом<span class="color_red">*</span></label>
+                            </div>
+                            <select id="actual_address" class="select2">
+                              <option>Постоянной регистрации</option>
+                              <option>Выбор 2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_580">
+                            <div class="form_label">
+                              <label for="addr_republic">Республика / Край / Область<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="addr_republic" value="Ленинградская область" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_580">
+                            <div class="form_label">
+                              <label for="addr_region">Район<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="addr_region" value="Северо-Западный" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="addr_index">Индекс</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="addr_index" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_580">
+                            <div class="form_label">
+                              <label for="addr_street">Улица<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="addr_street" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_110">
+                            <div class="form_label">
+                              <label for="addr_house">Дом<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="addr_house" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_180">
+                            <div class="form_label">
+                              <label for="addr_corp">Корпус / Строение</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="addr_corp" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_110">
+                            <div class="form_label">
+                              <label for="addr_flat">Квартира<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="addr_flat" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="home_phone">Домашний телефон</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="home_phone" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="addr_duration">Срок проживания на фактическом адресе<span class="color_red">* </span><span class="form_tip"> (В годах)</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="addr_duration" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_435 select_v1">
+                            <div class="form_label">
+                              <label for="immovables_type">Тип недвижимости</label>
+                            </div>
+                            <select id="immovables_type" class="select2">
+                              <option>Квартира в многоквартирном доме</option>
+                              <option>Выбор 2</option>
+                            </select>
+                          </div>
+                          <div class="form_cell cell_v1 w_435 select_v1">
+                            <div class="form_label">
+                              <label for="immovables_status">Статус недвижимости</label>
+                            </div>
+                            <select id="immovables_status" class="select2">
+                              <option>Социальный или служебный найм</option>
+                              <option>Выбор 2</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_section">
+                        <div class="form_row_caption">3. <span>Адрес постоянной регистрации</span></div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_580 cell_disabled">
+                            <div class="form_label">
+                              <label for="actual_addr_republic">Республика / Край / Область<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="actual_addr_republic" value="Ленинградская область" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_580 cell_disabled">
+                            <div class="form_label">
+                              <label for="permanent_addr_region">Район<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="permanent_addr_region" value="Северо-Западный" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290 cell_disabled">
+                            <div class="form_label">
+                              <label for="permanent_addr_index">Индекс</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="permanent_addr_index" placeholder="Введите индекс" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_580 cell_disabled">
+                            <div class="form_label">
+                              <label for="permanent_addr_street">Улица<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="permanent_addr_street" placeholder="Введите улицу " disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_110 cell_disabled">
+                            <div class="form_label">
+                              <label for="permanent_addr_house">Дом<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="permanent_addr_house" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_180 cell_disabled">
+                            <div class="form_label">
+                              <label for="permanent_addr_corp">Корпус / Строение</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="permanent_addr_corp" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_110 cell_disabled">
+                            <div class="form_label">
+                              <label for="permanent_addr_flat">Квартира<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="permanent_addr_flat" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290 cell_disabled">
+                            <div class="form_label">
+                              <label for="actual_home_phone">Домашний телефон</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="actual_home_phone" placeholder="Введите номер домашнего телефона" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="reg_date">Дата регистрации<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w datepicker_holder">
+                              <input id="reg_date" placeholder="ЧЧ/ММ/ГГ" class="f_input input_v1 calendarInput"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_section">
+                        <div class="form_row_caption">4. <span>Адрес временной регистрации</span></div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 check_holder">
+                            <div class="fl">
+                              <label class="checkbox_emul">
+                                <input type="checkbox" data-disable="1" class="hidden_input disableChecker"/><span class="check_text">
+                                   
+                                  – Наличие временной регистрации<span class="color_red">* </span></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div data-disable="1" class="form_cell cell_v1 w_580 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="temp_addr_republic">Республика / Край / Область<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="temp_addr_republic" value="Ленинградская область" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div data-disable="1" class="form_cell cell_v1 w_580 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="temp_addr_region">Район<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="temp_addr_region" value="Северо-Западный" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div data-disable="1" class="form_cell cell_v1 w_290 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="temp_addr_index">Индекс</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="temp_addr_index" placeholder="Введите индекс" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div data-disable="1" class="form_cell cell_v1 w_580 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="temp_addr_street">Улица<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="temp_addr_street" placeholder="Введите улицу " disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div data-disable="1" class="form_cell cell_v1 w_110 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="temp_addr_house">Дом<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="temp_addr_house" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div data-disable="1" class="form_cell cell_v1 w_180 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="temp_addr_corp">Корпус / Строение</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="temp_addr_corp" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div data-disable="1" class="form_cell cell_v1 w_110 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="temp_addr_flat">Квартира<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="temp_addr_flat" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div data-disable="1" class="form_cell cell_v1 w_290 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="reg_date_end">Срок окончания временной регистрации<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w datepicker_holder">
+                              <input id="reg_date_end" placeholder="ЧЧ/ММ/ГГ" disabled="disabled" class="f_input input_v1 calendarInput"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_section">
+                        <div class="form_row_caption">5. <span>Паспортные данные</span></div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">&nbsp;</div>
+                            <div class="check_cell">
+                              <label class="checkbox_emul">
+                                <input type="checkbox" data-disable-invert="true" data-disable="2" checked="checked" class="hidden_input disableChecker"/><span class="check_text">
+                                   
+                                  – Российское гражданство<span class="color_red">* </span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div data-disable="2" class="form_cell cell_v1 w_580 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="nationality">Гражданство<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="nationality" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_190">
+                            <div class="form_label">
+                              <label for="passport_series">Серия<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="passport_series" value="4475" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_190">
+                            <div class="form_label">
+                              <label for="passport_number">Номер<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="passport_number" value="557322" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_190">
+                            <div class="form_label">
+                              <label for="passport_division_code">Код подразделения<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="passport_division_code" value="123-456" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_190">
+                            <div class="form_label">
+                              <label for="passport_issue_date">Дата выдачи<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w datepicker_holder">
+                              <input id="passport_issue_date" value="12.04.1978" data-format="dd.mm.yy" class="f_input input_v1 calendarInput"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_870">
+                            <div class="form_label">
+                              <label for="passport_provider">Кем выдан<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="passport_provider" value="ФНС №1 Ленинградской области по Приморскому району города Санкт-Петербурга" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="passport_birthday">Дата рождения<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w datepicker_holder">
+                              <input id="passport_birthday" placeholder="ЧЧ/ММ/ГГ" class="f_input input_v1 calendarInput"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_580">
+                            <div class="form_label">
+                              <label for="passport_birth_place">Место рождения<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="passport_birth_place" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_870">
+                            <div class="cut_place"></div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">&nbsp;</div>
+                            <div class="check_cell">
+                              <label class="checkbox_emul">
+                                <input type="checkbox" data-disable="3" class="hidden_input disableChecker"/><span class="check_text">– Текущему паспорту менее 3-х лет<span class="color_red">* </span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div data-disable="3" class="form_cell cell_v1 w_580 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="passport_less_3_reasons">Причины получения нового паспорта<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="passport_less_3_reasons" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div data-disable="3" class="form_cell cell_v1 w_190 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="passport_less_3_series">Серия<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="passport_less_3_series" value="4475" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div data-disable="3" class="form_cell cell_v1 w_190 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="passport_less_3_number">Номер<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="passport_less_3_number" value="557322" disabled="disabled" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div data-disable="3" class="form_cell cell_v1 w_190 cell_disabled disableToggle">
+                            <div class="form_label">
+                              <label for="passport_less_3_issue_date">Дата выдачи<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w datepicker_holder">
+                              <input id="passport_less_3_issue_date" disabled="disabled" class="f_input input_v1 calendarInput"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_870">
+                            <div class="cut_place"></div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <p>Прикрепите скан всех страниц паспорта, на которых отображаются данные</p>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label"></div>
+                            <input id="passport_scan_attach" type="file" class="hidden_input"/>
+                            <label for="passport_scan_attach" class="btn_v3 violet_btn attach_btn">Прикрепить материалы</label>
+                          </div>
+                          <div class="form_cell cell_v1 cb">
+                            <div class="attach_msg">Нет ни одного прикрепленного файла  </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_section">
+                        <div class="form_row_caption">6. <span>Образование</span></div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290 select_v1">
+                            <div class="form_label">
+                              <label for="education">Тип образования<span class="color_red">*</span></label>
+                            </div>
+                            <select id="education" class="select2">
+                              <option>Высшее</option>
+                              <option>Выбор 2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_580">
+                            <div class="form_label">
+                              <label for="education_last_institution">Наименование последнего учебного заведения<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="education_last_institution" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_580">
+                            <div class="form_label">
+                              <label for="education_last_specialty">Специальность<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="education_last_specialty" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_section">
+                        <div class="form_row_caption">7. <span>Семейное положение</span></div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290 select_v1">
+                            <div class="form_label">
+                              <label for="family_status">Тип семейного положения<span class="color_red">*</span></label>
+                            </div>
+                            <select id="family_status" class="select2">
+                              <option>Холост / Не замужем</option>
+                              <option>Выбор 2</option>
+                            </select>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">&nbsp;</div>
+                            <div class="check_cell">
+                              <label class="checkbox_emul">
+                                <input type="checkbox" class="hidden_input"/><span class="check_text">
+                                   
+                                  – Есть брачный контракт<span class="color_red">* </span></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="family_dependents_count">Количество лиц на иждивении<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="family_dependents_count" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="family_chidren_count">Количество детей на иждивении<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="family_chidren_count" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_290">
+                            <div class="form_label">
+                              <label for="family_adult_children_count">Количество детей старше 18 лет<span class="color_red">*</span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="family_adult_children_count" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_section">
+                        <div class="form_row_caption">8. <span>Стаж вождения</span></div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_380">
+                            <div class="form_label">&nbsp;</div>
+                            <div class="check_cell">
+                              <label class="checkbox_emul">
+                                <input type="checkbox" class="hidden_input"/><span class="check_text">
+                                   
+                                  – Наличие водительского удостоверения<span class="color_red">* </span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_200">
+                            <div class="form_label">
+                              <label for="driving_experience">Стаж вождения <span class="form_tip"> (В годах) </span></label>
+                            </div>
+                            <div class="input_w">
+                              <input id="driving_experience" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_section">
+                        <div class="form_row_caption">9. <span>Заграничный паспорт</span></div>
+                        <div class="form_row form_cell_v2">
+                          <div class="form_cell cell_v1 w_190">
+                            <div class="form_label">
+                              <label for="international_passport_series">Серия</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="international_passport_series" value="4475" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_190">
+                            <div class="form_label">
+                              <label for="international_passport_number">Номер</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="international_passport_number" value="557322" class="f_input input_v1"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_190">
+                            <div class="form_label">
+                              <label for="international_passport_issue_date">Дата выдачи</label>
+                            </div>
+                            <div class="input_w datepicker_holder">
+                              <input id="international_passport_issue_date" data-format="dd.mm.yy" class="f_input input_v1 calendarInput"/>
+                            </div>
+                          </div>
+                          <div class="form_cell cell_v1 w_300">
+                            <div class="form_label">
+                              <label for="international_passport_division_code">Кем выдан</label>
+                            </div>
+                            <div class="input_w">
+                              <input id="international_passport_division_code" class="f_input input_v1"/>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div id="tab_unit_2">
+                  <div id="tab_unit_2" class="tab_unit">
                     <div class="tab_inner">2</div>
                   </div>
-                  <div id="tab_unit_3">
+                  <div id="tab_unit_3" class="tab_unit">
                     <div class="tab_inner">3</div>
                   </div>
                 </div>
+                <div class="step_controls"><a href="#" class="btn_v1 next_step_btn violet_btn_2">К следущему шагу</a></div>
               </div>
             </form>
           </div>

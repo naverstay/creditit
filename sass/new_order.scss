@@ -1,8 +1,12 @@
 $gl_yellow_2: #fdce0b;
 
+.new_order_form {
+  padding-bottom: 60px;
+}
+
 .tab_list_holder {
   @extend %clearfix;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .tab_list {
@@ -98,6 +102,13 @@ $gl_yellow_2: #fdce0b;
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: .4px;
+}
+
+.tab_block,
+.tab_unit {
+  border-radius: 0 !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
 .steps_holder {
@@ -198,15 +209,20 @@ $gl_yellow_2: #fdce0b;
     right: -7px;
     border: solid #e5e6e8;
     border-width: 0 1px 3px 0;
-
   }
 
+}
+
+.form_section {
+  padding-bottom: 16px;
+  margin-bottom: 35px;
+  border-bottom: 2px solid #e5e6e8;
 }
 
 .form_row_caption {
   font-weight: bold;
   margin-bottom: 23px;
-  letter-spacing: .45px;
+  //letter-spacing: .45px;
 
   span {
     border-bottom: 2px solid $gl_yellow_2;
@@ -214,6 +230,74 @@ $gl_yellow_2: #fdce0b;
 }
 
 .form_label {
-  margin-bottom: 8px;
+  margin-bottom: 9px;
+  font-size: 13px;
   letter-spacing: -.15px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.form_tip {
+  color: #858585;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.checkbox_emul {
+  position: relative;
+  display: block;
+  cursor: pointer;
+
+  .hidden_input:checked + .check_text {
+    @extend .icon-check2;
+
+    &:before {
+      background: #fdce0b;
+      border-color: #fdce0b;
+    }
+  }
+}
+
+.check_text {
+  @extend .icon-before;
+  padding-left: 18px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    color: #1c1701;
+    border: 1px solid #b6b6b6;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+  }
+}
+
+.hidden_input {
+  display: none;
+}
+
+.cut_place {
+  border-top: 1px dashed #b6b6b6;
+  margin: 15px 0 10px;
+}
+
+.check_holder {
+  line-height: 16px;
+}
+
+.check_cell {
+  line-height: 36px;
+}
+
+
+.step_controls {
+  @extend %clearfix;
+  margin: 40px 0;
 }

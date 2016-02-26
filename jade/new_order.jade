@@ -36,14 +36,18 @@ html(lang='ru')
                                         li.step_item: a.step_link(href='#'): span.mb Анкета довренного лица
                                         li.step_item.active_step: a.step_link(href='#'): span.mb Общая анкета
                                         
-                                .tabBlock(data-tab-context='#tab_list')
-                                    #tab_unit_1
+                                .tabBlock.tab_block(data-tab-context='#tab_list')
+                                    #tab_unit_1.tab_unit
                                         +tab_inner()
                                             
-                                    #tab_unit_2
+                                    #tab_unit_2.tab_unit
                                         .tab_inner 2
 
-                                    #tab_unit_3
+                                    #tab_unit_3.tab_unit
                                         .tab_inner 3
 
+                                .step_controls
+                                    a.btn_v1.next_step_btn.violet_btn_2(href='#') К следущему шагу
+                                
+                                            
             +footer()

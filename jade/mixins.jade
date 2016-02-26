@@ -36,12 +36,10 @@ mixin header(active_menu)
  
 
 
-mixin input_coposer(w_cls, inp_id, inp_cls, inp_plc) 
+mixin input_coposer(w_cls, inp_id, inp_cls, inp_plc, inp_val, inp_disable, inp_data_format) 
     .input_w(class=w_cls)
-        input.f_input(id=inp_id class=inp_cls placeholder=inp_plc)
-
-
-
+        input.f_input(id=inp_id || null class=inp_cls placeholder=inp_plc || null value=inp_val || null disabled = (inp_disable ? 'disabled' : null) data-format = inp_data_format || null)
+        
 
 mixin select2 (first_option, id)
     select.select2(id=id)
@@ -61,33 +59,559 @@ mixin footer()
 
 mixin tab_inner()
     .tab_inner
-        .form_row_caption
-            | 1. 
-            span Общая информация
-            
-        .form_row.form_cell_v2
-            .form_cell.cell_v1.w_290.select_v1
-                .form_label: label(for='relations')
-                    | Отношение к клиенту
-                    span.color_red *
-                +select2('Коллега с места работы', 'relations')
+        .form_section
+            .form_row_caption
+                | 1. 
+                span Общая информация
                 
-        .form_row.form_cell_v2
-            .form_cell.cell_v1.w_290.select_v1
-                .form_label: label(for='last_name')
-                    | Пол
-                    span.color_red *
-                +input_coposer('w_260', 'last_name', 'input_v1')
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290.select_v1
+                    .form_label: label(for='relations')
+                        | Отношение к клиенту
+                        span.color_red *
+                    +select2('Коллега с места работы', 'relations')
+                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='gender')
+                        | Пол
+                        span.color_red *
+                    +input_coposer('', 'gender', 'input_v1')
+                
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='last_name')
+                        | Фамилия
+                        span.color_red *
+                    +input_coposer('', 'last_name', 'input_v1', '', 'Константинопольский')
+                        
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='first_name')
+                        | Имя
+                        span.color_red *
+                    +input_coposer('', 'first_name', 'input_v1', '', 'Константин')
+                        
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='fathers_name')
+                        | Отчество
+                        span.color_red *
+                    +input_coposer('', 'fathers_name', 'input_v1', '', 'Константинович')
+                                            
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='phone')
+                        | Телефон
+                        span.color_red *
+                    +input_coposer('', 'phone', 'input_v1', '', '8-910-123-45-67')
+                    
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='email')
+                        | Электронная почта
+                    +input_coposer('', 'email', 'input_v1', '', 'konstantinopolsky@mail.ru')
+                        
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='inn')
+                        | ИНН
+                        span.color_red *
+                    +input_coposer('', 'inn', 'input_v1')
+                    
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='snils')
+                        | СНИЛС
+                        span.color_red *
+                    +input_coposer('', 'snils', 'input_v1')
+    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290.select_v1
+                    .form_label: label(for='military_id')
+                        | Наличие военного билета
+                    +select2('Не указано', 'military_id')
+    
+                .form_cell.cell_v1.w_580
+                    .form_label: label(for='lack_reasons')
+                        | Причины отсутствия
+                    +input_coposer('', 'lack_reasons', 'input_v1')
+    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_870
+                    .cut_place
             
-        .form_row.form_cell_v2
-            .form_cell.cell_v1.w_290.select_v1
-                .form_label: label(for='last_name')
-                    | Фамилия
-                    span.color_red *
-                +input_coposer('w_260', 'last_name', 'input_v1')
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.check_holder
+                    .fl: label.checkbox_emul
+                        input.hidden_input.disableChecker(type='checkbox' data-disable='0')
+                        span.check_text 
+                            | – ФИО было изменено
+                            span.color_red * 
+                    span.form_tip  (Если ФИО было изменено, то укажите причины изменения)
+    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580.cell_disabled.disableToggle(data-disable='0')
+                    .form_label: label(for='last_name_ch_reason')
+                        | Причина изменения ФИО
+                    +input_coposer('', 'last_name_ch_reason', 'input_v1', '', '', true)
+                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290.cell_disabled.disableToggle(data-disable='0')
+                    .form_label: label(for='last_name_changed')
+                        | Фамилия
+                    +input_coposer('', 'last_name_changed', 'input_v1', '', '', true)
+                .form_cell.cell_v1.w_290.cell_disabled.disableToggle(data-disable='0')
+                    .form_label: label(for='first_name_changed')
+                        | Имя
+                    +input_coposer('', 'first_name_changed', 'input_v1', '', '', true)
+                .form_cell.cell_v1.w_290.cell_disabled.disableToggle(data-disable='0')
+                    .form_label: label(for='fathers_name_changed')
+                        | Отчество
+                    +input_coposer('', 'fathers_name_changed', 'input_v1', '', '', true)
+    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_870
+                    .cut_place
+                    
+            .form_row.form_cell_v2
+                p Укажите ФИО латинскими буквами как в загранпаспорте 
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='last_name_translit')
+                        | Фамилия латинскими буквами
+                    +input_coposer('', 'last_name_translit', 'input_v1', '', '')
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='first_name_translit')
+                        | Имя латинскими буквами
+                    +input_coposer('', 'first_name_translit', 'input_v1', '', '')
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='fathers_name_translit')
+                        | Отчество латинскими буквами
+                    +input_coposer('', 'fathers_name_translit', 'input_v1', '', '')
+
+        .form_section
+            .form_row_caption
+                | 2. 
+                span Фактический адрес
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290.select_v1
+                    .form_label: label(for='actual_address')
+                        | Совпадает с адресом
+                        span.color_red *
+                    +select2('Постоянной регистрации', 'actual_address')
+                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580
+                    .form_label: label(for='addr_republic')
+                        | Республика / Край / Область
+                        span.color_red *
+                    +input_coposer('', 'addr_republic', 'input_v1', '' , 'Ленинградская область')
+                                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580
+                    .form_label: label(for='addr_region')
+                        | Район
+                        span.color_red *
+                    +input_coposer('', 'addr_region', 'input_v1', '' , 'Северо-Западный')
+                    
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='addr_index')
+                        | Индекс
+                    +input_coposer('', 'addr_index', 'input_v1', '' , '')
+    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580
+                    .form_label: label(for='addr_street')
+                        | Улица
+                        span.color_red *
+                    +input_coposer('', 'addr_street', 'input_v1', '' , '')
+                    
+                .form_cell.cell_v1.w_110
+                    .form_label: label(for='addr_house')
+                        | Дом
+                        span.color_red *
+                    +input_coposer('', 'addr_house', 'input_v1', '' , '')
+                    
+                .form_cell.cell_v1.w_180
+                    .form_label: label(for='addr_corp')
+                        | Корпус / Строение
+                    +input_coposer('', 'addr_corp', 'input_v1', '' , '')
+    
+                .form_cell.cell_v1.w_110
+                    .form_label: label(for='addr_flat')
+                        | Квартира
+                        span.color_red *
+                    +input_coposer('', 'addr_flat', 'input_v1', '' , '')
+    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='home_phone')
+                        | Домашний телефон
+                    +input_coposer('', 'home_phone', 'input_v1', '' , '')
+                    
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='addr_duration')
+                        | Срок проживания на фактическом адресе
+                        span.color_red * 
+                        span.form_tip  (В годах)
+                    +input_coposer('', 'addr_duration', 'input_v1', '' , '')
+                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_435.select_v1
+                    .form_label: label(for='immovables_type')
+                        | Тип недвижимости
+                    +select2('Квартира в многоквартирном доме', 'immovables_type')
+                .form_cell.cell_v1.w_435.select_v1
+                    .form_label: label(for='immovables_status')
+                        | Статус недвижимости
+                    +select2('Социальный или служебный найм', 'immovables_status')
+                    
+        .form_section
+            .form_row_caption
+                | 3. 
+                span Адрес постоянной регистрации
+                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580.cell_disabled
+                    .form_label: label(for='actual_addr_republic')
+                        | Республика / Край / Область
+                        span.color_red *
+                    +input_coposer('', 'actual_addr_republic', 'input_v1', '' , 'Ленинградская область', true)
+                                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580.cell_disabled
+                    .form_label: label(for='permanent_addr_region')
+                        | Район
+                        span.color_red *
+                    +input_coposer('', 'permanent_addr_region', 'input_v1', '' , 'Северо-Западный', true)
+                    
+                .form_cell.cell_v1.w_290.cell_disabled
+                    .form_label: label(for='permanent_addr_index')
+                        | Индекс
+                    +input_coposer('', 'permanent_addr_index', 'input_v1', 'Введите индекс' , '', true)
+    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580.cell_disabled
+                    .form_label: label(for='permanent_addr_street')
+                        | Улица
+                        span.color_red *
+                    +input_coposer('', 'permanent_addr_street', 'input_v1', 'Введите улицу ' , '', true)
+                    
+                .form_cell.cell_v1.w_110.cell_disabled
+                    .form_label: label(for='permanent_addr_house')
+                        | Дом
+                        span.color_red *
+                    +input_coposer('', 'permanent_addr_house', 'input_v1', '' , '', true)
+                    
+                .form_cell.cell_v1.w_180.cell_disabled
+                    .form_label: label(for='permanent_addr_corp')
+                        | Корпус / Строение
+                    +input_coposer('', 'permanent_addr_corp', 'input_v1', '' , '', true)
+    
+                .form_cell.cell_v1.w_110.cell_disabled
+                    .form_label: label(for='permanent_addr_flat')
+                        | Квартира
+                        span.color_red *
+                    +input_coposer('', 'permanent_addr_flat', 'input_v1', '' , '', true)
+                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290.cell_disabled
+                    .form_label: label(for='actual_home_phone')
+                        | Домашний телефон
+                    +input_coposer('', 'actual_home_phone', 'input_v1', 'Введите номер домашнего телефона' , '', true)
+
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='reg_date')
+                        | Дата регистрации
+                        span.color_red *
+                    +input_coposer('datepicker_holder', 'reg_date', 'input_v1 calendarInput', 'ЧЧ/ММ/ГГ' , '')                    
+        .form_section
+            .form_row_caption
+                | 4. 
+                span Адрес временной регистрации
+                      
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.check_holder
+                    .fl: label.checkbox_emul
+                        input.hidden_input.disableChecker(type='checkbox' data-disable='1')
+                        span.check_text 
+                            | – Наличие временной регистрации
+                            span.color_red * 
+                
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580.cell_disabled.disableToggle(data-disable='1')
+                    .form_label: label(for='temp_addr_republic')
+                        | Республика / Край / Область
+                        span.color_red *
+                    +input_coposer('', 'temp_addr_republic', 'input_v1', '' , 'Ленинградская область', true)
+                                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580.cell_disabled.disableToggle(data-disable='1')
+                    .form_label: label(for='temp_addr_region')
+                        | Район
+                        span.color_red *
+                    +input_coposer('', 'temp_addr_region', 'input_v1', '' , 'Северо-Западный', true)
+                    
+                .form_cell.cell_v1.w_290.cell_disabled.disableToggle(data-disable='1')
+                    .form_label: label(for='temp_addr_index')
+                        | Индекс
+                    +input_coposer('', 'temp_addr_index', 'input_v1', 'Введите индекс' , '', true)
+    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580.cell_disabled.disableToggle(data-disable='1')
+                    .form_label: label(for='temp_addr_street')
+                        | Улица
+                        span.color_red *
+                    +input_coposer('', 'temp_addr_street', 'input_v1', 'Введите улицу ' , '', true)
+                    
+                .form_cell.cell_v1.w_110.cell_disabled.disableToggle(data-disable='1')
+                    .form_label: label(for='temp_addr_house')
+                        | Дом
+                        span.color_red *
+                    +input_coposer('', 'temp_addr_house', 'input_v1', '' , '', true)
+                    
+                .form_cell.cell_v1.w_180.cell_disabled.disableToggle(data-disable='1')
+                    .form_label: label(for='temp_addr_corp')
+                        | Корпус / Строение
+                    +input_coposer('', 'temp_addr_corp', 'input_v1', '' , '', true)
+    
+                .form_cell.cell_v1.w_110.cell_disabled.disableToggle(data-disable='1')
+                    .form_label: label(for='temp_addr_flat')
+                        | Квартира
+                        span.color_red *
+                    +input_coposer('', 'temp_addr_flat', 'input_v1', '' , '', true)
+                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290.cell_disabled.disableToggle(data-disable='1')
+                    .form_label: label(for='reg_date_end')
+                        | Срок окончания временной регистрации
+                        span.color_red *
+                    +input_coposer('datepicker_holder', 'reg_date_end', 'input_v1 calendarInput', 'ЧЧ/ММ/ГГ' , '', true)
+
+        .form_section
+            .form_row_caption
+                | 5. 
+                span Паспортные данные
+
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290
+                    .form_label &nbsp;
+                    .check_cell: label.checkbox_emul
+                        input.hidden_input.disableChecker(type='checkbox' data-disable-invert='true' data-disable='2' checked)
+                        span.check_text 
+                            | – Российское гражданство
+                            span.color_red * 
+                
+                .form_cell.cell_v1.w_580.cell_disabled.disableToggle(data-disable='2')
+                    .form_label: label(for='nationality')
+                        | Гражданство
+                        span.color_red *
+                    +input_coposer('', 'nationality', 'input_v1', '' , '', true)
+
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_190
+                    .form_label: label(for='passport_series')
+                        | Серия
+                        span.color_red *
+                    +input_coposer('', 'passport_series', 'input_v1', '' , '4475')
+                            
+                .form_cell.cell_v1.w_190
+                    .form_label: label(for='passport_number')
+                        | Номер
+                        span.color_red *
+                    +input_coposer('', 'passport_number', 'input_v1', '' , '557322')
+                            
+                .form_cell.cell_v1.w_190
+                    .form_label: label(for='passport_division_code')
+                        | Код подразделения
+                        span.color_red *
+                    +input_coposer('', 'passport_division_code', 'input_v1', '' , '123-456')
+                            
+                .form_cell.cell_v1.w_190
+                    .form_label: label(for='passport_issue_date')
+                        | Дата выдачи
+                        span.color_red *
+                    +input_coposer('datepicker_holder', 'passport_issue_date', 'input_v1 calendarInput', '' , '12.04.1978', false, 'dd.mm.yy')
+                            
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_870
+                    .form_label: label(for='passport_provider')
+                        | Кем выдан
+                        span.color_red *
+                    +input_coposer('', 'passport_provider', 'input_v1', '' , 'ФНС №1 Ленинградской области по Приморскому району города Санкт-Петербурга')
+
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='passport_birthday')
+                        | Дата рождения
+                        span.color_red *
+                    +input_coposer('datepicker_holder', 'passport_birthday', 'input_v1 calendarInput', 'ЧЧ/ММ/ГГ' , '')
+
+                .form_cell.cell_v1.w_580
+                    .form_label: label(for='passport_birth_place')
+                        | Место рождения
+                        span.color_red *
+                    +input_coposer('', 'passport_birth_place', 'input_v1', '' , '')
+
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_870
+                    .cut_place
+
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290
+                    .form_label &nbsp;
+                    .check_cell: label.checkbox_emul
+                        input.hidden_input.disableChecker(type='checkbox' data-disable='3')
+                        span.check_text
+                            | – Текущему паспорту менее 3-х лет
+                            span.color_red * 
+                .form_cell.cell_v1.w_580.cell_disabled.disableToggle(data-disable='3')
+                    .form_label: label(for='passport_less_3_reasons')
+                        | Причины получения нового паспорта
+                        span.color_red *
+                    +input_coposer('', 'passport_less_3_reasons', 'input_v1', '' , '', true)
+
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_190.cell_disabled.disableToggle(data-disable='3')
+                    .form_label: label(for='passport_less_3_series')
+                        | Серия
+                        span.color_red *
+                    +input_coposer('', 'passport_less_3_series', 'input_v1', '' , '4475', true)
+                            
+                .form_cell.cell_v1.w_190.cell_disabled.disableToggle(data-disable='3')
+                    .form_label: label(for='passport_less_3_number')
+                        | Номер
+                        span.color_red *
+                    +input_coposer('', 'passport_less_3_number', 'input_v1', '' , '557322', true)
+                            
+                .form_cell.cell_v1.w_190.cell_disabled.disableToggle(data-disable='3')
+                    .form_label: label(for='passport_less_3_issue_date')
+                        | Дата выдачи
+                        span.color_red *
+                    +input_coposer('datepicker_holder', 'passport_less_3_issue_date', 'input_v1 calendarInput', '' , '', true)
+                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_870
+                    .cut_place
+                    
+            .form_row.form_cell_v2
+                p Прикрепите скан всех страниц паспорта, на которых отображаются данные
+                .form_cell.cell_v1.w_290
+                    .form_label
+                    input#passport_scan_attach.hidden_input(type='file')
+                    label.btn_v3.violet_btn.attach_btn(for='passport_scan_attach') Прикрепить материалы
+                .form_cell.cell_v1.cb
+                    .attach_msg Нет ни одного прикрепленного файла  
+            
+        .form_section
+            .form_row_caption
+                | 6. 
+                span Образование
+                
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290.select_v1
+                    .form_label: label(for='education')
+                        | Тип образования
+                        span.color_red *
+                    +select2('Высшее', 'education')
+
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580
+                    .form_label: label(for='education_last_institution')
+                        | Наименование последнего учебного заведения
+                        span.color_red *
+                    +input_coposer('', 'education_last_institution', 'input_v1')
+                    
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_580
+                    .form_label: label(for='education_last_specialty')
+                        | Специальность
+                        span.color_red *
+                    +input_coposer('', 'education_last_specialty', 'input_v1')
+                    
+        .form_section
+            .form_row_caption
+                | 7. 
+                span Семейное положение
+                
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290.select_v1
+                    .form_label: label(  for='family_status')
+                        | Тип семейного положения
+                        span.color_red *
+                    +select2('Холост / Не замужем', 'family_status')
+                
+                .form_cell.cell_v1.w_290
+                    .form_label &nbsp;
+                    .check_cell: label.checkbox_emul
+                        input.hidden_input(type='checkbox')
+                        span.check_text 
+                            | – Есть брачный контракт
+                            span.color_red * 
+
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='family_dependents_count')
+                        | Количество лиц на иждивении
+                        span.color_red *
+                    +input_coposer('', 'family_dependents_count', 'input_v1')
+                    
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='family_chidren_count')
+                        | Количество детей на иждивении
+                        span.color_red *
+                    +input_coposer('', 'family_chidren_count', 'input_v1')
+                    
+                .form_cell.cell_v1.w_290
+                    .form_label: label(for='family_adult_children_count')
+                        | Количество детей старше 18 лет
+                        span.color_red *
+                    +input_coposer('', 'family_adult_children_count', 'input_v1')
+                    
+        .form_section
+            .form_row_caption
+                | 8. 
+                span Стаж вождения
+                
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_380
+                    .form_label &nbsp;
+                    .check_cell: label.checkbox_emul
+                        input.hidden_input(type='checkbox')
+                        span.check_text 
+                            | – Наличие водительского удостоверения
+                            span.color_red * 
+
+                .form_cell.cell_v1.w_200
+                    .form_label: label(for='driving_experience')
+                        | Стаж вождения 
+                        span.form_tip  (В годах) 
+                    +input_coposer('', 'driving_experience', 'input_v1')
+                   
+        .form_section
+            .form_row_caption
+                | 9. 
+                span Заграничный паспорт
+                
+            .form_row.form_cell_v2
+                .form_cell.cell_v1.w_190
+                    .form_label: label(for='international_passport_series')
+                        | Серия
+                    +input_coposer('', 'international_passport_series', 'input_v1', '' , '4475')
+                            
+                .form_cell.cell_v1.w_190
+                    .form_label: label(for='international_passport_number')
+                        | Номер
+                    +input_coposer('', 'international_passport_number', 'input_v1', '' , '557322')
+                            
+                .form_cell.cell_v1.w_190
+                    .form_label: label(for='international_passport_issue_date')
+                        | Дата выдачи
+                    +input_coposer('datepicker_holder', 'international_passport_issue_date', 'input_v1 calendarInput', '' , '', false, 'dd.mm.yy')
+                
+                .form_cell.cell_v1.w_300
+                    .form_label: label(for='international_passport_division_code')
+                        | Кем выдан
+                    +input_coposer('', 'international_passport_division_code', 'input_v1', '' , '')
                     
                     
-                
+                        
 mixin loop_while(counter)
     -i=0;
     while i < counter

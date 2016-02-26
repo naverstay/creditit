@@ -53,6 +53,10 @@ b {
   float: right;
 }
 
+.cb {
+  clear: both;
+}
+
 .mb {
   display: inline-block;
   vertical-align: middle;
@@ -505,6 +509,41 @@ b {
 
 //************  forms
 
+.input_w {
+  position: relative;
+
+  &.datepicker_holder {
+    .ui-datepicker-trigger {
+      @extend .icon-before;
+      @extend .icon-calendar;
+      background: none;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 36px;
+      height: 36px;
+      margin-top: -18px;
+
+      &:before {
+        color: $gl_violet;
+        font-size: 24px;
+      }
+    }
+
+    input {
+      padding-right: 50px;
+
+      &:disabled + .ui-datepicker-trigger {
+        pointer-events: none;
+
+        &:before {
+          color: #cdcdcd;
+        }
+      }
+    }
+  }
+}
+
 .form_row {
   @extend %clearfix;
 
@@ -514,7 +553,7 @@ b {
       margin-bottom: 30px;
     }
   }
-  
+
   &.form_cell_v2 {
     .form_cell {
       float: left;
@@ -524,6 +563,12 @@ b {
 
 }
 
+.form_cell_v2 {
+  p {
+    margin-bottom: 12px;
+  }
+}
+
 .form_cell {
   position: relative;
 
@@ -531,6 +576,13 @@ b {
     padding-right: 30px;
   }
 
+  &.cell_disabled {
+    color: #cdcdcd;
+
+    .color_red {
+      color: #cdcdcd;
+    }
+  }
 }
 
 %input_v1 {
@@ -538,6 +590,12 @@ b {
   height: 38px;
   border-radius: 2px;
   padding: 8px 10px;
+
+  &:disabled {
+    color: #cdcdcd;
+    border-color: #cdcdcd;
+  }
+
 }
 
 .f_input {
@@ -562,6 +620,22 @@ b {
   width: 100px;
 }
 
+.w_110 {
+  width: 110px;
+}
+
+.w_180 {
+  width: 180px;
+}
+
+.w_190 {
+  width: 190px;
+}
+
+.w_200 {
+  width: 200px;
+}
+
 .w_260 {
   width: 260px;
 }
@@ -570,8 +644,32 @@ b {
   width: 290px;
 }
 
+.w_300 {
+  width: 300px;
+}
+
+.w_380 {
+  width: 380px;
+}
+
+.w_435 {
+  width: 435px;
+}
+
+.w_550 {
+  width: 550px;
+}
+
 .w_570 {
   width: 570px;
+}
+
+.w_580 {
+  width: 580px;
+}
+
+.w_870 {
+  width: 870px;
 }
 
 //************  buttons
@@ -589,6 +687,17 @@ b {
     position: relative;
     z-index: 1;
     font: 14px/38px $ArialBold;
+  }
+
+  &.next_step_btn {
+    text-align: center;
+    float: left;
+    padding: 0 19px;
+    cursor: pointer;
+    border-radius: 2px;
+    z-index: 1;
+    font: 14px/38px $ArialBold;
+    text-decoration: none;
   }
 }
 
@@ -623,10 +732,38 @@ b {
   }
 }
 
+.btn_v3 {
+  height: 28px;
+
+  &.attach_btn {
+    border-radius: 2px;
+    float: left;
+    font-size: 13px;
+    line-height: 26px;
+    font-weight: bold;
+    padding: 0 11px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+}
+
 .yellow_black_btn {
   @include transition_all(background .3s, color .3s);
   color: $default_t_color;
   background: $gl_yellow;
+}
+
+.violet_btn {
+  @include transition_all(background .3s, color .3s, border-color .3s);
+  color: $gl_violet;
+  border: 1px solid $gl_violet;
+}
+
+.violet_btn_2 {
+  @include transition_all(background .3s, color .3s, border-color .3s);
+  background: $gl_violet;
+  color: #fff;
 }
 
 .select_v1 {
@@ -650,7 +787,7 @@ b {
       @extend .icon-before;
       @extend .icon-arrow_down;
       height: 34px;
-      
+
       &:before {
         position: absolute;
         top: 50%;
@@ -658,7 +795,7 @@ b {
         margin-top: -4px;
         left: 0;
       }
-      
+
       b {
         display: none;
       }
