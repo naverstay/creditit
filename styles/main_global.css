@@ -470,7 +470,7 @@ textarea:focus::-moz-placeholder {
   color: #000;
 }
 .ui-datepicker.datepicker_v1 .ui-datepicker-next {
-  right: 7.8em;
+  right: 8.2em;
 }
 .ui-datepicker.datepicker_v1 .ui-datepicker-next:before {
   -webkit-transform: translate(-50%, -50%) rotate(-90deg);
