@@ -88,8 +88,13 @@
                             <div class="form_label">
                               <label for="gender">Пол<span class="color_red">*</span></label>
                             </div>
-                            <div class="input_w">
-                              <input id="gender" class="f_input input_v1"/>
+                            <div class="input_w gender_toggler">
+                              <label class="radio_emul">
+                                <input type="radio" name="gender" checked="checked" class="hidden_input"/><span class="input_v1 f_input check_text"><b class="mb">Мужчина</b></span>
+                              </label>
+                              <label class="radio_emul">
+                                <input id="gender" type="radio" name="gender" class="hidden_input"/><span class="input_v1 f_input check_text"><b class="mb">Женщина</b></span>
+                              </label>
                             </div>
                           </div>
                         </div>

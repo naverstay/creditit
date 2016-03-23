@@ -617,6 +617,57 @@ b {
 
 }
 
+.gender_toggler {
+
+  .radio_emul {
+    float: left;
+    width: 49.5%;
+    text-align: center;
+
+    .check_text {
+      padding: 0;
+      position: relative;
+      line-height: 32px;
+      cursor: pointer;
+      border-radius: 0 2px 2px 0;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        width: auto;
+        height: auto;
+        border-radius: 0 1px 1px 0;
+        border: 1px solid transparent;
+      }
+    }
+
+    .hidden_input:checked + .check_text {
+      border-color: #fecd05;
+      cursor: default;
+
+      &:before {
+        border-color: #fecd05;
+      }
+    }
+
+    &:first-child {
+      margin-right: 1%;
+
+      .check_text {
+        border-radius: 2px 0 0 2px;
+
+        &:before {
+          border-radius: 1px 0 0 1px;
+        }
+      }
+    }
+  }
+}
+
 .w_100 {
   width: 100px;
 }

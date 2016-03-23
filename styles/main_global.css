@@ -1967,6 +1967,47 @@ b {
   font-family: "ArialItalic", sans-serif;
 }
 
+.gender_toggler .radio_emul {
+  float: left;
+  width: 49.5%;
+  text-align: center;
+}
+.gender_toggler .radio_emul .check_text {
+  padding: 0;
+  position: relative;
+  line-height: 32px;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+}
+.gender_toggler .radio_emul .check_text:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  border-radius: 0 1px 1px 0;
+  border: 1px solid transparent;
+}
+.gender_toggler .radio_emul .hidden_input:checked + .check_text {
+  border-color: #fecd05;
+  cursor: default;
+}
+.gender_toggler .radio_emul .hidden_input:checked + .check_text:before {
+  border-color: #fecd05;
+}
+.gender_toggler .radio_emul:first-child {
+  margin-right: 1%;
+}
+.gender_toggler .radio_emul:first-child .check_text {
+  border-radius: 2px 0 0 2px;
+}
+.gender_toggler .radio_emul:first-child .check_text:before {
+  border-radius: 1px 0 0 1px;
+}
+
 .w_100 {
   width: 100px;
 }
