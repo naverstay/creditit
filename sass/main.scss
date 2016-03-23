@@ -1,5 +1,6 @@
 $gl_green: #32a609;
 $gl_blue: #00b1ff;
+$gl_blue_2: #009cb9;
 $gl_gray: #858585;
 $gl_violet: #a658b1;
 $gl_yellow: #fecd05;
@@ -738,9 +739,7 @@ b {
   &.attach_btn {
     border-radius: 2px;
     float: left;
-    font-size: 13px;
-    line-height: 26px;
-    font-weight: bold;
+    font: 13px/26px $ArialBold;
     padding: 0 11px;
     margin: 10px 0;
     cursor: pointer;
@@ -766,6 +765,61 @@ b {
   color: #fff;
 }
 
+.select2-results__option {
+  line-height: 20px;
+  padding: 6px 10px;
+
+  &[aria-selected=true] {
+    @extend .icon-before;
+    @extend .icon-check2;
+    background: none !important;
+    cursor: default;
+    color: #000 !important;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: -10px;
+      height: 20px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+
+.select2-dropdown {
+  margin-top: -1px;
+  position: relative;
+  padding: 12px 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 9px;
+    left: 9px;
+    height: 1px;
+    background: #e5e6e8;
+  }
+
+}
+
+.datepicker_v1 {
+  .ui-datepicker-title {
+
+    .select2-container {
+      display: block;
+      min-width: 75px;
+      position: absolute;
+      right: -8.7em;
+      top: -.1em;
+
+    }
+  }
+}
+
 .select_v1 {
 
   .select2-container {
@@ -780,6 +834,7 @@ b {
 
     .select2-selection__rendered {
       line-height: 36px;
+      //color: $gl_blue_2;
       color: $gl_violet;
     }
 
@@ -802,6 +857,45 @@ b {
     }
   }
 
+}
+
+.select_v2 {
+
+  .select2-container {
+    display: block;
+    width: 100%;
+  }
+
+  .select2-selection--single {
+    border: 1px solid #b6b6b6;
+    height: 30px;
+    border-radius: 2px;
+
+    .select2-selection__rendered {
+      line-height: 30px;
+      padding-left: 0;
+      color: #000;
+      font-family: $ArialBold;
+    }
+
+    .select2-selection__arrow {
+      @extend .icon-before;
+      @extend .icon-arrow_down;
+      height: 28px;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        font-size: 10px;
+        margin-top: -4px;
+        left: 0;
+      }
+
+      b {
+        display: none;
+      }
+    }
+  }
 }
 
 // **********  text

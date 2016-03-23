@@ -3343,7 +3343,7 @@
                         inst.selectedDay = Math.min(inst.selectedDay, daysInMonth);
                     }
                     leadDays = (this._getFirstDayOfMonth(drawYear, drawMonth) - firstDay + 7) % 7;
-                    curRows = Math.ceil((leadDays + daysInMonth) / 7); // calculate the number of rows to generate
+                    curRows = 6 || Math.ceil((leadDays + daysInMonth) / 7); // calculate the number of rows to generate
                     numRows = (isMultiMonth ? this.maxRows > curRows ? this.maxRows : curRows : curRows); //If multiple months, use the higher number of rows (see #7043)
                     this.maxRows = numRows;
                     printDate = this._daylightSavingAdjust(new Date(drawYear, drawMonth, 1 - leadDays));

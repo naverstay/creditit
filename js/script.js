@@ -26,8 +26,9 @@ $(function ($) {
         datePckr.datepicker({
             firstDay: 1,
             dateFormat: datePckr.attr('data-format') || 'dd/mm/yy',
-            changeMonth: true,
+            //changeMonth: true,
             changeYear: true,
+            showOtherMonths: true,
             buttonText: '',
             defaultDate: +1,
             showOn: "both",
@@ -36,54 +37,10 @@ $(function ($) {
             monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
             monthNamesShort: ["Янв", "Фев", "Март", "Апр", "Май", "Июнь", "Июль", "Авг", "Сен", "Окт", "Ноя", "Дек"],
             dayNames: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
-            dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
             dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-
-            afterShow: function (input, inst, td) {
-
-                //var datePicker = $(this),
-                //    monthSelect = datePicker.datepicker("widget").find('.ui-datepicker-month'),
-                //    yearSelect = datePicker.datepicker("widget").find('.ui-datepicker-year');
-                //
-                //monthSelect.select2({
-                //    minimumResultsForSearch: 10,
-                //    width: 'auto'
-                //});
-                //
-                //yearSelect.select2({
-                //    minimumResultsForSearch: 10,
-                //    width: 'auto'
-                //});
-
-            },
-            onChangeMonthYear: function (year, month, dtpckr) {
-                //console.log(year, month, dtpckr);
-                //var datePicker = $(dtpckr.dpDiv);
-                //
-                //setTimeout(function () {
-                //    var monthSelect = datePicker.find('.ui-datepicker-month'),
-                //        yearSelect = datePicker.find('.ui-datepicker-year');
-                //    
-                //    monthSelect.removeClass('select2-hidden-accessible').next('.select2.select2-container').remove();
-                //
-                //    yearSelect.removeClass('select2-hidden-accessible').next('.select2.select2-container').remove();
-                //
-                //    monthSelect.select2({
-                //        minimumResultsForSearch: 10,
-                //        width: 'auto'
-                //    });
-                //
-                //    yearSelect.select2({
-                //        minimumResultsForSearch: 10,
-                //        width: 'auto'
-                //    });
-                //}, 0);
-
+            beforeShow: function (input, inst) {
+                $(inst.dpDiv).addClass("datepicker_v1 select_v2");
             }
-        }).on('show', function (e) {
-            console.log(e);
-        }).on('changeDate', function (e, w) {
-
         });
     });
 
@@ -117,6 +74,16 @@ $(function ($) {
         });
 
     });
+
+    var updateDatepickerOriginal = $.datepicker._updateDatepicker;
+    $.datepicker._updateDatepicker = function () {
+        var response = updateDatepickerOriginal.apply(this, arguments);
+        this.dpDiv.find('.ui-datepicker-year').select2({
+            minimumResultsForSearch: 10,
+            width: '5.4em'
+        });
+        return response;
+    };
 
     all_dialog_close();
 

@@ -94,6 +94,121 @@
   width: 17em;
   padding: .2em .2em 0;
   display: none;
+
+  &.datepicker_v1 {
+    width: 20em;
+    padding: .7em 1.4em;
+    border: none;
+    box-shadow: 0 0 14px rgba(0, 0, 0, .2);
+
+    thead {
+      display: none;
+    }
+
+    .ui-widget-header {
+      border: none;
+      background: none;
+      border-bottom: 1px solid #e5e6e8;
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+    }
+
+    .ui-datepicker-month {
+      text-transform: uppercase;
+    }
+
+    .ui-datepicker-title {
+      position: relative;
+      margin: 0 8.7em 0 .7em;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        top: 50%;
+        left: 100%;
+        margin-left: 1.8em;
+        bottom: 0;
+        background: #e5e6e8;
+        height: 30px;
+        margin-top: -15px;
+      }
+
+    }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+      z-index: 2;
+      width: .8em;
+      @extend .icon-before;
+      @extend .icon-arrow_down;
+
+      .ui-icon {
+        display: none;
+      }
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #009cb9;
+        text-align: center;
+      }
+
+      &:hover {
+        border: none;
+        background: none;
+
+        &:before {
+          color: #000;
+        }
+      }
+    }
+
+    .ui-datepicker-next {
+      right: 7.8em;
+
+      &:before {
+        -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+        -ms-transform: translate(-50%, -50%) rotate(-90deg);
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+    }
+
+    .ui-datepicker-prev {
+      &:before {
+        -webkit-transform: translate(-50%, -50%) rotate(90deg);
+        -ms-transform: translate(-50%, -50%) rotate(90deg);
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+
+    .ui-datepicker-calendar {
+
+      td {
+        padding: 3px 1px;
+      }
+
+      .ui-state-default {
+        display: inline-block;
+        vertical-align: middle;
+        height: 20px;
+        min-width: 20px;
+        line-height: 20px;
+        padding: 0 2px;
+        border: none;
+        background: none;
+        color: #000;
+        text-align: center;
+      }
+
+      .ui-state-active {
+        cursor: default;
+        background: #f76123;
+        color: #fff;
+      }
+    }
+  }
 }
 
 .ui-datepicker .ui-datepicker-header {

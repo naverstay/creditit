@@ -99,9 +99,9 @@ $gl_yellow_2: #fdce0b;
   vertical-align: bottom;
   height: 100px;
   padding-bottom: 12px;
-  font-weight: bold;
+  font-family: $ArialBold;
   line-height: 1.2;
-  letter-spacing: .4px;
+  //letter-spacing: .4px;
 }
 
 .tab_block,
@@ -174,12 +174,10 @@ $gl_yellow_2: #fdce0b;
   //overflow: hidden;
   border: solid #e5e6e8;
   border-width: 2px 0;
-  font-size: 13px;
   letter-spacing: .35px;
-  line-height: 36px;
   color: #000;
   height: 42px;
-  font-weight: bold;
+  font: 13px/36px $ArialBold;
   padding: 0 20px 0 28px;
   max-width: 170px;
 
@@ -220,7 +218,7 @@ $gl_yellow_2: #fdce0b;
 }
 
 .form_row_caption {
-  font-weight: bold;
+  font-family: $ArialBold;
   margin-bottom: 23px;
   //letter-spacing: .45px;
 
@@ -233,8 +231,12 @@ $gl_yellow_2: #fdce0b;
   margin-bottom: 9px;
   font-size: 13px;
   letter-spacing: -.15px;
-  font-weight: bold;
+  font-family: $ArialBold;
   white-space: nowrap;
+
+  span.color_red {
+    font-weight: 400;
+  }
 }
 
 .form_tip {
@@ -259,6 +261,7 @@ $gl_yellow_2: #fdce0b;
 }
 
 .check_text {
+  @include transition_all(color .3s);
   @extend .icon-before;
   padding-left: 18px;
 
@@ -302,6 +305,7 @@ $gl_yellow_2: #fdce0b;
 }
 
 .ui-datepicker-prev {
+  cursor: pointer;
 
   .ui-icon {
     @extend .icon-before;
@@ -309,7 +313,7 @@ $gl_yellow_2: #fdce0b;
     text-indent: 0;
     width: 16px;
     height: 16px;
-    
+
     &:before {
       @include transform_rotate(180);
       font-size: 16px;
@@ -320,6 +324,7 @@ $gl_yellow_2: #fdce0b;
 }
 
 .ui-datepicker-next {
+  cursor: pointer;
 
   .ui-icon {
     @extend .icon-before;

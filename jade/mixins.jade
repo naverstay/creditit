@@ -43,8 +43,8 @@ mixin input_coposer(w_cls, inp_id, inp_cls, inp_plc, inp_val, inp_disable, inp_d
 
 mixin select2 (first_option, id)
     select.select2(id=id)
-        option=first_option
-        option Выбор 2
+        option(value=0)=first_option
+        option(value=1) Выбор 2
 
 mixin footer()
     .footer
