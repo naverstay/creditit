@@ -58,7 +58,7 @@ mixin footer()
                 .mb: a.gl_link.color_violet(href='#') Статистика
 
 mixin tr(cls)
-    tr.orderRowMain.main_row(class = cls)
+    tr.orderRowMain.main_row.openOrderBtn(class = cls)
         td.col_1
             a.order_link.openOrderBtn_(href='#')
                 //span.sort_order.order_left
@@ -80,7 +80,7 @@ mixin tr(cls)
             ul.order_controls.text_center
                 li.control_item: a.btn_v2.control_btn.control_info(href='#')
                 li.control_item: a.btn_v2.control_btn.control_rm(href='#')
-                li.control_item: a.order_link.openOrderBtn(href='#')
+                li.control_item: a.order_link(href='#')
                     span.sort_order.order_right
 
 

@@ -512,6 +512,16 @@ b {
       width: 10%;
     }
 
+    .opened {
+      .col_7 {
+        .semaphore_item {
+          pointer-events: none;
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+
     .col_8 {
       width: 8%;
 

@@ -1897,6 +1897,11 @@ b {
 .gl_table.table_v2 .col_7 {
   width: 10%;
 }
+.gl_table.table_v2 .opened .col_7 .semaphore_item {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
 .gl_table.table_v2 .col_8 {
   width: 8%;
 }
