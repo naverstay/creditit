@@ -85,6 +85,25 @@ $(function ($) {
         return response;
     };
 
+    $('.tooltipMe').each(function (ind) {
+        $(this).tooltip({
+            position: {
+                my: "left bottom-25",
+                at: "left top",
+                of: this,
+                collision: "flip"
+            },
+            tooltipClass: "tooltip_v1",
+            open: function (event, ui) {
+                setTimeout(function () {
+                    ui.tooltip.css({
+                        left: $(event.target).offset().left - 10
+                    });
+                }, 0);
+            }
+        });
+    });
+
     all_dialog_close();
 
 });

@@ -1518,6 +1518,7 @@ html, body {
 }
 
 html {
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
@@ -1571,8 +1572,10 @@ b {
 .wrapper {
   position: relative;
   min-width: 1280px;
+  max-width: 100%;
   min-height: 100%;
   padding: 140px 0 0;
+  overflow: hidden;
 }
 
 .base {
@@ -1881,18 +1884,23 @@ b {
 }
 .gl_table.table_v2 .col_2 {
   width: 31.5%;
+  cursor: pointer;
 }
 .gl_table.table_v2 .col_3 {
   width: 13%;
+  cursor: pointer;
 }
 .gl_table.table_v2 .col_4 {
   width: 9%;
+  cursor: pointer;
 }
 .gl_table.table_v2 .col_5 {
   width: 8%;
+  cursor: pointer;
 }
 .gl_table.table_v2 .col_6 {
   width: 11.5%;
+  cursor: pointer;
 }
 .gl_table.table_v2 .col_7 {
   width: 10%;
@@ -2085,6 +2093,30 @@ b {
 .semaphore_item.semaphore_red {
   background: #d2232a;
   border: 1px solid #d2232a;
+}
+
+.tooltip_v1 {
+  -webkit-transition: left 0.3s, opacity 0.3s;
+  -ms-transition: left 0.3s, opacity 0.3s;
+  transition: left 0.3s, opacity 0.3s;
+  z-index: 3;
+  background: #fff;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #000;
+  left: 100%;
+  float: left;
+  border-radius: 2px;
+  box-shadow: 0 0 13px rgba(44, 50, 65, 0.45);
+}
+.tooltip_v1:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 12px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
 }
 
 .input_w {

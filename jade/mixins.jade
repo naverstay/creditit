@@ -71,11 +71,11 @@ mixin tr(cls)
         td.col_5 30/07/2017
         td.col_6 На рассмотрении
         td.col_7
-            span.semaphore_item.semaphore_green
-            span.semaphore_item.semaphore_yellow
-            span.semaphore_item.semaphore_yellow
-            span.semaphore_item.semaphore_yellow
-            span.semaphore_item.semaphore_red
+            span.tooltipMe.semaphore_item.semaphore_green(title='Авангард')
+            span.tooltipMe.semaphore_item.semaphore_yellow(title='Альфа Банк')
+            span.tooltipMe.semaphore_item.semaphore_yellow(title='Банк Возрождение')
+            span.tooltipMe.semaphore_item.semaphore_yellow(title='Еще Банк')
+            span.tooltipMe.semaphore_item.semaphore_red(title='Абсолют Банк')
         td.col_8
             ul.order_controls.text_center
                 li.control_item: a.btn_v2.control_btn.control_info(href='#')

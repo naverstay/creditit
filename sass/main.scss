@@ -11,6 +11,7 @@ html, body {
 }
 
 html {
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
@@ -67,8 +68,10 @@ b {
 .wrapper {
   position: relative;
   min-width: 1280px;
+  max-width: 100%;
   min-height: 100%;
   padding: 140px 0 0;
+  overflow: hidden;
 }
 
 .base {
@@ -490,22 +493,27 @@ b {
 
     .col_2 {
       width: 31.5%;
+      cursor: pointer;
     }
 
     .col_3 {
       width: 13%;
+      cursor: pointer;
     }
 
     .col_4 {
       width: 9%;
+      cursor: pointer;
     }
 
     .col_5 {
       width: 8%;
+      cursor: pointer;
     }
 
     .col_6 {
       width: 11.5%;
+      cursor: pointer;
     }
 
     .col_7 {
@@ -738,6 +746,29 @@ b {
     border: 1px solid #d2232a;
   }
 
+}
+
+.tooltip_v1 {
+  @include transition_all(left .3s, opacity .3s);
+  z-index: 3;
+  background: #fff;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #000;
+  left: 100%;
+  float: left;
+  border-radius: 2px;
+  box-shadow: 0 0 13px rgba(44, 50, 65, .45);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 12px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+  }
 }
 
 //************  forms
