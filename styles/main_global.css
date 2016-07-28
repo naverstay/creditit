@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main_menu_holder:after, .order_r_item:after, .order_controls:after, .pagination_block:after, .form_row:after, .tab_list_holder:after, .steps_holder:after, .step_controls:after {
   position: static;
   display: block;
@@ -251,65 +252,90 @@ textarea:focus::-moz-placeholder {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'credit_it_icons';
+  src: url("../fonts/icons/credit_it_icons.eot?4g3env");
+  src: url("../fonts/icons/credit_it_icons.eot?4g3env#iefix") format("embedded-opentype"), url("../fonts/icons/credit_it_icons.ttf?4g3env") format("truetype"), url("../fonts/icons/credit_it_icons.woff?4g3env") format("woff"), url("../fonts/icons/credit_it_icons.svg?4g3env#credit_it_icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'credit_it_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .icon-check2:before, .select2-results__option[aria-selected=true]:before, .checkbox_emul .hidden_input:checked + .check_text:before {
-  content: "\e906";
+  content: "";
 }
 
 .icon-arrow_down:before, .ui-datepicker.datepicker_v1 .ui-datepicker-prev:before,
 .ui-datepicker.datepicker_v1 .ui-datepicker-next:before, .select_v1 .select2-selection--single .select2-selection__arrow:before, .select_v2 .select2-selection--single .select2-selection__arrow:before {
-  content: "\e907";
+  content: "";
 }
 
 .icon-calendar:before, .input_w.datepicker_holder .ui-datepicker-trigger:before {
-  content: "\e908";
+  content: "";
 }
 
 .icon-add_gaurantor:before {
-  content: "\e909";
+  content: "";
 }
 
 .icon-add_client:before {
-  content: "\e90a";
+  content: "";
 }
 
 .icon-wallet:before {
-  content: "\e90b";
+  content: "";
 }
 
 .icon-bank:before {
-  content: "\e90c";
+  content: "";
 }
 
 .icon-wife:before {
-  content: "\e90d";
+  content: "";
 }
 
 .icon-client:before {
-  content: "\e90e";
+  content: "";
 }
 
 .icon-document:before, .programme_icon:before {
-  content: "\e900";
+  content: "";
 }
 
 .icon-label:before, .bank_icon:before {
-  content: "\e901";
+  content: "";
 }
 
 .icon-check:before, .btn_v2.control_btn.control_check:before {
-  content: "\e902";
+  content: "";
 }
 
 .icon-close:before, .btn_v2.control_btn.control_rm:before {
-  content: "\e903";
+  content: "";
 }
 
-.icon-info:before, .btn_v2.control_btn.control_info:before {
-  content: "\e904";
+.icon-info2:before, .btn_v2.control_btn.control_info:before {
+  content: "";
+}
+
+.icon-arrow-left2:before {
+  content: "";
 }
 
 .icon-arrow-right2:before, .ui-datepicker-prev .ui-icon:before, .ui-datepicker-next .ui-icon:before {
-  content: "\e905";
+  content: "";
 }
 
 /*! jQuery UI - v1.11.4 - 2016-02-23
@@ -1663,6 +1689,10 @@ b {
   border-width: 3px 4px 3px 0;
   border-color: transparent #a658b1 transparent transparent;
 }
+.sort_order.order_right.opened:before {
+  border-width: 4px 3px 0 3px;
+  border-color: #a658b1 transparent transparent transparent;
+}
 
 .main_content {
   padding-top: 22px;
@@ -1765,6 +1795,130 @@ b {
 .gl_table.table_v1 .info_row td {
   vertical-align: middle;
 }
+.gl_table.table_v2 th {
+  font: 11px "ArialBold", sans-serif;
+  color: #858585;
+  height: 30px;
+  vertical-align: middle;
+  padding: 5px;
+  text-align: left;
+  background: #f7f7f7;
+  border-top: 1px solid #e5e6e8;
+  border-bottom: 2px solid #fecd05;
+}
+.gl_table.table_v2 th:first-child {
+  border-left: 1px solid #e5e6e8;
+  padding-left: 10px;
+}
+.gl_table.table_v2 th:last-child {
+  border-right: 1px solid #e5e6e8;
+  padding-right: 20px;
+}
+.gl_table.table_v2 td {
+  color: #858585;
+  vertical-align: middle;
+  height: 56px;
+  padding: 12px 5px 15px;
+  text-align: left;
+  background: #fff;
+  line-height: 1.3;
+  border: 2px solid transparent;
+  border-bottom: 1px solid #e5e6e8;
+  border-top: 1px solid #e5e6e8;
+}
+.gl_table.table_v2 td:first-child {
+  padding-left: 10px;
+}
+.gl_table.table_v2 td:last-child {
+  padding-right: 0;
+}
+.gl_table.table_v2 td.opened {
+  border: 2px solid #e5e6e8;
+}
+.gl_table.table_v2 td.results_cell {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.gl_table.table_v2 tr.opened td {
+  background: #f7f7f7;
+}
+.gl_table.table_v2 tr.opened td:first-child {
+  border-left: 2px solid #e5e6e8;
+}
+.gl_table.table_v2 tr.opened td:last-child {
+  border-right: 2px solid #e5e6e8;
+}
+.gl_table.table_v2 .main_row.opened td {
+  border-top: 2px solid #e5e6e8;
+  border-bottom-style: dashed;
+}
+.gl_table.table_v2 .main_row.opened:not(.first_row) td {
+  height: 55px;
+}
+.gl_table.table_v2 .info_row.opened td {
+  border-bottom: 2px solid #e5e6e8;
+}
+.gl_table.table_v2 .sort_order.order_left:before {
+  border-width: 4px 0 4px 5px;
+  margin-top: -4px;
+}
+.gl_table.table_v2 .sort_order.order_right:before {
+  border-width: 6px 10px 6px 0;
+  margin-top: -6px;
+  margin-left: 0;
+}
+.gl_table.table_v2 .sort_order.order_right.opened:before {
+  border-width: 10px 6px 0 6px;
+  margin-top: -4px;
+}
+.gl_table.table_v2 .sort_order.order_down:before,
+.gl_table.table_v2 .sort_order.order_left.opened:before {
+  border-width: 5px 4px 0 4px;
+  margin-top: -3px;
+}
+.gl_table.table_v2 .col_1 {
+  width: 9%;
+}
+.gl_table.table_v2 .col_2 {
+  width: 31.5%;
+}
+.gl_table.table_v2 .col_3 {
+  width: 13%;
+}
+.gl_table.table_v2 .col_4 {
+  width: 9%;
+}
+.gl_table.table_v2 .col_5 {
+  width: 8%;
+}
+.gl_table.table_v2 .col_6 {
+  width: 11.5%;
+}
+.gl_table.table_v2 .col_7 {
+  width: 10%;
+}
+.gl_table.table_v2 .col_8 {
+  width: 8%;
+}
+.gl_table.table_v2 .col_8 .control_btn {
+  font-size: 18px;
+  vertical-align: middle;
+}
+.gl_table.table_v2 .bank_programmes {
+  width: 42.3%;
+}
+.gl_table.table_v2 .bank_name {
+  width: 16.5%;
+}
+.gl_table.table_v2 .bank_answer {
+  width: 12.8%;
+}
+.gl_table.table_v2 .info_row {
+  display: none;
+}
+.gl_table.table_v2 .info_row td {
+  vertical-align: middle;
+}
 
 .order_link {
   text-decoration: none;
@@ -1789,6 +1943,16 @@ b {
 .bank_name {
   float: left;
   width: 23%;
+}
+
+.bank_deadline {
+  float: left;
+  width: 9.3%;
+}
+
+.bank_status {
+  float: left;
+  width: 10%;
 }
 
 .bank_programmes {
@@ -1891,6 +2055,31 @@ b {
 }
 .pagination_block > li.pagination_next .gl_link:before {
   display: none;
+}
+
+.semaphore_item {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 100%;
+  width: 14px;
+  height: 14px;
+  margin: 0 2px;
+}
+.semaphore_item:first-child {
+  margin-left: 0;
+}
+.semaphore_item.semaphore_green {
+  border: 1px solid #00a651;
+  background: #00a651;
+}
+.semaphore_item.semaphore_yellow {
+  background: #fff200;
+  border: 1px solid #878885;
+}
+.semaphore_item.semaphore_red {
+  background: #d2232a;
+  border: 1px solid #d2232a;
 }
 
 .input_w {

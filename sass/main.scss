@@ -214,6 +214,13 @@ b {
       border-width: 3px 4px 3px 0;
       border-color: transparent $gl_violet transparent transparent;
     }
+
+    &.opened {
+      &:before {
+        border-width: 4px 3px 0 3px;
+        border-color: $gl_violet transparent transparent transparent;
+      }
+    }
   }
 
 }
@@ -359,6 +366,181 @@ b {
       }
     }
   }
+
+  &.table_v2 {
+    th {
+      font: 11px $ArialBold;
+      color: #858585;
+      height: 30px;
+      vertical-align: middle;
+      padding: 5px;
+      text-align: left;
+      background: #f7f7f7;
+      border-top: 1px solid #e5e6e8;
+      border-bottom: 2px solid $gl_yellow;
+
+      &:first-child {
+        border-left: 1px solid #e5e6e8;
+        padding-left: 10px;
+      }
+
+      &:last-child {
+        border-right: 1px solid #e5e6e8;
+        padding-right: 20px;
+      }
+
+    }
+
+    td {
+      //@include transition_all(background .3s, border .3s);
+      color: #858585;
+      vertical-align: middle;
+      height: 56px;
+      padding: 12px 5px 15px;
+      text-align: left;
+      background: #fff;
+      line-height: 1.3;
+      border: 2px solid transparent;
+      border-bottom: 1px solid #e5e6e8;
+      border-top: 1px solid #e5e6e8;
+
+      &:first-child {
+        padding-left: 10px;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &.opened {
+        border: 2px solid #e5e6e8;
+      }
+
+      &.results_cell {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+    }
+
+    tr.opened {
+      td {
+        background: #f7f7f7;
+
+        &:first-child {
+          border-left: 2px solid #e5e6e8;
+        }
+
+        &:last-child {
+          border-right: 2px solid #e5e6e8;
+        }
+      }
+    }
+
+    .main_row {
+
+      &.opened {
+        td {
+          border-top: 2px solid #e5e6e8;
+          border-bottom-style: dashed;
+        }
+
+        &:not(.first_row) {
+          td {
+            height: 55px;
+          }
+        }
+      }
+    }
+
+    .info_row {
+
+      &.opened {
+        td {
+          border-bottom: 2px solid #e5e6e8;
+        }
+      }
+    }
+
+    .sort_order.order_left:before {
+      border-width: 4px 0 4px 5px;
+      margin-top: -4px;
+    }
+
+    .sort_order.order_right:before {
+      border-width: 6px 10px 6px 0;
+      margin-top: -6px;
+      margin-left: 0;
+    }
+
+    .sort_order.order_right.opened:before {
+      border-width: 10px 6px 0 6px;
+      margin-top: -4px;
+    }
+
+    .sort_order.order_down:before,
+    .sort_order.order_left.opened:before {
+      border-width: 5px 4px 0 4px;
+      margin-top: -3px;
+    }
+
+    .col_1 {
+      width: 9%;
+    }
+
+    .col_2 {
+      width: 31.5%;
+    }
+
+    .col_3 {
+      width: 13%;
+    }
+
+    .col_4 {
+      width: 9%;
+    }
+
+    .col_5 {
+      width: 8%;
+    }
+
+    .col_6 {
+      width: 11.5%;
+    }
+
+    .col_7 {
+      width: 10%;
+    }
+
+    .col_8 {
+      width: 8%;
+
+      .control_btn {
+        font-size: 18px;
+        vertical-align: middle;
+      }
+    }
+
+    .bank_programmes {
+      width: 42.3%;
+    }
+
+    .bank_name {
+      width: 16.5%;
+    }
+
+    .bank_answer {
+      width: 12.8%;
+    }
+
+    .info_row {
+      display: none;
+
+      td {
+        vertical-align: middle;
+      }
+    }
+  }
 }
 
 .order_link {
@@ -388,6 +570,16 @@ b {
 .bank_name {
   float: left;
   width: 23%;
+}
+
+.bank_deadline {
+  float: left;
+  width: 9.3%;
+}
+
+.bank_status {
+  float: left;
+  width: 10%;
 }
 
 .bank_programmes {
@@ -506,6 +698,36 @@ b {
       }
     }
   }
+}
+
+.semaphore_item {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 100%;
+  width: 14px;
+  height: 14px;
+  margin: 0 2px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &.semaphore_green {
+    border: 1px solid #00a651;
+    background: #00a651;
+  }
+
+  &.semaphore_yellow {
+    background: #fff200;
+    border: 1px solid #878885;
+  }
+
+  &.semaphore_red {
+    background: #d2232a;
+    border: 1px solid #d2232a;
+  }
+
 }
 
 //************  forms
@@ -768,7 +990,7 @@ b {
     font-size: 22px;
 
     &.control_info {
-      @extend .icon-info;
+      @extend .icon-info2;
       color: $gl_violet;
     }
 

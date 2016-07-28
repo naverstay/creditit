@@ -1,0 +1,60 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('CreditIt главная 2', true)
+
+    body
+        .wrapper
+            .rect_1024
+            .base
+                +header(2)
+
+                div.main_content
+                    .section_inner
+                        h1.page_title Заявки
+
+                        form(action='#')
+                            .orders_filter_form
+                                .form_row.form_cell_v1
+                                    .form_cell.cell_v1.w_290.select_v1
+                                        +select2('Все заявки')
+                                    .form_cell.w_570
+                                        .input_w
+                                            input.f_input.input_v1(placeholder='Введите ФИО, контакты, автомобиль или банк для поиска нужных заявок')
+
+                                    .form_cell.w_100
+                                        .input_w
+                                            button.btn_v1.yellow_black_btn.search_btn Найти
+
+                            .filter_results
+                                table.gl_table.table_v2
+                                    tr
+                                        th.col_1
+                                            span.sort_order.order_down
+                                            span ID
+                                        th.col_2 Клиент
+                                        th.col_3 Контактный телефон
+                                        th.col_4 Сумма кредита
+                                        th.col_5 Deadline
+                                        th.col_6 Статус заявки
+                                        th.col_7 Статус по банку
+                                        th.col_8 &nbsp;
+                                    +tr('first_row')
+
+                                    +loop_while(3)
+                                        +tr()
+                                            
+                                            
+                            ul.pagination_block
+                                li.active: a.gl_link.first_link(href='#') 1
+                                li: a.gl_link(href='#') 2
+                                li: a.gl_link(href='#') 3
+                                li: a.gl_link.last_link(href='#') 4
+                                li.pagination_next: a.gl_link(href='#')
+                                    span.icon_next.icon-before.icon-arrow-right2.color_violet
+                                li.pagination_counter
+                                    span 1 – 20 из 140
+
+
+
+            +footer()
