@@ -644,8 +644,8 @@ b {
 }
 
 .control_item {
-  float: left;
-  width: 33%;
+  float: right;
+  min-width: 33%;
 }
 
 .pagination_block {
@@ -749,7 +749,7 @@ b {
 }
 
 .tooltip_v1 {
-  @include transition_all(left .3s, opacity .3s);
+  @include transition_all(opacity .3s);
   z-index: 3;
   background: #fff;
   padding: 8px 10px;
@@ -759,6 +759,7 @@ b {
   float: left;
   border-radius: 2px;
   box-shadow: 0 0 13px rgba(44, 50, 65, .45);
+  opacity: 0;
 
   &:before {
     content: '';
@@ -1056,6 +1057,15 @@ b {
     font: 13px/26px $ArialBold;
     padding: 0 11px;
     margin: 10px 0;
+    cursor: pointer;
+  }
+
+  &.open_order_btn {
+    border-radius: 2px;
+    float: left;
+    font: 13px/26px $ArialBold;
+    padding: 0 11px;
+    margin-right: 5px;
     cursor: pointer;
   }
 

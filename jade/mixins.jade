@@ -61,7 +61,7 @@ mixin tr(cls)
     tr.orderRowMain.main_row.openOrderBtn(class = cls)
         td.col_1
             a.order_link.openOrderBtn_(href='#')
-                //span.sort_order.order_left
+                span.sort_order.order_left
                 span.order_id 55483222
         td.col_2
             p: b Константинопольский Константин Константинович
@@ -78,11 +78,11 @@ mixin tr(cls)
             span.tooltipMe.semaphore_item.semaphore_red(title='Абсолют Банк')
         td.col_8
             ul.order_controls.text_center
-                li.control_item: a.btn_v2.control_btn.control_info(href='#')
-                li.control_item: a.btn_v2.control_btn.control_rm(href='#')
                 li.control_item: a.order_link(href='#')
-                    span.sort_order.order_right
-
+                    span.btn_v3.violet_btn.open_order_btn Открыть заявку
+                    //-span.sort_order.order_right
+                //-li.control_item: a.btn_v2.control_btn.control_rm(href='#')
+                //-li.control_item: a.btn_v2.control_btn.control_info(href='#')
 
     tr.orderRowInfo.info_row
         td.col_1

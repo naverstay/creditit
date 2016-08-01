@@ -88,18 +88,21 @@ $(function ($) {
     $('.tooltipMe').each(function (ind) {
         $(this).tooltip({
             position: {
-                my: "left bottom-25",
+                my: "left-10 bottom-10",
                 at: "left top",
                 of: this,
                 collision: "flip"
             },
             tooltipClass: "tooltip_v1",
             open: function (event, ui) {
+                var el = $(event.target);
+
                 setTimeout(function () {
                     ui.tooltip.css({
-                        left: $(event.target).offset().left - 10
+                        left: el.offset().left - 10,
+                        opacity: 1
                     });
-                }, 0);
+                }, 420);
             }
         });
     });
