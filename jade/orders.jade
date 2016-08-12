@@ -1,0 +1,257 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('CreditIt заявки', false, false, true)
+
+    body
+        .wrapper
+            .rect_1024
+            .base
+                +header(2)
+
+                div.main_content
+                    .section_inner
+                        .order_progress
+                            .order_progress_val(style='width:30%;')
+                            table.order_progress_table
+                                tr
+                                    td
+                                        .order_progress_step Новая заявка  
+                                    td
+                                        .order_progress_step Отправлена в банк  
+                                    td
+                                        .order_progress_step Запрос банка  
+                                    td
+                                        .order_progress_step Одобрено банком  
+                                    td
+                                        .order_progress_step Назначена сделка  
+                                    td
+                                        .order_progress_step Кредит оформлен  
+                                    td
+                                        .order_progress_step Деньги переведены дилеру  
+                                    td
+                                        .order_progress_step Документы сданы в банк  
+                                    td
+                                        .order_progress_step Закрыта 
+                                    
+                        .order_panel
+                            .order_p_client
+                                .order_p_info
+                                    .order_p_caption Клиент
+                                    .order_p_box
+                                        .order_client_id 55324876
+                                        .order_client_name: b Тихомиров  <br> Сергей Андреевич
+                                        
+                                        ul.order_client_contacts
+                                            li +7 903 256-3700
+                                            li +7 495 131-0098
+                                            li: a.link_inherit(href='mailto:mail@testmail.com') mail@testmail.com
+                                            
+                                    .order_p_caption Автомобиль
+                                        
+                                    .order_p_box
+                                        table.order_status_table
+                                            tr
+                                                td
+                                                    span.order_status_bank Марка
+                                                td
+                                                    b Chery
+                                            tr
+                                                td
+                                                    span.order_status_bank Модель
+                                                td
+                                                    b Tiggo 5
+                                            tr
+                                                td
+                                                    span.order_status_bank Комплектация
+                                                td
+                                                    b.color_gray VXD20ZD904
+                                            tr
+                                                td
+                                                    span.order_status_bank Цена
+                                                td
+                                                    b.color_gray 900 000 руб.
+                                                                                    
+                                    .order_p_caption Кредитный расчет
+                                        
+                                    .order_p_box
+                                        table.order_status_table
+                                            tr
+                                                td
+                                                    span.order_status_bank ПВ
+                                                td
+                                                    b 350 000 руб.
+                                            tr
+                                                td
+                                                    span.order_status_bank Срок кредита
+                                                td
+                                                    b 24 мес.
+                                            tr
+                                                td
+                                                    span.order_status_bank Сумма кредита
+                                                td
+                                                    b.color_gray 750 000 руб.
+                                            tr
+                                                td
+                                                    span.order_status_bank Включено
+                                                td
+                                                    b.color_gray КАСКО, СЖ
+                                                    
+                            .order_p_main
+                                .order_main_tabs_w
+                                    ul#tab_list.order_main_tabs
+                                        li: a.order_tab_btn(href='#tab_unit_1'): span.order_tab_text Заявка
+                                        li: a.order_tab_btn(href='#tab_unit_2'): span.order_tab_text Автомобиль
+                                        li: a.order_tab_btn(href='#tab_unit_3'): span.order_tab_text Условия кредита
+                                        li: a.order_tab_btn(href='#tab_unit_4'): span.order_tab_text Статус в банках
+                                        li: a.order_tab_btn(href='#tab_unit_5'): span.order_tab_text Управление заявкой
+                                        
+                                            
+                                .tabBlock.tab_block(data-tab-context='#tab_list')
+                                    #tab_unit_1.tab_unit
+                                        ul.order_info_list
+                                            li.orderInfoRow
+                                                .order_info_caption.openOrderRow Личная информация
+                                                .order_info_unit.infoBlock
+                                                    .order_info_box.infoBox
+                                                        a.order_info_edit.editBtn(href='#') Редактировать
+                                                        table.order_info_table.layout_fix
+                                                            tr.orderTableRow
+                                                                td 
+                                                                    .order_info_label Фамилия
+                                                                    .order_info_val.edit Тихомиров
+                                                                td 
+                                                                    .order_info_label Имя
+                                                                    .order_info_val.edit Сергей
+                                                                td 
+                                                                    .order_info_label Отчество
+                                                                    .order_info_val.edit Андреевич
+                                                                td 
+                                                                td 
+                                                                    
+                                                            tr.orderTableRow
+                                                                td(colspan=5) 
+                                                                    .order_info_label Роли клиента
+                                                                    .order_info_val.edit_select(data-option='{\"Водитель\":\"Водитель\",\"Заемщик\":\"Заемщик\",\"Поручитель\":\"Поручитель\",\"Созаемщик\":\"Созаемщик\",\"Страхователь\":\"Страхователь\",\"Супруг / супруга\":\"Супруг / супруга\", \"selected\":[\"Заемщик\", \"Страхователь\"]}') Заемщик , Страхователь
+                                                            tr.orderTableRow(style='display:none;')
+                                                                td
+                                                                    .order_info_label Предыдущая фамилия
+                                                                    .order_info_val.edit 
+                                                                td
+                                                                    .order_info_label Предыдущее имя
+                                                                    .order_info_val.edit 
+                                                                td
+                                                                    .order_info_label Предыдущее отчество
+                                                                    .order_info_val.edit 
+                                                                td 
+                                                                td 
+                                                                    
+                                                            tr.orderTableRow(style='display:none;')
+                                                                td
+                                                                    .order_info_label Фамилия латиницей
+                                                                    .order_info_val.edit 
+                                                                td
+                                                                    .order_info_label Имя латиницей
+                                                                    .order_info_val.edit 
+                                                                td
+                                                                    .order_info_label Отчество латиницей
+                                                                    .order_info_val.edit 
+                                                                td 
+                                                                td 
+                                                                    
+                                                                
+                                                                
+                                                    
+                                            li.orderInfoRow
+                                                .order_info_caption.openOrderRow Контакты
+                                                .order_info_unit.infoBlock
+                                                    .order_info_box.infoBox
+                                                        a.order_info_edit.editBtn(href='#') Редактировать
+                                                        table.order_info_table.layout_fix
+                                                            tr.orderTableRow
+                                                                td(colspan=2)
+                                                                    .order_info_label Адрес регистрации
+                                                                    .order_info_val.edit 129518 Москва, ул. 156-я Парковая, д. 10, кор. 19, кв. 1
+                                                                td
+                                                                    .order_info_val
+                                                                        label.checkbox_emul_2
+                                                                            input.hidden_input(type='checkbox')
+                                                                            span.check_text_2 Совпадает с адресом проживания
+                                                                td
+                                                                    .order_info_label Проживает с
+                                                                    .order_info_val.edit 18/07/2001
+                                                                        
+                                                            tr.orderTableRow
+                                                                td
+                                                                    .order_info_label Домашний телефон
+                                                                    .order_info_val.edit +7 (495) 123 45 67
+                                                                td
+                                                                    .order_info_label Мобильный телефон
+                                                                    .order_info_val.edit +7 (926) 456 56 66
+                                                                td
+                                                                    .order_info_label Телефон друга
+                                                                    .order_info_val.edit +7 (910) 765 43 21
+                                                                td
+                                                                    .order_info_label E-mail
+                                                                    .order_info_val.edit tikhomirov123@mail.ru
+                                                                
+
+
+                                            li.orderInfoRow
+                                                .order_info_caption.openOrderRow Социальный статус
+                                                .order_info_unit.infoBlock
+                                                    .order_info_box
+                                                    
+                                            li.orderInfoRow
+                                                .order_info_caption.openOrderRow Профессиональная деятельность
+                                                .order_info_unit.infoBlock
+                                                    .order_info_box
+                                                    
+                                            li.orderInfoRow
+                                                .order_info_caption.openOrderRow Доходы и расходы
+                                                .order_info_unit.infoBlock
+                                                    .order_info_box
+                                                    
+                                            li.orderInfoRow
+                                                .order_info_caption.openOrderRow Собственность
+                                                .order_info_unit.infoBlock
+                                                    .order_info_box
+                                                    
+                                            
+
+                                    #tab_unit_2.tab_unit
+                                        .tab_inner 2
+
+                                    #tab_unit_3.tab_unit
+                                        .tab_inner 3
+                                            
+                                    #tab_unit_4.tab_unit
+                                        .tab_inner 4
+
+                                    #tab_unit_5.tab_unit
+                                        .tab_inner 5
+                                            
+                            .order_p_status
+                                .order_p_info
+                                    .order_p_caption статус в банках
+                                    .order_p_box
+                                        table.order_status_table
+                                            tr
+                                                td
+                                                    span.order_status_bank ВТБ24
+                                                td
+                                                    b.color_gray На рассмотрении
+                                            tr
+                                                td
+                                                    span.order_status_bank Сетелем
+                                                td
+                                                    b.color_red Отказ
+                                            tr
+                                                td
+                                                    span.order_status_bank Юникредит
+                                                td
+                                                    b.color_green Одобрено с условием
+                                
+
+                        
+            +footer()

@@ -260,6 +260,49 @@ $gl_yellow_2: #fdce0b;
   }
 }
 
+.checkbox_emul_2 {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  line-height: 1;
+
+  .check_text_2 {
+    @extend .icon-before;
+    display: block;
+    position: relative;
+    padding-left: 22px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 18px;
+      width: 18px;
+      margin-top: -9px;
+      border-radius: 100%;
+      border: 1px solid #9f9f9f;
+    }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      margin-top: -9px;
+      left: 0;
+      height: 18px;
+      width: 18px;
+      line-height: 18px;
+      text-align: center;
+      color: #a658b1;
+    }
+  }
+
+  .hidden_input:checked + .check_text_2 {
+    @extend .icon-check2;
+
+  }
+}
+
 .check_text {
   @include transition_all(color .3s);
   @extend .icon-before;

@@ -1,4 +1,4 @@
-mixin dev_head(page_title, index, new_order)
+mixin dev_head(page_title, index, new_order, orders)
     head
         title=page_title
         | <!-- saved from url=(0014)about:internet -->
@@ -9,6 +9,10 @@ mixin dev_head(page_title, index, new_order)
         script(src='js/select2.js')
         script(src='js/jquery-ui.js')
         script(src='js/script.js')
+        - if (orders)
+            script(src='js/jquery.jeditable.js')
+            script(src='js/orders.js')
+            
 
 mixin header(active_menu)
     div.header
@@ -31,7 +35,7 @@ mixin header(active_menu)
 
                 ul.fr.main_menu
                     li.mb: a.menu_link(class = (active_menu == 1 ? 'active' : '') href='new_order.html') Оформить заявку
-                    li.mb: a.menu_link(class = (active_menu == 2 ? 'active' : '') href='#') Заявки
+                    li.mb: a.menu_link(class = (active_menu == 2 ? 'active' : '') href='orders.html') Заявки
                     li.mb: a.menu_link(class = (active_menu == 3 ? 'active' : '') href='#') Статистика
  
 

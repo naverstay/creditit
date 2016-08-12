@@ -863,6 +863,18 @@ b {
 
 }
 
+%input_v2 {
+  border: 1px solid #c8c8c8;
+  padding: 3px 4px;
+  font: 12px/14px $ArialBold;
+
+  &:disabled {
+    color: #cdcdcd;
+    border-color: #cdcdcd;
+  }
+
+}
+
 .f_input {
   display: block;
   width: 100%;
@@ -1232,6 +1244,10 @@ b {
   color: $default_t_color;
 }
 
+.color_gray {
+  color: #6b6b6b;
+}
+
 .color_red {
   color: $gl_red;
 }
@@ -1267,9 +1283,7 @@ $rectWidth: 1242px;
   width: $rectWidth;
   bottom: 0;
   margin-left: -$rectWidth/2;
-
   pointer-events: none;
-
   border: 1px solid red;
 }
 
@@ -1278,11 +1292,8 @@ $rectWidth: 1242px;
   top: 0;
   bottom: 0;
   left: $rectWidth/2;
-
   width: 1px;
-
   content: '';
-
   background: red;
 }
 

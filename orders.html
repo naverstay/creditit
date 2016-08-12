@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>CreditIt заявки</title><!-- saved from url=(0014)about:internet -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles/main_global.css" media="all"/>
+    <script src="js/jquery1.10.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.jeditable.js"></script>
+    <script src="js/orders.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="rect_1024"></div>
+      <div class="base">
+        <div class="header">
+          <div class="header_line">
+            <div class="section_inner clearfix">
+              <div class="fl">
+                <div class="mb"><b class="slogan">единый кредитный интегратор</b></div>
+              </div>
+              <div class="fr user_menu">
+                <div class="mb"><span>Дилерский центр: СТК сервис</span></div>
+                <div class="mb"><a href="#" class="gl_link color_violet">Выход</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="section_inner">
+            <div class="main_menu_holder">
+              <div class="fl">
+                <div class="mb"><a href="index.html" class="logo"><img src="i/logo_2.svg"/></a></div>
+              </div>
+              <ul class="fr main_menu">
+                <li class="mb"><a href="new_order.html" class="menu_link">Оформить заявку</a></li>
+                <li class="mb"><a href="orders.html" class="menu_link active">Заявки</a></li>
+                <li class="mb"><a href="#" class="menu_link">Статистика</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="main_content">
+          <div class="section_inner">
+            <div class="order_progress">
+              <div style="width:30%;" class="order_progress_val"></div>
+              <table class="order_progress_table">
+                <tr>
+                  <td>
+                    <div class="order_progress_step">Новая заявка  </div>
+                  </td>
+                  <td>
+                    <div class="order_progress_step">Отправлена в банк  </div>
+                  </td>
+                  <td>
+                    <div class="order_progress_step">Запрос банка  </div>
+                  </td>
+                  <td>
+                    <div class="order_progress_step">Одобрено банком  </div>
+                  </td>
+                  <td>
+                    <div class="order_progress_step">Назначена сделка  </div>
+                  </td>
+                  <td>
+                    <div class="order_progress_step">Кредит оформлен  </div>
+                  </td>
+                  <td>
+                    <div class="order_progress_step">Деньги переведены дилеру  </div>
+                  </td>
+                  <td>
+                    <div class="order_progress_step">Документы сданы в банк  </div>
+                  </td>
+                  <td>
+                    <div class="order_progress_step">Закрыта </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="order_panel">
+              <div class="order_p_client">
+                <div class="order_p_info">
+                  <div class="order_p_caption">Клиент</div>
+                  <div class="order_p_box">
+                    <div class="order_client_id">55324876</div>
+                    <div class="order_client_name"><b>Тихомиров  <br> Сергей Андреевич</b></div>
+                    <ul class="order_client_contacts">
+                      <li>+7 903 256-3700</li>
+                      <li>+7 495 131-0098</li>
+                      <li><a href="mailto:mail@testmail.com" class="link_inherit">mail@testmail.com</a></li>
+                    </ul>
+                  </div>
+                  <div class="order_p_caption">Автомобиль</div>
+                  <div class="order_p_box">
+                    <table class="order_status_table">
+                      <tr>
+                        <td><span class="order_status_bank">Марка</span></td>
+                        <td><b>Chery</b></td>
+                      </tr>
+                      <tr>
+                        <td><span class="order_status_bank">Модель</span></td>
+                        <td><b>Tiggo 5</b></td>
+                      </tr>
+                      <tr>
+                        <td><span class="order_status_bank">Комплектация</span></td>
+                        <td><b class="color_gray">VXD20ZD904</b></td>
+                      </tr>
+                      <tr>
+                        <td><span class="order_status_bank">Цена</span></td>
+                        <td><b class="color_gray">900 000 руб.</b></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="order_p_caption">Кредитный расчет</div>
+                  <div class="order_p_box">
+                    <table class="order_status_table">
+                      <tr>
+                        <td><span class="order_status_bank">ПВ</span></td>
+                        <td><b>350 000 руб.</b></td>
+                      </tr>
+                      <tr>
+                        <td><span class="order_status_bank">Срок кредита</span></td>
+                        <td><b>24 мес.</b></td>
+                      </tr>
+                      <tr>
+                        <td><span class="order_status_bank">Сумма кредита</span></td>
+                        <td><b class="color_gray">750 000 руб.</b></td>
+                      </tr>
+                      <tr>
+                        <td><span class="order_status_bank">Включено</span></td>
+                        <td><b class="color_gray">КАСКО, СЖ</b></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="order_p_main">
+                <div class="order_main_tabs_w">
+                  <ul id="tab_list" class="order_main_tabs">
+                    <li><a href="#tab_unit_1" class="order_tab_btn"><span class="order_tab_text">Заявка</span></a></li>
+                    <li><a href="#tab_unit_2" class="order_tab_btn"><span class="order_tab_text">Автомобиль</span></a></li>
+                    <li><a href="#tab_unit_3" class="order_tab_btn"><span class="order_tab_text">Условия кредита</span></a></li>
+                    <li><a href="#tab_unit_4" class="order_tab_btn"><span class="order_tab_text">Статус в банках</span></a></li>
+                    <li><a href="#tab_unit_5" class="order_tab_btn"><span class="order_tab_text">Управление заявкой</span></a></li>
+                  </ul>
+                </div>
+                <div data-tab-context="#tab_list" class="tabBlock tab_block">
+                  <div id="tab_unit_1" class="tab_unit">
+                    <ul class="order_info_list">
+                      <li class="orderInfoRow">
+                        <div class="order_info_caption openOrderRow">Личная информация</div>
+                        <div class="order_info_unit infoBlock">
+                          <div class="order_info_box infoBox"><a href="#" class="order_info_edit editBtn">Редактировать</a>
+                            <table class="order_info_table layout_fix">
+                              <tr class="orderTableRow">
+                                <td> 
+                                  <div class="order_info_label">Фамилия</div>
+                                  <div class="order_info_val edit">Тихомиров</div>
+                                </td>
+                                <td> 
+                                  <div class="order_info_label">Имя</div>
+                                  <div class="order_info_val edit">Сергей</div>
+                                </td>
+                                <td> 
+                                  <div class="order_info_label">Отчество</div>
+                                  <div class="order_info_val edit">Андреевич</div>
+                                </td>
+                                <td> </td>
+                                <td> </td>
+                              </tr>
+                              <tr class="orderTableRow">
+                                <td colspan="5"> 
+                                  <div class="order_info_label">Роли клиента</div>
+                                  <div data-option="{&quot;Водитель&quot;:&quot;Водитель&quot;,&quot;Заемщик&quot;:&quot;Заемщик&quot;,&quot;Поручитель&quot;:&quot;Поручитель&quot;,&quot;Созаемщик&quot;:&quot;Созаемщик&quot;,&quot;Страхователь&quot;:&quot;Страхователь&quot;,&quot;Супруг / супруга&quot;:&quot;Супруг / супруга&quot;, &quot;selected&quot;:[&quot;Заемщик&quot;, &quot;Страхователь&quot;]}" class="order_info_val edit_select">Заемщик , Страхователь</div>
+                                </td>
+                              </tr>
+                              <tr style="display:none;" class="orderTableRow">
+                                <td>
+                                  <div class="order_info_label">Предыдущая фамилия</div>
+                                  <div class="order_info_val edit"> </div>
+                                </td>
+                                <td>
+                                  <div class="order_info_label">Предыдущее имя</div>
+                                  <div class="order_info_val edit"> </div>
+                                </td>
+                                <td>
+                                  <div class="order_info_label">Предыдущее отчество</div>
+                                  <div class="order_info_val edit"> </div>
+                                </td>
+                                <td> </td>
+                                <td> </td>
+                              </tr>
+                              <tr style="display:none;" class="orderTableRow">
+                                <td>
+                                  <div class="order_info_label">Фамилия латиницей</div>
+                                  <div class="order_info_val edit"> </div>
+                                </td>
+                                <td>
+                                  <div class="order_info_label">Имя латиницей</div>
+                                  <div class="order_info_val edit"> </div>
+                                </td>
+                                <td>
+                                  <div class="order_info_label">Отчество латиницей</div>
+                                  <div class="order_info_val edit"> </div>
+                                </td>
+                                <td> </td>
+                                <td> </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="orderInfoRow">
+                        <div class="order_info_caption openOrderRow">Контакты</div>
+                        <div class="order_info_unit infoBlock">
+                          <div class="order_info_box infoBox"><a href="#" class="order_info_edit editBtn">Редактировать</a>
+                            <table class="order_info_table layout_fix">
+                              <tr class="orderTableRow">
+                                <td colspan="2">
+                                  <div class="order_info_label">Адрес регистрации</div>
+                                  <div class="order_info_val edit">129518 Москва, ул. 156-я Парковая, д. 10, кор. 19, кв. 1</div>
+                                </td>
+                                <td>
+                                  <div class="order_info_val">
+                                    <label class="checkbox_emul_2">
+                                      <input type="checkbox" class="hidden_input"><span class="check_text_2">Совпадает с адресом проживания</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="order_info_label">Проживает с</div>
+                                  <div class="order_info_val edit">18/07/2001</div>
+                                </td>
+                              </tr>
+                              <tr class="orderTableRow">
+                                <td>
+                                  <div class="order_info_label">Домашний телефон</div>
+                                  <div class="order_info_val edit">+7 (495) 123 45 67</div>
+                                </td>
+                                <td>
+                                  <div class="order_info_label">Мобильный телефон</div>
+                                  <div class="order_info_val edit">+7 (926) 456 56 66</div>
+                                </td>
+                                <td>
+                                  <div class="order_info_label">Телефон друга</div>
+                                  <div class="order_info_val edit">+7 (910) 765 43 21</div>
+                                </td>
+                                <td>
+                                  <div class="order_info_label">E-mail</div>
+                                  <div class="order_info_val edit">tikhomirov123@mail.ru</div>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="orderInfoRow">
+                        <div class="order_info_caption openOrderRow">Социальный статус</div>
+                        <div class="order_info_unit infoBlock">
+                          <div class="order_info_box"></div>
+                        </div>
+                      </li>
+                      <li class="orderInfoRow">
+                        <div class="order_info_caption openOrderRow">Профессиональная деятельность</div>
+                        <div class="order_info_unit infoBlock">
+                          <div class="order_info_box"></div>
+                        </div>
+                      </li>
+                      <li class="orderInfoRow">
+                        <div class="order_info_caption openOrderRow">Доходы и расходы</div>
+                        <div class="order_info_unit infoBlock">
+                          <div class="order_info_box"></div>
+                        </div>
+                      </li>
+                      <li class="orderInfoRow">
+                        <div class="order_info_caption openOrderRow">Собственность</div>
+                        <div class="order_info_unit infoBlock">
+                          <div class="order_info_box"></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="tab_unit_2" class="tab_unit">
+                    <div class="tab_inner">2</div>
+                  </div>
+                  <div id="tab_unit_3" class="tab_unit">
+                    <div class="tab_inner">3</div>
+                  </div>
+                  <div id="tab_unit_4" class="tab_unit">
+                    <div class="tab_inner">4</div>
+                  </div>
+                  <div id="tab_unit_5" class="tab_unit">
+                    <div class="tab_inner">5</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order_p_status">
+                <div class="order_p_info">
+                  <div class="order_p_caption">статус в банках</div>
+                  <div class="order_p_box">
+                    <table class="order_status_table">
+                      <tr>
+                        <td><span class="order_status_bank">ВТБ24</span></td>
+                        <td><b class="color_gray">На рассмотрении</b></td>
+                      </tr>
+                      <tr>
+                        <td><span class="order_status_bank">Сетелем</span></td>
+                        <td><b class="color_red">Отказ</b></td>
+                      </tr>
+                      <tr>
+                        <td><span class="order_status_bank">Юникредит</span></td>
+                        <td><b class="color_green">Одобрено с условием</b></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="section_inner">
+          <div class="fl">
+            <div class="mb">
+              <div class="copyright">&copy; 2015 ООО «Creditit». Все права защищены</div>
+            </div>
+          </div>
+          <div class="fr footer_menu">
+            <div class="mb"><a href="#" class="gl_link color_violet">Оформить заявку</a></div>
+            <div class="mb"><a href="#" class="gl_link color_violet">Заявки</a></div>
+            <div class="mb"><a href="#" class="gl_link color_violet">Статистика</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
