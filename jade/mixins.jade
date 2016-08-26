@@ -61,6 +61,206 @@ mixin footer()
                 .mb: a.gl_link.color_violet(href='#') Заявки
                 .mb: a.gl_link.color_violet(href='#') Статистика
 
+mixin car_tab()
+    ul.order_info_list
+        li.orderInfoRow
+            .order_info_unit.infoBlock(style='display:block;')
+                .order_info_box.infoBox
+                    a.order_info_edit.editBtn(href='#') Редактировать
+                    table.order_info_table.layout_fix
+                        tr.orderTableRow
+                            td
+                                .order_info_label Марка автомобиля
+                                .order_info_val.edit Chery
+                            td
+                                .order_info_label Модель автомобиля
+                                .order_info_val.edit Arrizo 7
+                            td
+                                .order_info_label Комплектация
+                                .order_info_val.edit 1.6 CVT Luxury
+                            td
+                            td
+
+                        tr
+                            td(colspan=5)
+                                ul.car_features
+                                    li
+                                        label.checkbox_emul_2
+                                            input.hidden_input(type='radio' name='is_used' checked)
+                                            span.check_text_2 НОВЫЙ
+                                    li
+                                        label.checkbox_emul_2
+                                            input.hidden_input(type='radio' name='is_used')
+                                            span.check_text_2 ПОДЕРЖАННЫЙ
+                            
+                                ul.car_features
+                                    li
+                                        span.check_text_2 КОММЕРЧЕСКИЙ
+                                    li
+                                        label.checkbox_emul_2
+                                            input.hidden_input(type='radio' name='is_commercial')
+                                            span.check_text_2 ДА
+                                    li
+                                        label.checkbox_emul_2
+                                            input.hidden_input(type='radio' name='is_commercial' checked)
+                                            span.check_text_2 НЕТ
+                            
+                                ul.car_features
+                                    li
+                                        span.check_text_2 НАЛИЧИЕ В САЛОНЕ
+                                    li
+                                        label.checkbox_emul_2
+                                            input.hidden_input(type='radio' name='is_available' checked)
+                                            span.check_text_2 ЕСТЬ
+                                    li
+                                        label.checkbox_emul_2
+                                            input.hidden_input(type='radio' name='is_available')
+                                            span.check_text_2 НЕТ
+
+                        tr.orderTableRow
+                            td
+                                .order_info_label Тип транспортного средства
+                                .order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Спецтехника и прицеп\"]}') Спецтехника и прицеп
+                            td
+                                .order_info_label VIN  <br>  номер
+                                .order_info_val.edit 
+                            td
+                                .order_info_label Номер ПТС (без пробелов)
+                                .order_info_val.edit 
+                            td
+                                .order_info_label Регистрационный номер
+                                .order_info_val.edit
+                            td
+                            
+                        tr.orderTableRow(style='display:none;')
+                            td
+                                .order_info_label Год выпуска
+                                .order_info_val.edit 
+                            td
+                                .order_info_label Пробег, в км
+                                .order_info_val.edit 
+                            td
+                                .order_info_label.wnw Валюта стоимости автомобиля
+                                .order_info_val.edit_select.select_w4(data-option='{\"Доллары\":\"Доллары\",\"Евро\":\"Евро\",\"Рубли\":\"Рубли\", \"selected\":[\"Рубли\"]}') Рубли
+                            td
+                            td
+                            
+                        tr
+                            td(colspan=5)
+                                .order_info_label.wnw Документы на автомобиль
+                                    
+                        tr
+                            td(colspan=5)
+                                .order_info_label Тип документа
+                                .order_info_val.edit_select_attach.select_w4(data-option='{\"Доверенность\":\"Доверенность\",\"ПТС\":\"ПТС\",\"Свидетельство о регистрации ТС\":\"Свидетельство о регистрации ТС\", \"selected\":[\"Доверенность\"]}') Доверенность
+
+
+
+
+mixin order_tab()
+    ul.order_info_list
+        li.orderInfoRow
+            .order_info_caption.openOrderRow Личная информация
+            .order_info_unit.infoBlock
+                .order_info_box.infoBox
+                    a.order_info_edit.editBtn(href='#') Редактировать
+                    table.order_info_table.layout_fix
+                        tr.orderTableRow
+                            td
+                                .order_info_label Фамилия
+                                .order_info_val.edit Тихомиров
+                            td
+                                .order_info_label Имя
+                                .order_info_val.edit Сергей
+                            td
+                                .order_info_label Отчество
+                                .order_info_val.edit Андреевич
+                            td
+                            td
+
+                        tr.orderTableRow
+                            td(colspan=5)
+                                .order_info_label Роли клиента
+                                .order_info_val.edit_select_multi.select_w3(data-option='{\"Водитель\":\"Водитель\",\"Заемщик\":\"Заемщик\",\"Поручитель\":\"Поручитель\",\"Созаемщик\":\"Созаемщик\",\"Страхователь\":\"Страхователь\",\"Супруг / супруга\":\"Супруг / супруга\", \"selected\":[\"Заемщик\", \"Страхователь\"]}') Заемщик , Страхователь
+                        tr.orderTableRow(style='display:none;')
+                            td
+                                .order_info_label Предыдущая фамилия
+                                .order_info_val.edit
+                            td
+                                .order_info_label Предыдущее имя
+                                .order_info_val.edit
+                            td
+                                .order_info_label Предыдущее отчество
+                                .order_info_val.edit
+                            td
+                            td
+
+                        tr.orderTableRow(style='display:none;')
+                            td
+                                .order_info_label Фамилия латиницей
+                                .order_info_val.edit
+                            td
+                                .order_info_label Имя латиницей
+                                .order_info_val.edit
+                            td
+                                .order_info_label Отчество латиницей
+                                .order_info_val.edit
+                            td
+                            td
+
+        li.orderInfoRow
+            .order_info_caption.openOrderRow Контакты
+            .order_info_unit.infoBlock
+                .order_info_box.infoBox
+                    a.order_info_edit.editBtn(href='#') Редактировать
+                    table.order_info_table.layout_fix
+                        tr.orderTableRow
+                            td(colspan=2)
+                                .order_info_label Адрес регистрации
+                                .order_info_val.edit 129518 Москва, ул. 156-я Парковая, д. 10, кор. 19, кв. 1
+                            td
+                                .order_info_val
+                                    label.checkbox_emul_2
+                                        input.hidden_input(type='checkbox')
+                                        span.check_text_2 Совпадает с адресом проживания
+                            td
+                                .order_info_label Проживает с
+                                .order_info_val.edit 18/07/2001
+
+                        tr.orderTableRow
+                            td
+                                .order_info_label Домашний телефон
+                                .order_info_val.edit +7 (495) 123 45 67
+                            td
+                                .order_info_label Мобильный телефон
+                                .order_info_val.edit +7 (926) 456 56 66
+                            td
+                                .order_info_label Телефон друга
+                                .order_info_val.edit +7 (910) 765 43 21
+                            td
+                                .order_info_label E-mail
+                                .order_info_val.edit tikhomirov123@mail.ru
+
+        li.orderInfoRow
+            .order_info_caption.openOrderRow Социальный статус
+            .order_info_unit.infoBlock
+                .order_info_box
+
+        li.orderInfoRow
+            .order_info_caption.openOrderRow Профессиональная деятельность
+            .order_info_unit.infoBlock
+                .order_info_box
+
+        li.orderInfoRow
+            .order_info_caption.openOrderRow Доходы и расходы
+            .order_info_unit.infoBlock
+                .order_info_box
+
+        li.orderInfoRow
+            .order_info_caption.openOrderRow Собственность
+            .order_info_unit.infoBlock
+                .order_info_box
+
 mixin tr(cls)
     tr.orderRowMain.main_row.openOrderBtn(class = cls)
         td.col_1

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.main_menu_holder:after, .order_r_item:after, .order_controls:after, .pagination_block:after, .form_row:after, .tab_list_holder:after, .steps_holder:after, .step_controls:after, .order_panel:after {
+.main_menu_holder:after, .order_r_item:after, .order_controls:after, .pagination_block:after, .form_row:after, .tab_list_holder:after, .steps_holder:after, .step_controls:after, .unit_info:after, .order_panel:after {
   position: static;
   display: block;
   height: 0;
@@ -238,7 +238,7 @@ textarea:focus::-moz-placeholder {
 }
 .icon-before:before, .ui-datepicker.datepicker_v1 .ui-datepicker-prev:before,
 .ui-datepicker.datepicker_v1 .ui-datepicker-next:before, .bank_icon:before,
-.programme_icon:before, .input_w.datepicker_holder .ui-datepicker-trigger:before, .btn_v2.control_btn:before, .select2-results__option[aria-selected=true]:before, .select_v1 .select2-selection--single .select2-selection__arrow:before, .select_v2 .select2-selection--single .select2-selection__arrow:before, .tab_link:before, .checkbox_emul_2 .check_text_2:before, .check_text:before, .ui-datepicker-prev .ui-icon:before, .ui-datepicker-next .ui-icon:before, .order_progress_step:before, .order_info_val .select2-results__option:before {
+.programme_icon:before, .input_w.datepicker_holder .ui-datepicker-trigger:before, .btn_v2.control_btn:before, .select2-results__option[aria-selected=true]:before, .select_v1 .select2-selection--single .select2-selection__arrow:before, .select_v2 .select2-selection--single .select2-selection__arrow:before, .tab_link:before, .checkbox_emul_2 .check_text_2:before, .check_text:before, .ui-datepicker-prev .ui-icon:before, .ui-datepicker-next .ui-icon:before, .order_progress_step:before, .select_w3 .select2-results__option:before, .file_label:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'credit_it_icons' !important;
   speak: none;
@@ -254,8 +254,8 @@ textarea:focus::-moz-placeholder {
 
 @font-face {
   font-family: 'credit_it_icons';
-  src: url("../fonts/icons/credit_it_icons.eot?4g3env");
-  src: url("../fonts/icons/credit_it_icons.eot?4g3env#iefix") format("embedded-opentype"), url("../fonts/icons/credit_it_icons.ttf?4g3env") format("truetype"), url("../fonts/icons/credit_it_icons.woff?4g3env") format("woff"), url("../fonts/icons/credit_it_icons.svg?4g3env#credit_it_icons") format("svg");
+  src: url("../fonts/icons/credit_it_icons.eot?murlon");
+  src: url("../fonts/icons/credit_it_icons.eot?murlon#iefix") format("embedded-opentype"), url("../fonts/icons/credit_it_icons.ttf?murlon") format("truetype"), url("../fonts/icons/credit_it_icons.woff?murlon") format("woff"), url("../fonts/icons/credit_it_icons.svg?murlon#credit_it_icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -336,6 +336,14 @@ textarea:focus::-moz-placeholder {
 
 .icon-arrow-right2:before, .ui-datepicker-prev .ui-icon:before, .ui-datepicker-next .ui-icon:before, .order_progress_step:before {
   content: "";
+}
+
+.icon-car:before {
+  content: "";
+}
+
+.icon-folder-open:before, .file_label:before {
+  content: "";
 }
 
 /*! jQuery UI - v1.11.4 - 2016-02-23
@@ -2176,12 +2184,12 @@ b {
   border-color: #cdcdcd;
 }
 
-.edit_v1 > input {
+.edit_v1 > input, .edit_v2 > input {
   border: 1px solid #c8c8c8;
   padding: 3px 4px;
   font: 12px/14px "ArialBold", sans-serif;
 }
-.edit_v1 > input:disabled {
+.edit_v1 > input:disabled, .edit_v2 > input:disabled {
   color: #cdcdcd;
   border-color: #cdcdcd;
 }
@@ -2519,6 +2527,10 @@ b {
 
 .text_upper {
   text-transform: uppercase;
+}
+
+.wnw {
+  white-space: nowrap;
 }
 
 .rect_1024 {
@@ -2891,6 +2903,26 @@ b {
   position: absolute;
 }
 
+.unit_info {
+  padding-top: 63px;
+}
+
+.unit_info_block {
+  margin-left: 252px;
+  border-top: thin dotted #8a8885;
+}
+
+.unit_info_caption {
+  width: 228px;
+  float: left;
+  border-top: thin dotted #8a8885;
+}
+
+.unit_info_table {
+  width: 100%;
+  table-layout: fixed;
+}
+
 .order_progress {
   position: relative;
   margin-top: -10px;
@@ -3097,7 +3129,7 @@ b {
 .order_info_list {
   padding-top: 63px;
 }
-.order_info_list li:first-child {
+.order_info_list > li:first-child {
   border-top: 1px solid #c8c8c8;
 }
 
@@ -3175,27 +3207,37 @@ b {
   table-layout: fixed;
 }
 
+.edit_v1 > .select2-container {
+  max-width: 100px;
+}
 .edit_v1 > input {
   max-width: 100px;
 }
 
-.order_info_val .select2-container {
+.edit_v2 > .select2-container {
+  max-width: 200px;
+}
+.edit_v2 > input {
+  max-width: 200px;
+}
+
+.select_w3 .select2-container {
   position: relative !important;
   top: auto !important;
   left: auto !important;
   width: 100%;
 }
-.order_info_val .select2-container.select2 {
+.select_w3 .select2-container.select2 {
   display: none;
 }
-.order_info_val .select2-results__option {
+.select_w3 .select2-results__option {
   padding: 0 0 0 22px;
   float: left;
   position: relative;
   margin-right: 18px;
   border: none !important;
 }
-.order_info_val .select2-results__option:after {
+.select_w3 .select2-results__option:after {
   content: '';
   position: absolute;
   top: 50%;
@@ -3206,7 +3248,7 @@ b {
   border-radius: 100%;
   border: 1px solid #9f9f9f;
 }
-.order_info_val .select2-results__option:before {
+.select_w3 .select2-results__option:before {
   right: auto;
   left: 0;
   width: 18px;
@@ -3214,15 +3256,15 @@ b {
   line-height: 18px;
   color: #a658b1;
 }
-.order_info_val .select2-dropdown {
+.select_w3 .select2-dropdown {
   padding: 0;
   background: none !important;
   border: none !important;
 }
-.order_info_val .select2-dropdown:before {
+.select_w3 .select2-dropdown:before {
   display: none;
 }
-.order_info_val .select2-results__option--highlighted[aria-selected] {
+.select_w3 .select2-results__option--highlighted[aria-selected] {
   color: #0d0d0d;
   background: none !important;
   font-family: "ArialBold", sans-serif;
@@ -3251,6 +3293,73 @@ b {
   display: none !important;
 }
 
+.select_w4 .select2-dropdown:before {
+  right: 0;
+  left: 0;
+  background: #c8c8c8;
+}
+.select_w4 .select2-dropdown {
+  border-color: #c8c8c8;
+}
+.select_w4 .select2-container .select2-selection--single {
+  height: 22px;
+  background: none;
+  border-radius: 0;
+  border-color: #c8c8c8;
+}
+.select_w4 .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 22px;
+}
+.select_w4 .select2-container--default .select2-selection--single .select2-selection__rendered {
+  font: 12px/20px "ArialBold", sans-serif;
+}
+.select_w4 .select2-results__option {
+  line-height: normal;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
 .order_info_row {
   display: none;
+}
+
+.car_features {
+  float: left;
+  margin-left: -20px;
+  margin-right: 40px;
+}
+.car_features li {
+  float: left;
+  margin-bottom: 20px;
+}
+.car_features .check_text_2 {
+  display: none;
+  margin-left: 20px;
+}
+.car_features .hidden_input:checked + .check_text_2 {
+  display: block;
+}
+.car_features .check_text_2:first-child {
+  display: block;
+}
+.edit_mode .car_features .check_text_2 {
+  display: block;
+}
+
+.file_label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 9px;
+  line-height: 22px;
+}
+.file_label:before {
+  margin-right: 3px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.show_always {
+  display: initial !important;
 }

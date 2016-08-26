@@ -224,7 +224,7 @@
 .order_info_list {
   padding-top: 63px;
 
-  li {
+  > li {
 
     &:first-child {
       border-top: 1px solid #c8c8c8;
@@ -315,13 +315,29 @@
 
 .edit_v1 {
 
+  > .select2-container {
+    max-width: 100px;
+  }
+  
   > input {
     @extend %input_v2;
     max-width: 100px;
   }
 }
 
-.order_info_val {
+.edit_v2 {
+
+  > .select2-container {
+    max-width: 200px;
+  }
+
+  > input {
+    @extend %input_v2;
+    max-width: 200px;
+  }
+}
+
+.select_w3 {
 
   .select2-container {
     position: relative !important;
@@ -413,9 +429,96 @@
   }
 }
 
+.select_w4 {
+
+  .select2-dropdown {
+    &:before {
+      right: 0;
+      left: 0;
+      background: #c8c8c8;
+    }
+  }
+
+  .select2-dropdown {
+    border-color: #c8c8c8;
+  }
+
+  .select2-container .select2-selection--single {
+    height: 22px;
+    background: none;
+    border-radius: 0;
+    border-color: #c8c8c8;
+  }
+
+  .select2-container--default .select2-selection--single {
+
+    .select2-selection__arrow {
+      height: 22px;
+    }
+
+    .select2-selection__rendered {
+      font: 12px/20px $ArialBold;
+    }
+  }
+  .select2-results__option {
+    line-height: normal;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
 .order_info_row {
   display: none;
 }
 
+.car_features {
+  float: left;
+  margin-left: -20px;
+  margin-right: 40px;
 
+  li {
+    float: left;
+    margin-bottom: 20px;
+  }
 
+  .check_text_2 {
+    display: none;
+    margin-left: 20px;
+  }
+
+  .hidden_input:checked + .check_text_2 {
+    display: block;
+  }
+
+  .check_text_2:first-child {
+    display: block;
+  }
+
+  .edit_mode & {
+    .check_text_2 {
+      display: block;
+    }
+  }
+}
+
+.file_label {
+  @extend .icon-before;
+  @extend .icon-folder-open;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 9px;
+  line-height: 22px;
+
+  &:before {
+    margin-right: 3px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+}
+
+.show_always {
+  display: initial !important;
+}

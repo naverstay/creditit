@@ -383,3 +383,27 @@ $gl_yellow_2: #fdce0b;
 
   }
 }
+
+.unit_info {
+  @extend %clearfix;
+  padding-top: 63px;
+}
+
+.unit_info_block {
+  margin-left: 252px;
+  border-top: thin dotted #8a8885;
+}
+
+.unit_info_caption {
+  width: 228px;
+  float: left;
+  border-top: thin dotted #8a8885;
+}
+
+.unit_info_table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+
+

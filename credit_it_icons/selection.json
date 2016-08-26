@@ -8,6 +8,7 @@
         ],
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "check"
         ],
@@ -21,8 +22,8 @@
         "code": 59654,
         "name": "check2"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 0
     },
     {
@@ -34,6 +35,7 @@
         "width": 1029,
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "arrow_down"
         ],
@@ -47,8 +49,8 @@
         "code": 59655,
         "name": "arrow_down"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 1
     },
     {
@@ -64,6 +66,7 @@
         "width": 1012,
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "calendar"
         ],
@@ -77,8 +80,8 @@
         "code": 59656,
         "name": "calendar"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 2
     },
     {
@@ -92,6 +95,7 @@
         "width": 1026,
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "add_gaurantor"
         ],
@@ -105,8 +109,8 @@
         "code": 59657,
         "name": "add_gaurantor"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 3
     },
     {
@@ -121,6 +125,7 @@
         "width": 1029,
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "add_client"
         ],
@@ -134,8 +139,8 @@
         "code": 59658,
         "name": "add_client"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 4
     },
     {
@@ -149,6 +154,7 @@
         "width": 1037,
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "wallet"
         ],
@@ -162,8 +168,8 @@
         "code": 59659,
         "name": "wallet"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 5
     },
     {
@@ -181,6 +187,7 @@
         "width": 1030,
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "bank"
         ],
@@ -194,8 +201,8 @@
         "code": 59660,
         "name": "bank"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 6
     },
     {
@@ -210,6 +217,7 @@
         "width": 1003,
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "wife"
         ],
@@ -223,8 +231,8 @@
         "code": 59661,
         "name": "wife"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 7
     },
     {
@@ -240,6 +248,7 @@
         "width": 1013,
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "client"
         ],
@@ -253,8 +262,8 @@
         "code": 59662,
         "name": "client"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 8
     },
     {
@@ -264,6 +273,7 @@
         ],
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "document"
         ],
@@ -277,8 +287,8 @@
         "code": 59648,
         "name": "document"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 9
     },
     {
@@ -288,6 +298,7 @@
         ],
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "label"
         ],
@@ -301,8 +312,8 @@
         "code": 59649,
         "name": "label"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 10
     },
     {
@@ -313,6 +324,7 @@
         ],
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "check"
         ],
@@ -326,8 +338,8 @@
         "code": 59650,
         "name": "check"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 11
     },
     {
@@ -339,6 +351,7 @@
         ],
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "close"
         ],
@@ -352,8 +365,8 @@
         "code": 59651,
         "name": "close"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 12
     },
     {
@@ -364,6 +377,7 @@
         ],
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "info"
         ],
@@ -377,8 +391,8 @@
         "code": 59652,
         "name": "info2"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 13
     },
     {
@@ -388,6 +402,7 @@
         ],
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "arrow-right",
           "right",
@@ -398,13 +413,13 @@
       "attrs": [],
       "properties": {
         "order": 18,
-        "id": 15,
+        "id": 14,
         "prevSize": 32,
         "code": 59663,
         "name": "arrow-left2"
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 14
     },
     {
@@ -414,6 +429,7 @@
         ],
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "arrow-right",
           "right",
@@ -427,12 +443,71 @@
         "prevSize": 32,
         "ligatures": "arrow-right2, right4",
         "name": "arrow-right2",
-        "id": 14,
+        "id": 15,
         "code": 59653
       },
-      "setIdx": 13,
-      "setId": 5,
+      "setIdx": 0,
+      "setId": 21,
       "iconIdx": 15
+    },
+    {
+      "icon": {
+        "paths": [
+          "M275.436 584.229q0-29.794-21.217-51.011t-51.011-21.217-51.011 21.217-21.217 51.011 21.217 51.011 51.011 21.217 51.011-21.217 21.217-51.011zM291.687 439.772h458.651l-40.177-161.16q-0.903-3.611-6.32-7.9t-9.48-4.289h-346.697q-4.063 0-9.48 4.289t-6.32 7.9zM911.047 584.229q0-29.794-21.217-51.011t-51.011-21.217-51.011 21.217-21.217 51.011 21.217 51.011 51.011 21.217 51.011-21.217 21.217-51.011zM983.276 540.892v173.349q0 6.32-4.063 10.383t-10.383 4.063h-43.337v57.783q0 36.114-25.28 61.394t-61.394 25.28-61.394-25.28-25.28-61.394v-57.783h-462.263v57.783q0 36.114-25.28 61.394t-61.394 25.28-61.394-25.28-25.28-61.394v-57.783h-43.337q-6.32 0-10.383-4.063t-4.063-10.383v-173.349q0-41.983 29.569-71.551t71.551-29.569h12.64l47.4-189.149q10.383-42.434 46.949-71.1t80.806-28.666h346.697q44.24 0 80.806 28.666t46.949 71.1l47.4 189.149h12.64q41.983 0 71.551 29.569t29.569 71.551z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 1042,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "automobile",
+          "car"
+        ],
+        "grid": 16
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 1,
+        "id": 2,
+        "name": "car",
+        "prevSize": 32,
+        "code": 59664
+      },
+      "setIdx": 3,
+      "setId": 18,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M782.769 864.001l162.462-433.23h-704l-162.462 433.23zM187.076 376.616l-108.308 487.384v-704h243.692l108.308 108.308h352v108.308z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "tags": [
+          "folder-open",
+          "directory",
+          "category",
+          "browse"
+        ],
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "order": 65,
+        "prevSize": 32,
+        "ligatures": "folder-open, directory2",
+        "name": "folder-open",
+        "id": 49,
+        "code": 59665
+      },
+      "setIdx": 21,
+      "setId": 0,
+      "iconIdx": 48
     }
   ],
   "height": 1024,

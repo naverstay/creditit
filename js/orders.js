@@ -15,7 +15,7 @@ $(function ($) {
             }, 1);
 
         } else {
-            infoBox.addClass('edit_mode').find('.edit, .edit_select').dblclick();
+            infoBox.addClass('edit_mode').find('.edit, .edit_select, .edit_select_attach, .edit_select_multi').dblclick();
             infoBox.find('.orderTableRow').show();
         }
 
@@ -42,7 +42,7 @@ $(function ($) {
         placeholder: '',
         cssclass: 'edit_v1',
         callback: function (value, settings) {
-            console.log(value, settings);
+
         },
         onreset: function (settings, el) {
 
@@ -51,6 +51,70 @@ $(function ($) {
 
 
     $('.edit_select').each(function (ind) {
+        var el = $(this);
+
+        el.editable(function (value, settings) {
+            var ret = '', el = $(this), json = JSON.parse(el.attr('data-option')), selectedVals = [];
+
+            json['selected'] = value;
+
+            el.attr('data-option', JSON.stringify(json));
+
+            return value;
+        }, {
+            indicator: 'Saving...',
+            type: 'single',
+            placeholder: '',
+            onblur: 'ignore',
+            containerCssClass: 'select_v4',
+            dropdownCssClass: 'select_d4',
+            event: "dblclick",
+            cssclass: 'edit_v1',
+            callback: function (value, settings) {
+
+            },
+            onreset: function (settings, el) {
+
+            }
+
+        })
+
+    });
+
+    $('.edit_select_attach').each(function (ind) {
+        var el = $(this);
+
+        el.editable(function (value, settings) {
+            var ret = '', el = $(this), json = JSON.parse(el.attr('data-option')), selectedVals = [];
+
+            json['selected'] = value.replace(/:.*/, '');
+
+            el.attr('data-option', JSON.stringify(json));
+
+            return value;
+        }, {
+            indicator: 'Saving...',
+            type: 'single_attach',
+            placeholder: '',
+            onblur: 'ignore',
+            containerCssClass: 'select_v4',
+            dropdownCssClass: 'select_d4',
+            event: "dblclick",
+            cssclass: 'edit_v2',
+            labelclass: 'file_label',
+            labeltext: 'Выбрать файлы',
+            callback: function (value, settings) {
+
+            },
+            onreset: function (settings, el) {
+
+            }
+
+        })
+
+    });
+
+    $('.edit_select_multi').each(function (ind) {
         var el = $(this);
 
         el.editable(function (value, settings) {
@@ -96,7 +160,7 @@ $(function ($) {
 function rowToggler(row) {
     var vis = false;
 
-    row.find('.order_info_val').each(function (ind) {
+    row.find('.order_info_val.edit').each(function (ind) {
         if ($(this).text().length > 0) {
             vis = true;
         }
@@ -107,6 +171,168 @@ function rowToggler(row) {
 }
 
 function addMultiEditable() {
+
+    $.editable.addInputType('single', {
+
+        content: function (data, settings, original) {
+
+            data = $(original).attr('data-option');
+
+            var selectedVals = [];
+            /* If it is string assume it is json. */
+            if (String == data.constructor) {
+                eval('var json = ' + data);
+            } else {
+                /* Otherwise assume it is a hash already. */
+                var json = data;
+            }
+
+            $('select', this).append($('<option disabled />').val(''));
+
+            for (var key in json) {
+                if (!json.hasOwnProperty(key)) {
+                    continue;
+                }
+                if ('selected' == key) {
+                    if (typeof json[key] == 'string') {
+                        selectedVals.push(json[key]);
+                    } else if (typeof json[key] == 'object') {
+                        for (var i = 0; i < json[key].length; i++) {
+                            selectedVals.push(json[key][i]);
+                        }
+                    }
+                    continue;
+                }
+                var option = $('<option />').val(key).append(json[key]);
+                $('select', this).append(option);
+            }
+            /* Loop option again to set selected. IE needed this... */
+            for (var i = 0; i < selectedVals.length; i++) {
+                $('select', this).children().each(function () {
+                    if ($(this).val() == selectedVals[i] ||
+                        $(this).text() == $.trim(original.revert)) {
+                        $(this).attr('selected', 'selected');
+                    }
+                });
+            }
+        },
+        element: function (settings, original) {
+            var input = $('<select>');
+            $(this).append(input);
+            return (input);
+        },
+        plugin: function (settings, original) {
+
+            $('select', this)
+                .on("select2:close", function (e) {
+
+                })
+                .select2({
+                    //allowClear: true,
+                    //closeOnSelect: false,
+                    preventClosing: true,
+                    placeholder: '',
+                    minimumResultsForSearch: Infinity,
+                    width: '100%',
+                    dropdownParent: $(this),
+                    containerCssClass: settings.containerCssClass,
+                    adaptDropdownCssClass: function (c) {
+                        //console.log(settings.dropdownCssClass);
+                        return settings.dropdownCssClass;
+                    }
+                });
+        }
+    });
+
+    $.editable.addInputType('single_attach', {
+
+        content: function (data, settings, original) {
+
+            data = $(original).attr('data-option');
+
+            var selectedVals = [];
+            /* If it is string assume it is json. */
+            if (String == data.constructor) {
+                eval('var json = ' + data);
+            } else {
+                /* Otherwise assume it is a hash already. */
+                var json = data;
+            }
+
+            $('select', this).append($('<option disabled />').val(''));
+
+            for (var key in json) {
+                if (!json.hasOwnProperty(key)) {
+                    continue;
+                }
+                if ('selected' == key) {
+                    if (typeof json[key] == 'string') {
+                        selectedVals.push(json[key]);
+                    } else if (typeof json[key] == 'object') {
+                        for (var i = 0; i < json[key].length; i++) {
+                            selectedVals.push(json[key][i]);
+                        }
+                    }
+                    continue;
+                }
+                var option = $('<option />').val(key).append(json[key]);
+                $('select', this).append(option);
+            }
+            /* Loop option again to set selected. IE needed this... */
+            for (var i = 0; i < selectedVals.length; i++) {
+                $('select', this).children().each(function () {
+                    if ($(this).val() == selectedVals[i] ||
+                        $(this).text() == $.trim(original.revert)) {
+                        $(this).attr('selected', 'selected');
+                    }
+                });
+            }
+        },
+        element: function (settings, original) {
+            var input = $('<input class="hidden_input submit_val">'), select = $('<select />'), 
+                attach = $('<label />')
+                    .addClass(settings.labelclass)
+                    .append($('<input class="hidden_input file_name" type="file">'))
+                    .append($('<span />').text(settings.labeltext));
+
+            $('.file_name', attach).on('change', function () {
+                var el = $(this);
+                el.next().text(el.val())
+            });
+
+            $(this).append(input).append(select).append(attach);
+
+            return (input);
+        },
+        submit: function (settings, original) {
+            var file = $('.file_name', this), select = $('select option:selected', this).text();
+
+            $('.submit_val', this).val(file[0].files ? select + ': ' + file.val() : '');
+
+        },
+
+        plugin: function (settings, original) {
+
+            $('select', this)
+                .on("select2:close", function (e) {
+
+                })
+                .select2({
+                    //allowClear: true,
+                    //closeOnSelect: false,
+                    preventClosing: true,
+                    placeholder: '',
+                    minimumResultsForSearch: Infinity,
+                    width: '100%',
+                    dropdownParent: $(this),
+                    containerCssClass: settings.containerCssClass,
+                    adaptDropdownCssClass: function (c) {
+                        //console.log(settings.dropdownCssClass);
+                        return settings.dropdownCssClass;
+                    }
+                });
+        }
+    });
 
     $.editable.addInputType('multi', {
 
@@ -173,7 +399,7 @@ function addMultiEditable() {
                     dropdownParent: $(this),
                     containerCssClass: settings.containerCssClass,
                     adaptDropdownCssClass: function (c) {
-                        console.log(settings.dropdownCssClass);
+                        //console.log(settings.dropdownCssClass);
                         return settings.dropdownCssClass;
                     }
                 }).select2("open");

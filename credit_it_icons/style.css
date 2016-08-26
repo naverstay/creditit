@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'credit_it_icons';
-  src:  url('fonts/credit_it_icons.eot?4g3env');
-  src:  url('fonts/credit_it_icons.eot?4g3env#iefix') format('embedded-opentype'),
-    url('fonts/credit_it_icons.ttf?4g3env') format('truetype'),
-    url('fonts/credit_it_icons.woff?4g3env') format('woff'),
-    url('fonts/credit_it_icons.svg?4g3env#credit_it_icons') format('svg');
+  src:  url('fonts/credit_it_icons.eot?murlon');
+  src:  url('fonts/credit_it_icons.eot?murlon#iefix') format('embedded-opentype'),
+    url('fonts/credit_it_icons.ttf?murlon') format('truetype'),
+    url('fonts/credit_it_icons.woff?murlon') format('woff'),
+    url('fonts/credit_it_icons.svg?murlon#credit_it_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -71,5 +71,11 @@
 }
 .icon-arrow-right2:before {
   content: "\e905";
+}
+.icon-car:before {
+  content: "\e910";
+}
+.icon-folder-open:before {
+  content: "\e911";
 }
 
