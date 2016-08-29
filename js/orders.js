@@ -15,13 +15,42 @@ $(function ($) {
             }, 1);
 
         } else {
-            infoBox.addClass('edit_mode').find('.edit, .edit_select, .edit_select_attach, .edit_select_multi').dblclick();
+            infoBox.addClass('edit_mode').find('.edit, .edit_select, .edit_select_attach, .edit_select_multi, .edit_textarea').dblclick();
             infoBox.find('.orderTableRow').show();
         }
 
         return false;
     });
 
+    $('.select2').each(function (ind) {
+        var slct = $(this);
+
+        slct.select2({
+            allowClear: false,
+            //closeOnSelect: false,
+            //preventClosing: true,
+            placeholder: '',
+            minimumResultsForSearch: Infinity,
+            width: '100%',
+            dropdownParent: slct.parent(),
+            //containerCssClass: settings.containerCssClass,
+            adaptDropdownCssClass: function (c) {
+
+            }
+        })
+
+    });
+
+    $('.file_name').on('change', function () {
+        var el = $(this);
+        el.next().text(el.val())
+    });
+
+    $('.autogrow', this).autogrow({
+        lineHeight: 14,
+        minHeight: 22
+    });
+    
     $('.openOrderRow').on ('click', function () {
         var firedEl = $(this);
 
@@ -69,16 +98,39 @@ $(function ($) {
             containerCssClass: 'select_v4',
             dropdownCssClass: 'select_d4',
             event: "dblclick",
-            cssclass: 'edit_v1',
+            cssclass: 'edit_v3',
             callback: function (value, settings) {
 
             },
             onreset: function (settings, el) {
 
             }
+        });
+    });
 
-        })
+    $('.edit_textarea').each(function (ind) {
+        var el = $(this);
 
+        el.editable(function (value, settings) {
+            return value;
+        }, {
+            indicator: 'Saving...',
+            type: 'textarea',
+            placeholder: '',
+            onblur: 'ignore',
+            event: "dblclick",
+            cssclass: 'edit_v3',
+            autogrow: {
+                lineHeight: 14,
+                minHeight: 22
+            },
+            callback: function (value, settings) {
+
+            },
+            onreset: function (settings, el) {
+
+            }
+        });
     });
 
     $('.edit_select_attach').each(function (ind) {
@@ -160,7 +212,7 @@ $(function ($) {
 function rowToggler(row) {
     var vis = false;
 
-    row.find('.order_info_val.edit').each(function (ind) {
+    row.find('.order_info_val').each(function (ind) {
         if ($(this).text().length > 0) {
             vis = true;
         }
@@ -172,6 +224,27 @@ function rowToggler(row) {
 
 function addMultiEditable() {
 
+    $.editable.addInputType('textarea', {
+        element: function (settings, original) {
+            var textarea = $('<textarea />');
+            if (settings.rows) {
+                textarea.attr('rows', settings.rows);
+            } else {
+                textarea.height(settings.height);
+            }
+            if (settings.cols) {
+                textarea.attr('cols', settings.cols);
+            } else {
+                textarea.width(settings.width);
+            }
+            $(this).append(textarea);
+            return (textarea);
+        },
+        plugin: function (settings, original) {
+            $('textarea', this).autogrow(settings.autogrow);
+        }
+    });
+    
     $.editable.addInputType('single', {
 
         content: function (data, settings, original) {

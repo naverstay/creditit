@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'credit_it_icons';
-  src:  url('#{$icomoon-font-path}/credit_it_icons.eot?murlon');
-  src:  url('#{$icomoon-font-path}/credit_it_icons.eot?murlon#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/credit_it_icons.ttf?murlon') format('truetype'),
-    url('#{$icomoon-font-path}/credit_it_icons.woff?murlon') format('woff'),
-    url('#{$icomoon-font-path}/credit_it_icons.svg?murlon#credit_it_icons') format('svg');
+  src:  url('#{$icomoon-font-path}/credit_it_icons.eot?5kkemn');
+  src:  url('#{$icomoon-font-path}/credit_it_icons.eot?5kkemn#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/credit_it_icons.ttf?5kkemn') format('truetype'),
+    url('#{$icomoon-font-path}/credit_it_icons.woff?5kkemn') format('woff'),
+    url('#{$icomoon-font-path}/credit_it_icons.svg?5kkemn#credit_it_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-synchronize {
+  &:before {
+    content: $icon-synchronize;
+  }
+}
 .icon-check2 {
   &:before {
     content: $icon-check2;
@@ -114,6 +119,21 @@
 .icon-folder-open {
   &:before {
     content: $icon-folder-open;
+  }
+}
+.icon-reload {
+  &:before {
+    content: $icon-reload;
+  }
+}
+.icon-rub {
+  &:before {
+    content: $icon-rub;
+  }
+}
+.icon-sun {
+  &:before {
+    content: $icon-sun;
   }
 }
 

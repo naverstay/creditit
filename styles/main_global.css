@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.main_menu_holder:after, .order_r_item:after, .order_controls:after, .pagination_block:after, .form_row:after, .tab_list_holder:after, .steps_holder:after, .step_controls:after, .unit_info:after, .order_panel:after {
+.main_menu_holder:after, .order_r_item:after, .order_controls:after, .pagination_block:after, .form_row:after, .tab_list_holder:after, .steps_holder:after, .step_controls:after, .unit_info:after, .order_panel:after, .upload_item:after {
   position: static;
   display: block;
   height: 0;
@@ -254,8 +254,8 @@ textarea:focus::-moz-placeholder {
 
 @font-face {
   font-family: 'credit_it_icons';
-  src: url("../fonts/icons/credit_it_icons.eot?murlon");
-  src: url("../fonts/icons/credit_it_icons.eot?murlon#iefix") format("embedded-opentype"), url("../fonts/icons/credit_it_icons.ttf?murlon") format("truetype"), url("../fonts/icons/credit_it_icons.woff?murlon") format("woff"), url("../fonts/icons/credit_it_icons.svg?murlon#credit_it_icons") format("svg");
+  src: url("../fonts/icons/credit_it_icons.eot?5kkemn");
+  src: url("../fonts/icons/credit_it_icons.eot?5kkemn#iefix") format("embedded-opentype"), url("../fonts/icons/credit_it_icons.ttf?5kkemn") format("truetype"), url("../fonts/icons/credit_it_icons.woff?5kkemn") format("woff"), url("../fonts/icons/credit_it_icons.svg?5kkemn#credit_it_icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -271,6 +271,10 @@ textarea:focus::-moz-placeholder {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-synchronize:before {
+  content: "";
 }
 
 .icon-check2:before, .select2-results__option[aria-selected=true]:before, .checkbox_emul .hidden_input:checked + .check_text:before, .checkbox_emul_2 .hidden_input:checked + .check_text_2:before {
@@ -344,6 +348,18 @@ textarea:focus::-moz-placeholder {
 
 .icon-folder-open:before, .file_label:before {
   content: "";
+}
+
+.icon-reload:before {
+  content: "";
+}
+
+.icon-rub:before {
+  content: "";
+}
+
+.icon-sun:before {
+  content: "";
 }
 
 /*! jQuery UI - v1.11.4 - 2016-02-23
@@ -2184,12 +2200,12 @@ b {
   border-color: #cdcdcd;
 }
 
-.edit_v1 > input, .edit_v2 > input {
+.edit_v1 > input, .edit_v2 > input, .edit_v3 > textarea, .edit_v3 > input {
   border: 1px solid #c8c8c8;
   padding: 3px 4px;
   font: 12px/14px "ArialBold", sans-serif;
 }
-.edit_v1 > input:disabled, .edit_v2 > input:disabled {
+.edit_v1 > input:disabled, .edit_v2 > input:disabled, .edit_v3 > textarea:disabled, .edit_v3 > input:disabled {
   color: #cdcdcd;
   border-color: #cdcdcd;
 }
@@ -3035,6 +3051,14 @@ b {
   padding: 0;
   line-height: 24px;
 }
+.edit_mode .order_info_val .checkbox_emul_2 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.order_info_line .order_info_val {
+  float: left;
+  margin-right: 18px;
+}
 
 .order_info_label,
 .order_status_bank {
@@ -3126,8 +3150,12 @@ b {
   line-height: normal;
 }
 
-.order_info_list {
+.tab_inner {
   padding-top: 63px;
+}
+
+.order_info_list {
+  margin-bottom: 30px;
 }
 .order_info_list > li:first-child {
   border-top: 1px solid #c8c8c8;
@@ -3174,6 +3202,7 @@ b {
 
 .order_info_box {
   padding: 20px;
+  font-size: 12px;
   position: relative;
 }
 
@@ -3193,7 +3222,6 @@ b {
 
 .order_info_table {
   width: 100%;
-  font-size: 12px;
 }
 .order_info_table td {
   vertical-align: top;
@@ -3203,13 +3231,13 @@ b {
 .order_info_table td:first-child {
   padding-left: 0;
 }
+.order_info_table p {
+  margin-bottom: 15px;
+}
 .order_info_table.layout_fix {
   table-layout: fixed;
 }
 
-.edit_v1 > .select2-container {
-  max-width: 100px;
-}
 .edit_v1 > input {
   max-width: 100px;
 }
@@ -3218,6 +3246,16 @@ b {
   max-width: 200px;
 }
 .edit_v2 > input {
+  max-width: 200px;
+}
+
+.edit_v3 > .select2-container {
+  max-width: 100px;
+}
+.edit_v3 > textarea {
+  width: 100%;
+}
+.edit_v3 > input {
   max-width: 200px;
 }
 
@@ -3293,6 +3331,9 @@ b {
   display: none !important;
 }
 
+.select_w4 .select2-selection__clear {
+  display: none;
+}
 .select_w4 .select2-dropdown:before {
   right: 0;
   left: 0;
@@ -3362,4 +3403,95 @@ b {
 
 .show_always {
   display: initial !important;
+}
+
+.client_info p {
+  margin: 15px 0;
+}
+
+.upload_list {
+  margin-bottom: 20px;
+}
+.upload_list > li {
+  margin-top: 10px;
+}
+
+.upload_rm {
+  cursor: pointer;
+  float: left;
+  margin-right: 5px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #f00;
+  width: 16px;
+  height: 12px;
+}
+.upload_rm:before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  font-size: 16px;
+}
+
+.upload_name {
+  float: left;
+  width: 40%;
+}
+
+.upload_date {
+  float: left;
+  width: 30%;
+}
+
+.upload_post {
+  float: left;
+  width: 20%;
+}
+
+.credit_terms {
+  width: 100%;
+  margin-bottom: 30px;
+  table-layout: fixed;
+}
+.credit_terms td {
+  border: solid #c8c8c8;
+  border-width: 1px 0;
+  padding: 10px 0;
+  color: #9d9d9d;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.credit_terms .caption_row td {
+  padding-top: 30px;
+}
+.credit_terms tr:first-child td {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.agreement_progress li {
+  margin-bottom: 10px;
+}
+
+.agreement_step {
+  position: relative;
+  padding-left: 20px;
+}
+
+.step_rm {
+  cursor: pointer;
+  color: #f00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  vertical-align: middle;
+  height: 14px;
+}
+.step_rm:before {
+  position: absolute;
+  left: 0;
+  top: -3px;
+  font-size: 16px;
 }

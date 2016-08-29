@@ -121,8 +121,18 @@
   .edit_mode & {
     padding: 0;
     line-height: 24px;
+
+    .checkbox_emul_2 {
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
   }
 
+  .order_info_line & {
+    float: left;
+    margin-right: 18px;
+  }
+  
 }
 
 .order_info_label,
@@ -221,8 +231,13 @@
   line-height: normal;
 }
 
-.order_info_list {
+.tab_inner {
   padding-top: 63px;
+  //padding-bottom: 30px;
+}
+
+.order_info_list {
+  margin-bottom: 30px;
 
   > li {
 
@@ -274,6 +289,7 @@
 
 .order_info_box {
   padding: 20px;
+  font-size: 12px;
   position: relative;
 }
 
@@ -290,11 +306,10 @@
   &:hover {
     text-decoration: underline;
   }
-}
+} 
 
 .order_info_table {
   width: 100%;
-  font-size: 12px;
 
   td {
     vertical-align: top;
@@ -304,20 +319,18 @@
     &:first-child {
       padding-left: 0;
     }
-
   }
 
+  p {
+    margin-bottom: 15px;
+  }
+  
   &.layout_fix {
     table-layout: fixed;
   }
-
 }
 
 .edit_v1 {
-
-  > .select2-container {
-    max-width: 100px;
-  }
   
   > input {
     @extend %input_v2;
@@ -329,6 +342,23 @@
 
   > .select2-container {
     max-width: 200px;
+  }
+
+  > input {
+    @extend %input_v2;
+    max-width: 200px;
+  }
+}
+
+.edit_v3 {
+
+  > .select2-container {
+    max-width: 100px;
+  }
+
+  > textarea {
+    @extend %input_v2;
+    width: 100%;
   }
 
   > input {
@@ -431,6 +461,10 @@
 
 .select_w4 {
 
+  .select2-selection__clear {
+    display: none;
+  }
+  
   .select2-dropdown {
     &:before {
       right: 0;
@@ -521,4 +555,122 @@
 
 .show_always {
   display: initial !important;
+}
+
+.client_info {
+
+  p {
+    margin: 15px 0;
+  }
+}
+
+.upload_list {
+  margin-bottom: 20px;
+
+  > li {
+    margin-top: 10px;
+  }
+}
+
+.upload_item {
+  @extend %clearfix;
+
+}
+
+.upload_rm {
+  cursor: pointer;
+  float: left;
+  margin-right: 5px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: $gl_red;
+  width: 16px;
+  height: 12px;
+
+  &:before {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    font-size: 16px;
+  }
+}
+
+.upload_name {
+  float: left;
+  width: 40%;
+}
+
+.upload_date {
+  float: left;
+  width: 30%;
+}
+
+.upload_post {
+  float: left;
+  width: 20%;
+}
+
+.credit_terms {
+  width: 100%;
+  margin-bottom: 30px;
+  table-layout: fixed;
+
+  td {
+    border: solid #c8c8c8;
+    border-width: 1px 0;
+    padding: 10px 0;
+    color: #9d9d9d;
+    font-size: 12px;
+    vertical-align: middle;
+  }
+
+  .caption_row td {
+    padding-top: 30px;
+  }
+
+  tr:first-child td {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+}
+
+.agreement_progress {
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.agreement_step {
+  position: relative;
+  padding-left: 20px;
+}
+
+.agreement_date {
+
+}
+
+.agreement_status {
+
+}
+
+.step_rm {
+  cursor: pointer;
+  color: $gl_red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  vertical-align: middle;
+  height: 14px;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: -3px;
+    font-size: 16px;
+  }
+
 }

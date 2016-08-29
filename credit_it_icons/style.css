@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'credit_it_icons';
-  src:  url('fonts/credit_it_icons.eot?murlon');
-  src:  url('fonts/credit_it_icons.eot?murlon#iefix') format('embedded-opentype'),
-    url('fonts/credit_it_icons.ttf?murlon') format('truetype'),
-    url('fonts/credit_it_icons.woff?murlon') format('woff'),
-    url('fonts/credit_it_icons.svg?murlon#credit_it_icons') format('svg');
+  src:  url('fonts/credit_it_icons.eot?5kkemn');
+  src:  url('fonts/credit_it_icons.eot?5kkemn#iefix') format('embedded-opentype'),
+    url('fonts/credit_it_icons.ttf?5kkemn') format('truetype'),
+    url('fonts/credit_it_icons.woff?5kkemn') format('woff'),
+    url('fonts/credit_it_icons.svg?5kkemn#credit_it_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-synchronize:before {
+  content: "\e912";
+}
 .icon-check2:before {
   content: "\e906";
 }
@@ -77,5 +80,14 @@
 }
 .icon-folder-open:before {
   content: "\e911";
+}
+.icon-reload:before {
+  content: "\e913";
+}
+.icon-rub:before {
+  content: "\f158";
+}
+.icon-sun:before {
+  content: "\e914";
 }
 

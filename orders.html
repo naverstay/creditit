@@ -10,6 +10,7 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/script.js"></script>
     <script src="js/jquery.jeditable.js"></script>
+    <script src="js/autogrow.min.js"></script>
     <script src="js/orders.js"></script>
   </head>
   <body>
@@ -139,273 +140,645 @@
                   <ul id="tab_list" class="order_main_tabs">
                     <li><a href="#tab_unit_1" class="order_tab_btn"><span class="order_tab_text">Заявка</span></a></li>
                     <li><a href="#tab_unit_2" class="order_tab_btn"><span class="order_tab_text">Автомобиль</span></a></li>
-                    <li><a href="#tab_unit_3" class="order_tab_btn"><span class="order_tab_text">Условия кредита</span></a></li>
-                    <li><a href="#tab_unit_4" class="order_tab_btn"><span class="order_tab_text">Статус в банках</span></a></li>
-                    <li><a href="#tab_unit_5" class="order_tab_btn"><span class="order_tab_text">Управление заявкой</span></a></li>
+                    <li><a href="#tab_unit_3" class="order_tab_btn"><span class="order_tab_text">Параметры кредита</span></a></li>
+                    <li><a href="#tab_unit_4" class="order_tab_btn"><span class="order_tab_text">История рассмотрения</span></a></li>
+                    <li><a href="#tab_unit_5" class="order_tab_btn"><span class="order_tab_text">Статус заявки</span></a></li>
                   </ul>
                 </div>
                 <div data-tab-context="#tab_list" class="tabBlock tab_block">
                   <div id="tab_unit_1" class="tab_unit">
-                    <ul class="order_info_list">
-                      <li class="orderInfoRow">
-                        <div class="order_info_caption openOrderRow">Личная информация</div>
-                        <div class="order_info_unit infoBlock">
-                          <div class="order_info_box infoBox"><a href="#" class="order_info_edit editBtn">Редактировать</a>
-                            <table class="order_info_table layout_fix">
-                              <tr class="orderTableRow">
-                                <td>
-                                  <div class="order_info_label">Фамилия</div>
-                                  <div class="order_info_val edit">Тихомиров</div>
-                                </td>
-                                <td>
-                                  <div class="order_info_label">Имя</div>
-                                  <div class="order_info_val edit">Сергей</div>
-                                </td>
-                                <td>
-                                  <div class="order_info_label">Отчество</div>
-                                  <div class="order_info_val edit">Андреевич</div>
-                                </td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                              <tr class="orderTableRow">
-                                <td colspan="5">
-                                  <div class="order_info_label">Роли клиента</div>
-                                  <div data-option="{&quot;Водитель&quot;:&quot;Водитель&quot;,&quot;Заемщик&quot;:&quot;Заемщик&quot;,&quot;Поручитель&quot;:&quot;Поручитель&quot;,&quot;Созаемщик&quot;:&quot;Созаемщик&quot;,&quot;Страхователь&quot;:&quot;Страхователь&quot;,&quot;Супруг / супруга&quot;:&quot;Супруг / супруга&quot;, &quot;selected&quot;:[&quot;Заемщик&quot;, &quot;Страхователь&quot;]}" class="order_info_val edit_select_multi select_w3">Заемщик , Страхователь</div>
-                                </td>
-                              </tr>
-                              <tr style="display:none;" class="orderTableRow">
-                                <td>
-                                  <div class="order_info_label">Предыдущая фамилия</div>
-                                  <div class="order_info_val edit"></div>
-                                </td>
-                                <td>
-                                  <div class="order_info_label">Предыдущее имя</div>
-                                  <div class="order_info_val edit"></div>
-                                </td>
-                                <td>
-                                  <div class="order_info_label">Предыдущее отчество</div>
-                                  <div class="order_info_val edit"></div>
-                                </td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                              <tr style="display:none;" class="orderTableRow">
-                                <td>
-                                  <div class="order_info_label">Фамилия латиницей</div>
-                                  <div class="order_info_val edit"></div>
-                                </td>
-                                <td>
-                                  <div class="order_info_label">Имя латиницей</div>
-                                  <div class="order_info_val edit"></div>
-                                </td>
-                                <td>
-                                  <div class="order_info_label">Отчество латиницей</div>
-                                  <div class="order_info_val edit"></div>
-                                </td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                            </table>
-                          </div>
+                    <div class="tab_inner">
+                      <form action="#">
+                        <ul class="order_info_list">
+                          <li class="orderInfoRow">
+                            <div class="order_info_caption openOrderRow">Личная информация</div>
+                            <div class="order_info_unit infoBlock">
+                              <div class="edit_mode order_info_box infoBox">
+                                <table class="order_info_table layout_fix">
+                                  <tr class="orderTableRow">
+                                    <td>
+                                      <div class="order_info_label">Фамилия</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="Тихомиров"/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Имя</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="Сергей"/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Отчество</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="Андреевич"/>
+                                      </div>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr class="orderTableRow">
+                                    <td colspan="5">
+                                      <div class="order_info_label">Роли клиента</div>
+                                      <div class="order_info_line">
+                                        <div class="order_info_val">
+                                          <label class="checkbox_emul_2">
+                                            <input type="checkbox" class="hidden_input"/><span class="check_text_2">Водитель</span>
+                                          </label>
+                                        </div>
+                                        <div class="order_info_val">
+                                          <label class="checkbox_emul_2">
+                                            <input type="checkbox" class="hidden_input"/><span class="check_text_2">Заемщик</span>
+                                          </label>
+                                        </div>
+                                        <div class="order_info_val">
+                                          <label class="checkbox_emul_2">
+                                            <input type="checkbox" class="hidden_input"/><span class="check_text_2">Поручитель</span>
+                                          </label>
+                                        </div>
+                                        <div class="order_info_val">
+                                          <label class="checkbox_emul_2">
+                                            <input type="checkbox" class="hidden_input"/><span class="check_text_2">Созаемщик</span>
+                                          </label>
+                                        </div>
+                                        <div class="order_info_val">
+                                          <label class="checkbox_emul_2">
+                                            <input type="checkbox" class="hidden_input"/><span class="check_text_2">Страхователь</span>
+                                          </label>
+                                        </div>
+                                        <div class="order_info_val">
+                                          <label class="checkbox_emul_2">
+                                            <input type="checkbox" class="hidden_input"/><span class="check_text_2">Супруг / супруга</span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr style_="display:none;" class="orderTableRow">
+                                    <td>
+                                      <div class="order_info_label">Предыдущая фамилия</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Предыдущее имя</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Предыдущее отчество</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr style_="display:none;" class="orderTableRow">
+                                    <td>
+                                      <div class="order_info_label">Фамилия латиницей</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Имя латиницей</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Отчество латиницей</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="orderInfoRow">
+                            <div class="order_info_caption openOrderRow">Контакты</div>
+                            <div class="order_info_unit infoBlock">
+                              <div class="edit_mode order_info_box infoBox">
+                                <table class="order_info_table layout_fix">
+                                  <tr class="orderTableRow">
+                                    <td colspan="2">
+                                      <div class="order_info_label">Адрес регистрации</div>
+                                      <div class="order_info_val edit_ edit_v2">
+                                        <input value="129518 Москва, ул. 156-я Парковая, д. 10, кор. 19, кв. 1"/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_val">
+                                        <label class="checkbox_emul_2">
+                                          <input type="checkbox" class="hidden_input"/><span class="check_text_2">Совпадает с адресом проживания</span>
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Проживает с</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="18/07/2001"/>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr class="orderTableRow">
+                                    <td>
+                                      <div class="order_info_label">Домашний телефон</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="+7 (495) 123 45 67"/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Мобильный телефон</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="+7 (926) 456 56 66"/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Телефон друга</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="+7 (910) 765 43 21"/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">E-mail</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="tikhomirov123@mail.ru"/>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="orderInfoRow">
+                            <div class="order_info_caption openOrderRow">Социальный статус</div>
+                            <div class="order_info_unit infoBlock">
+                              <div class="edit_mode order_info_box"></div>
+                            </div>
+                          </li>
+                          <li class="orderInfoRow">
+                            <div class="order_info_caption openOrderRow">Профессиональная деятельность</div>
+                            <div class="order_info_unit infoBlock">
+                              <div class="edit_mode order_info_box"></div>
+                            </div>
+                          </li>
+                          <li class="orderInfoRow">
+                            <div class="order_info_caption openOrderRow">Доходы и расходы</div>
+                            <div class="order_info_unit infoBlock">
+                              <div class="edit_mode order_info_box"></div>
+                            </div>
+                          </li>
+                          <li class="orderInfoRow">
+                            <div class="order_info_caption openOrderRow">Собственность</div>
+                            <div class="order_info_unit infoBlock">
+                              <div class="edit_mode order_info_box"></div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="client_info">
+                          <div class="order_info_label">Документы клиента</div>
+                          <p><a href="#" class="link_inherit"><span class="icon-document"></span><span>Согласие на обработку персональных данных</span></a></p>
+                          <ul class="order_info_list">
+                            <li class="orderInfoRow">
+                              <div style="display:block;" class="order_info_unit">
+                                <div class="edit_mode order_info_box infoBox">
+                                  <table class="order_info_table layout_fix">
+                                    <tr class="orderTableRow">
+                                      <td colspan="2">
+                                        <div class="order_info_label">Имя клиента</div>
+                                        <div class="order_info_val edit_ edit_v1">
+                                          <input value="Евгения Малинина"/>
+                                        </div>
+                                      </td>
+                                      <td colspan="5">
+                                        <div class="order_info_label">Тип документа</div>
+                                        <div class="order_info_val select_w4 edit_v2">
+                                          <select class="select2">
+                                            <option disabled="" value=""></option>
+                                            <option value="Доверенность" selected="selected">Доверенность</option>
+                                            <option value="ПТС">ПТС</option>
+                                            <option value="Свидетельство о регистрации ТС">Свидетельство о регистрации ТС</option>
+                                          </select>
+                                          <label class="file_label">
+                                            <input type="file" class="hidden_input file_name"/><span>Выбрать файлы</span>
+                                          </label>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="orderInfoRow">
+                              <div style="display:block;" class="order_info_unit">
+                                <div class="edit_mode order_info_box">
+                                  <div class="order_info_val"><span class="color_red">Загруженные документы</span></div>
+                                  <ul class="upload_list">
+                                    <li>
+                                      <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
                         </div>
-                      </li>
-                      <li class="orderInfoRow">
-                        <div class="order_info_caption openOrderRow">Контакты</div>
-                        <div class="order_info_unit infoBlock">
-                          <div class="order_info_box infoBox"><a href="#" class="order_info_edit editBtn">Редактировать</a>
-                            <table class="order_info_table layout_fix">
-                              <tr class="orderTableRow">
-                                <td colspan="2">
-                                  <div class="order_info_label">Адрес регистрации</div>
-                                  <div class="order_info_val edit">129518 Москва, ул. 156-я Парковая, д. 10, кор. 19, кв. 1</div>
-                                </td>
-                                <td>
-                                  <div class="order_info_val">
-                                    <label class="checkbox_emul_2">
-                                      <input type="checkbox" class="hidden_input"/><span class="check_text_2">Совпадает с адресом проживания</span>
-                                    </label>
-                                  </div>
-                                </td>
-                                <td>
-                                  <div class="order_info_label">Проживает с</div>
-                                  <div class="order_info_val edit">18/07/2001</div>
-                                </td>
-                              </tr>
-                              <tr class="orderTableRow">
-                                <td>
-                                  <div class="order_info_label">Домашний телефон</div>
-                                  <div class="order_info_val edit">+7 (495) 123 45 67</div>
-                                </td>
-                                <td>
-                                  <div class="order_info_label">Мобильный телефон</div>
-                                  <div class="order_info_val edit">+7 (926) 456 56 66</div>
-                                </td>
-                                <td>
-                                  <div class="order_info_label">Телефон друга</div>
-                                  <div class="order_info_val edit">+7 (910) 765 43 21</div>
-                                </td>
-                                <td>
-                                  <div class="order_info_label">E-mail</div>
-                                  <div class="order_info_val edit">tikhomirov123@mail.ru</div>
-                                </td>
-                              </tr>
-                            </table>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="orderInfoRow">
-                        <div class="order_info_caption openOrderRow">Социальный статус</div>
-                        <div class="order_info_unit infoBlock">
-                          <div class="order_info_box"></div>
-                        </div>
-                      </li>
-                      <li class="orderInfoRow">
-                        <div class="order_info_caption openOrderRow">Профессиональная деятельность</div>
-                        <div class="order_info_unit infoBlock">
-                          <div class="order_info_box"></div>
-                        </div>
-                      </li>
-                      <li class="orderInfoRow">
-                        <div class="order_info_caption openOrderRow">Доходы и расходы</div>
-                        <div class="order_info_unit infoBlock">
-                          <div class="order_info_box"></div>
-                        </div>
-                      </li>
-                      <li class="orderInfoRow">
-                        <div class="order_info_caption openOrderRow">Собственность</div>
-                        <div class="order_info_unit infoBlock">
-                          <div class="order_info_box"></div>
-                        </div>
-                      </li>
-                    </ul>
+                        <div class="step_controls"><a href="#" class="btn_v1 next_step_btn violet_btn_2">Сохранить</a></div>
+                      </form>
+                    </div>
                   </div>
                   <div id="tab_unit_2" class="tab_unit">
-                    <div class="tab_inner"> 
-                      <ul class="order_info_list">
-                        <li class="orderInfoRow">
-                          <div style="display:block;" class="order_info_unit infoBlock">
-                            <div class="order_info_box infoBox"><a href="#" class="order_info_edit editBtn">Редактировать</a>
-                              <table class="order_info_table layout_fix">
-                                <tr class="orderTableRow">
-                                  <td>
-                                    <div class="order_info_label">Марка автомобиля</div>
-                                    <div class="order_info_val edit">Chery</div>
-                                  </td>
-                                  <td>
-                                    <div class="order_info_label">Модель автомобиля</div>
-                                    <div class="order_info_val edit">Arrizo 7</div>
-                                  </td>
-                                  <td>
-                                    <div class="order_info_label">Комплектация</div>
-                                    <div class="order_info_val edit">1.6 CVT Luxury</div>
-                                  </td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <td colspan="5">
-                                    <ul class="car_features">
-                                      <li>
-                                        <label class="checkbox_emul_2">
-                                          <input type="radio" name="is_used" checked="checked" class="hidden_input"/><span class="check_text_2">НОВЫЙ</span>
+                    <div class="tab_inner">
+                      <form action="#">
+                        <ul class="order_info_list">
+                          <li class="orderInfoRow">
+                            <div style="display:block;" class="order_info_unit infoBlock">
+                              <div class="edit_mode order_info_box infoBox">
+                                <table class="order_info_table layout_fix">
+                                  <tr class="orderTableRow">
+                                    <td colspan="2">
+                                      <div class="order_info_label">Марка автомобиля</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="Chery"/>
+                                      </div>
+                                    </td>
+                                    <td colspan="2">
+                                      <div class="order_info_label">Модель автомобиля</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="Arrizo 7"/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Комплектация</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="1.6 CVT Luxury"/>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="5">
+                                      <ul class="car_features">
+                                        <li>
+                                          <label class="checkbox_emul_2">
+                                            <input type="radio" name="is_used" checked="checked" class="hidden_input"/><span class="check_text_2">НОВЫЙ</span>
+                                          </label>
+                                        </li>
+                                        <li>
+                                          <label class="checkbox_emul_2">
+                                            <input type="radio" name="is_used" class="hidden_input"/><span class="check_text_2">ПОДЕРЖАННЫЙ</span>
+                                          </label>
+                                        </li>
+                                      </ul>
+                                      <ul class="car_features">
+                                        <li><span class="check_text_2">КОММЕРЧЕСКИЙ</span></li>
+                                        <li>
+                                          <label class="checkbox_emul_2">
+                                            <input type="radio" name="is_commercial" class="hidden_input"/><span class="check_text_2">ДА</span>
+                                          </label>
+                                        </li>
+                                        <li>
+                                          <label class="checkbox_emul_2">
+                                            <input type="radio" name="is_commercial" checked="checked" class="hidden_input"/><span class="check_text_2">НЕТ</span>
+                                          </label>
+                                        </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr class="orderTableRow">
+                                    <td>
+                                      <div class="order_info_label">Тип транспортного средства</div>
+                                      <div class="order_info_val select_w4">
+                                        <select class="select2">
+                                          <option disabled="" value=""></option>
+                                          <option value="Автомобиль">Автомобиль</option>
+                                          <option value="Грузовая техника" selected="selected">Грузовая техника</option>
+                                          <option value="Мототехника">Мототехника</option>
+                                          <option value="Спецтехника и прицеп">Спецтехника и прицеп</option>
+                                        </select>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">VIN номер<br> &nbsp;</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Номер ПТС<br>(без пробелов)</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Регистрационный номер</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Год выпуска <br> &nbsp;</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Пробег, в км.  <br> &nbsp;</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="5">
+                                      <div class="order_info_val wnw"><span class="color_red">Документы на автомобиль</span></div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="5">
+                                      <div class="order_info_label">Тип документа</div>
+                                      <div class="order_info_val select_w4 edit_v2">
+                                        <select class="select2">
+                                          <option disabled="" value=""></option>
+                                          <option value="Доверенность" selected="selected">Доверенность</option>
+                                          <option value="ПТС">ПТС</option>
+                                          <option value="Свидетельство о регистрации ТС">Свидетельство о регистрации ТС</option>
+                                        </select>
+                                        <label class="file_label">
+                                          <input type="file" class="hidden_input file_name"/><span>Выбрать файлы</span>
                                         </label>
-                                      </li>
-                                      <li>
-                                        <label class="checkbox_emul_2">
-                                          <input type="radio" name="is_used" class="hidden_input"/><span class="check_text_2">ПОДЕРЖАННЫЙ</span>
-                                        </label>
-                                      </li>
-                                    </ul>
-                                    <ul class="car_features">
-                                      <li><span class="check_text_2">КОММЕРЧЕСКИЙ</span></li>
-                                      <li>
-                                        <label class="checkbox_emul_2">
-                                          <input type="radio" name="is_commercial" class="hidden_input"/><span class="check_text_2">ДА</span>
-                                        </label>
-                                      </li>
-                                      <li>
-                                        <label class="checkbox_emul_2">
-                                          <input type="radio" name="is_commercial" checked="checked" class="hidden_input"/><span class="check_text_2">НЕТ</span>
-                                        </label>
-                                      </li>
-                                    </ul>
-                                    <ul class="car_features">
-                                      <li><span class="check_text_2">НАЛИЧИЕ В САЛОНЕ</span></li>
-                                      <li>
-                                        <label class="checkbox_emul_2">
-                                          <input type="radio" name="is_available" checked="checked" class="hidden_input"/><span class="check_text_2">ЕСТЬ</span>
-                                        </label>
-                                      </li>
-                                      <li>
-                                        <label class="checkbox_emul_2">
-                                          <input type="radio" name="is_available" class="hidden_input"/><span class="check_text_2">НЕТ</span>
-                                        </label>
-                                      </li>
-                                    </ul>
-                                  </td>
-                                </tr>
-                                <tr class="orderTableRow">
-                                  <td>
-                                    <div class="order_info_label">Тип транспортного средства</div>
-                                    <div data-option="{&quot;Автомобиль&quot;:&quot;Автомобиль&quot;,&quot;Грузовая техника&quot;:&quot;Грузовая техника&quot;,&quot;Мототехника&quot;:&quot;Мототехника&quot;,&quot;Спецтехника и прицеп&quot;:&quot;Спецтехника и прицеп&quot;, &quot;selected&quot;:[&quot;Спецтехника и прицеп&quot;]}" class="order_info_val edit_select select_w4">Спецтехника и прицеп</div>
-                                  </td>
-                                  <td>
-                                    <div class="order_info_label">VIN  <br>  номер</div>
-                                    <div class="order_info_val edit"> </div>
-                                  </td>
-                                  <td>
-                                    <div class="order_info_label">Номер ПТС (без пробелов)</div>
-                                    <div class="order_info_val edit"> </div>
-                                  </td>
-                                  <td>
-                                    <div class="order_info_label">Регистрационный номер</div>
-                                    <div class="order_info_val edit"></div>
-                                  </td>
-                                  <td></td>
-                                </tr>
-                                <tr style="display:none;" class="orderTableRow">
-                                  <td>
-                                    <div class="order_info_label">Год выпуска</div>
-                                    <div class="order_info_val edit"> </div>
-                                  </td>
-                                  <td>
-                                    <div class="order_info_label">Пробег, в км</div>
-                                    <div class="order_info_val edit"> </div>
-                                  </td>
-                                  <td>
-                                    <div class="order_info_label wnw">Валюта стоимости автомобиля</div>
-                                    <div data-option="{&quot;Доллары&quot;:&quot;Доллары&quot;,&quot;Евро&quot;:&quot;Евро&quot;,&quot;Рубли&quot;:&quot;Рубли&quot;, &quot;selected&quot;:[&quot;Рубли&quot;]}" class="order_info_val edit_select select_w4">Рубли</div>
-                                  </td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <td colspan="5">
-                                    <div class="order_info_label wnw">Документы на автомобиль</div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td colspan="5">
-                                    <div class="order_info_label">Тип документа</div>
-                                    <div data-option="{&quot;Доверенность&quot;:&quot;Доверенность&quot;,&quot;ПТС&quot;:&quot;ПТС&quot;,&quot;Свидетельство о регистрации ТС&quot;:&quot;Свидетельство о регистрации ТС&quot;, &quot;selected&quot;:[&quot;Доверенность&quot;]}" class="order_info_val edit_select_attach select_w4">Доверенность</div>
-                                  </td>
-                                </tr>
-                              </table>
+                                      </div>
+                                      <div class="order_info_val"><span class="color_red">Загруженные документы</span></div>
+                                      <ul class="upload_list">
+                                        <li>
+                                          <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
+                                        </li>
+                                        <li>
+                                          <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
+                                        </li>
+                                        <li>
+                                          <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
+                                        </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </div>
                             </div>
-                          </div>
-                        </li>
-                      </ul>
+                          </li>
+                        </ul>
+                        <div class="step_controls"><a href="#" class="btn_v1 next_step_btn violet_btn_2">Сохранить</a></div>
+                      </form>
                     </div>
                   </div>
                   <div id="tab_unit_3" class="tab_unit">
-                    <div class="tab_inner">3</div>
+                    <div class="tab_inner">
+                      <table class="credit_terms">
+                        <tr class="caption_row">
+                          <td><b class="color_red">Данные по автомобилю</b></td>
+                          <td class="text_right">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td><span>Стоимость автомобиля без учета скидок</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Стоимость автомобиля с учетом всех скидок</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Стоимость дополнительного оборудования  <br>  (за наличные)</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr class="caption_row">
+                          <td><b class="color_red">Данные КАСКО</b></td>
+                          <td class="text_right">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td><span>Стоимость КАСКО</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr class="caption_row">
+                          <td> <b class="color_red">Данные кредита</b></td>
+                          <td class="text_right">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td> <span>Сумма кредита</span></td>
+                          <td class="text_right"><b>237 150 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr>
+                          <td> <span>Срок кредита</span></td>
+                          <td class="text_right"><b>36 </b><span>мес.</span></td>
+                        </tr>
+                        <tr>
+                          <td> <span>Первоначальный взнос</span></td>
+                          <td class="text_right"><b>237 150 <span class="icon-rub"></span></b> <br> <b>50.0</b><span>% от суммы кредита</span></td>
+                        </tr>
+                        <tr class="caption_row">
+                          <td><b class="color_red">Данные банков</b></td>
+                          <td class="text_right">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td><span>Название банка</span></td>
+                          <td class="text_right"><b>Chery Finance</b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Название программы</span></td>
+                          <td class="text_right"><b>Русфинанс банк. Стандартное предложение (КАСКО + СЖ)</b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Ежемесячный платеж</span></td>
+                          <td class="text_right"><b>9 098 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Ставка банка</span></td>
+                          <td class="text_right"><b>15.50</b><span>%</span></td>
+                        </tr>
+                        <tr>
+                          <td><span>Маркетинговая ставка</span></td>
+                          <td class="text_right"><b>15.50</b><span>%</span></td>
+                        </tr>
+                        <tr>
+                          <td><span>Переплата</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Стоимость страхования жизни<br>(в кредит)</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                      </table>
+                    </div>
                   </div>
                   <div id="tab_unit_4" class="tab_unit">
-                    <div class="tab_inner">4</div>
+                    <div class="tab_inner">
+                      <form action="#">
+                        <ul class="order_results">
+                          <li class="order_r_item">
+                            <div class="bank_name"><span class="bank_icon color_red"></span><span>Абсолют Банк</span></div>
+                            <div class="bank_programmes">
+                              <div class="programme_name"><span class="programme_icon"></span><span>Программа “Выгодный автокредит”</span></div>
+                            </div>
+                            <div class="bank_answer"><b class="color_red">Отказ</b></div>
+                          </li>
+                          <li class="order_r_item">
+                            <div class="bank_name"><span class="bank_icon color_green"></span><span>Авангард</span></div>
+                            <div class="bank_programmes">
+                              <div class="programme_name"><span class="programme_icon"></span><span>Стандартный</span></div><span>;</span>
+                              <div class="programme_name"><span class="programme_icon"></span><span>Абсолютно для всех</span></div>
+                            </div>
+                            <div class="bank_answer"><b class="color_green">Одобрение</b></div>
+                          </li>
+                          <li class="order_r_item">
+                            <div class="bank_name"><span class="bank_icon"></span><span>Альфа Банк</span></div>
+                            <div class="bank_programmes">
+                              <div class="programme_name"><span class="programme_icon"></span><span>Каждому по “жедезному коню”</span></div><span>;</span>
+                              <div class="programme_name"><span class="programme_icon"></span><span>Автокредит (льготное кредитование) </span></div>
+                            </div>
+                            <div class="bank_answer"><span>Ожидание ответа</span></div>
+                          </li>
+                          <li class="order_r_item">
+                            <div class="bank_name"><span class="bank_icon"></span><span>Банк Возрождение</span></div>
+                            <div class="bank_programmes">
+                              <div class="programme_name"><span class="programme_icon"></span><span>Потребительский кредит</span></div>
+                            </div>
+                            <div class="bank_answer"><span>Ожидание ответа</span></div>
+                          </li>
+                        </ul>
+                        <div class="step_controls"><a href="#" class="btn_v1 next_step_btn violet_btn_2">Сохранить</a></div>
+                      </form>
+                    </div>
                   </div>
                   <div id="tab_unit_5" class="tab_unit">
-                    <div class="tab_inner">5</div>
+                    <div class="tab_inner">
+                      <form action="#">
+                        <div class="order_info_label">Статус дилера:</div>
+                        <div class="order_info_val">Новая заявка</div>
+                        <ul class="order_info_list">
+                          <li class="orderInfoRow">
+                            <div style="display:block;" class="order_info_unit infoBlock">
+                              <div class="edit_mode order_info_box infoBox">
+                                <table class="order_info_table layout_fix">
+                                  <tr class="orderTableRow">
+                                    <td colspan="3">
+                                      <p><span class="icon-document"></span><span>Документы от дилера</span></p>
+                                      <div class="order_info_label">Тип документа</div>
+                                      <div class="edit_v2 order_info_val select_w4 edit_v2">
+                                        <select class="select2">
+                                          <option disabled="" value=""></option>
+                                          <option value="Доверенность" selected="selected">Доверенность</option>
+                                          <option value="ПТС">ПТС</option>
+                                          <option value="Свидетельство о регистрации ТС">Свидетельство о регистрации ТС</option>
+                                        </select>
+                                        <label class="file_label">
+                                          <input type="file" class="hidden_input file_name"/><span>Выбрать файлы</span>
+                                        </label>
+                                      </div>
+                                      <p><a href="#" class="link_inherit"><span class="icon-document"></span><span>Распечатать анкету клиента</span></a></p>
+                                      <div class="order_info_val"><span class="color_red">Загруженные документы</span></div>
+                                    </td>
+                                    <td colspan="3">
+                                      <p><span class="icon-document"></span><span>Документы от банка</span></p>
+                                      <div class="order_info_label">Тип документа</div>
+                                      <div class="edit_v2 order_info_val select_w4 edit_v2">
+                                        <select class="select2">
+                                          <option disabled="" value=""></option>
+                                          <option value="Доверенность" selected="selected">Доверенность</option>
+                                          <option value="ПТС">ПТС</option>
+                                          <option value="Свидетельство о регистрации ТС">Свидетельство о регистрации ТС</option>
+                                        </select>
+                                        <label class="file_label">
+                                          <input type="file" class="hidden_input file_name"/><span>Выбрать файлы</span>
+                                        </label>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr class="orderTableRow">
+                                    <td colspan="3">
+                                      <p><span class="icon-reload"></span><span>Процесс согласования</span></p>
+                                      <div class="order_info_label">Укажите статус</div>
+                                      <div class="order_info_val select_w4 edit_v2">
+                                        <select class="select2">
+                                          <option disabled="" value=""></option>
+                                          <option value="статус 1" selected="selected">статус 1</option>
+                                          <option value="статус 2">статус 2</option>
+                                        </select>
+                                      </div>
+                                      <div class="order_info_label">Комментарий</div>
+                                      <div class="order_info_val edit_v3">
+                                        <textarea class="autogrow"></textarea>
+                                      </div>
+                                    </td>
+                                    <td colspan="3">
+                                      <p>&nbsp;
+                                        <ul class="agreement_progress">
+                                          <li>
+                                            <div class="agreement_step"><span class="icon-close step_rm"></span><b class="agreement_date">10.08.2016 12:24:10, Тестовый Руководитель Марки </b><span class="agreement_status">Статус: Новая заявка</span></div>
+                                          </li>
+                                          <li>
+                                            <div class="agreement_step"><span class="icon-close step_rm"></span><b class="agreement_date">10.08.2016 12:24:10, Тестовый Руководитель Марки </b><span class="agreement_status">Статус: Новая заявка</span></div>
+                                          </li>
+                                        </ul>
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="6">
+                                      <p><span class="icon-sun"></span><span>Данные кредитного договора и договора залога</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr class="orderTableRow">
+                                    <td colspan="2">
+                                      <div class="order_info_label">Дата заключения кредитного договора</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="28.08.2016"/>
+                                      </div>
+                                    </td>
+                                    <td colspan="2">
+                                      <div class="order_info_label">Номер кредитного договора</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="123456"/>
+                                      </div>
+                                    </td>
+                                    <td></td>
+                                    <td>                                   </td>
+                                  </tr>
+                                  <tr class="orderTableRow">
+                                    <td colspan="2">
+                                      <div class="order_info_label">Дата заключения договора залога</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="28.08.2016"/>
+                                      </div>
+                                    </td>
+                                    <td colspan="2">
+                                      <div class="order_info_label">Номер договора залога</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="123"/>
+                                      </div>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="step_controls"><a href="#" class="btn_v1 next_step_btn violet_btn_2">Сохранить</a></div>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>

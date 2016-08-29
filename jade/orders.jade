@@ -102,27 +102,31 @@ html(lang='ru')
                                     ul#tab_list.order_main_tabs
                                         li: a.order_tab_btn(href='#tab_unit_1'): span.order_tab_text Заявка
                                         li: a.order_tab_btn(href='#tab_unit_2'): span.order_tab_text Автомобиль
-                                        li: a.order_tab_btn(href='#tab_unit_3'): span.order_tab_text Условия кредита
-                                        li: a.order_tab_btn(href='#tab_unit_4'): span.order_tab_text Статус в банках
-                                        li: a.order_tab_btn(href='#tab_unit_5'): span.order_tab_text Управление заявкой
+                                        li: a.order_tab_btn(href='#tab_unit_3'): span.order_tab_text Параметры кредита
+                                        li: a.order_tab_btn(href='#tab_unit_4'): span.order_tab_text История рассмотрения
+                                        li: a.order_tab_btn(href='#tab_unit_5'): span.order_tab_text Статус заявки
                                         
                                             
                                 .tabBlock.tab_block(data-tab-context='#tab_list')
                                     #tab_unit_1.tab_unit
-                                        +order_tab()
+                                        .tab_inner: form(action='#')
+                                            +order_tab()
 
                                     #tab_unit_2.tab_unit
-                                        .tab_inner 
+                                        .tab_inner: form(action='#')
                                             +car_tab()
 
                                     #tab_unit_3.tab_unit
-                                        .tab_inner 3
+                                        .tab_inner
+                                            +credit_terms()
                                             
                                     #tab_unit_4.tab_unit
-                                        .tab_inner 4
+                                        .tab_inner: form(action='#')
+                                            +credit_history()
 
                                     #tab_unit_5.tab_unit
-                                        .tab_inner 5
+                                        .tab_inner: form(action='#')
+                                            +credit_management()
                                             
                             .order_p_status
                                 .order_p_info
