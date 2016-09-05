@@ -78,7 +78,7 @@
                 </tr>
               </table>
             </div>
-            <div class="order_panel">
+            <div class="order_panel order_panel_wide">
               <div class="order_p_client">
                 <div class="order_p_info">
                   <div class="order_p_caption">Клиент</div>
@@ -137,16 +137,259 @@
               </div>
               <div class="order_p_main">
                 <div class="order_main_tabs_w">
+                  <div class="tab_list_caption">Заполнить заявку</div>
                   <ul id="tab_list" class="order_main_tabs">
-                    <li><a href="#tab_unit_1" class="order_tab_btn"><span class="order_tab_text">Заявка</span></a></li>
-                    <li><a href="#tab_unit_2" class="order_tab_btn"><span class="order_tab_text">Автомобиль</span></a></li>
-                    <li><a href="#tab_unit_3" class="order_tab_btn"><span class="order_tab_text">Параметры кредита</span></a></li>
-                    <li><a href="#tab_unit_4" class="order_tab_btn"><span class="order_tab_text">История рассмотрения</span></a></li>
+                    <li class="small_cell"><a href="#tab_unit_1" class="order_tab_btn"><span class="order_tab_text">1. Автомобиль</span></a></li>
+                    <li class="small_cell"><a href="#tab_unit_2" class="order_tab_btn"><span class="order_tab_text">2. Параметры кредита</span></a></li>
+                    <li class="small_cell"><a href="#tab_unit_3" class="order_tab_btn"><span class="order_tab_text">3. Данные клиента</span></a></li>
+                    <li><a href="#tab_unit_4" class="order_tab_btn"><span class="order_tab_text"> рассмотрение заявки</span></a></li>
                     <li><a href="#tab_unit_5" class="order_tab_btn"><span class="order_tab_text">Статус заявки</span></a></li>
                   </ul>
                 </div>
                 <div data-tab-context="#tab_list" class="tabBlock tab_block">
                   <div id="tab_unit_1" class="tab_unit">
+                    <div class="tab_inner">
+                      <form action="#">
+                        <ul class="order_info_list">
+                          <li class="orderInfoRow">
+                            <div style="display:block;" class="order_info_unit infoBlock">
+                              <div class="edit_mode order_info_box infoBox">
+                                <ul class="order_info_controls">
+                                  <li> <a href="#" class="btn_v4 order_edit_btn violet_btn_2">Сохранить</a></li>
+                                  <li> <a href="#" class="btn_v4 order_edit_btn violet_btn_2 disabled">Редактировать</a></li>
+                                </ul>
+                                <table class="order_info_table layout_fix">
+                                  <tr class="orderTableRow">
+                                    <td>
+                                      <div class="order_info_label">Марка</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="Chery"/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Модель</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="Arrizo 7"/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Комплектация</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value="1.6 CVT Luxury"/>
+                                      </div>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <ul class="car_features">
+                                        <li>
+                                          <label class="checkbox_emul_2">
+                                            <input type="radio" name="is_used" checked="checked" class="hidden_input"/><b class="check_text_2">Новый</b>
+                                          </label>
+                                        </li>
+                                      </ul>
+                                    </td>
+                                    <td>
+                                      <ul class="car_features">
+                                        <li>
+                                          <label class="checkbox_emul_2">
+                                            <input type="radio" name="is_used" class="hidden_input"/><b class="check_text_2">Подержанный</b>
+                                          </label>
+                                        </li>
+                                      </ul>
+                                    </td>
+                                    <td colspan="4">
+                                      <ul class="car_features">
+                                        <li><b class="check_text_2">Коммерческий</b></li>
+                                        <li>
+                                          <label class="checkbox_emul_2">
+                                            <input type="radio" name="is_commercial" class="hidden_input"/><b class="check_text_2">Да</b>
+                                          </label>
+                                        </li>
+                                        <li>
+                                          <label class="checkbox_emul_2">
+                                            <input type="radio" name="is_commercial" checked="checked" class="hidden_input"/><b class="check_text_2">Нет</b>
+                                          </label>
+                                        </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr class="orderTableRow">
+                                    <td>
+                                      <div class="order_info_label">Тип транспортного средства</div>
+                                      <div class="order_info_val select_w4">
+                                        <select class="select2">
+                                          <option disabled="" value=""></option>
+                                          <option value="Автомобиль">Автомобиль</option>
+                                          <option value="Грузовая техника" selected="selected">Грузовая техника</option>
+                                          <option value="Мототехника">Мототехника</option>
+                                          <option value="Спецтехника и прицеп">Спецтехника и прицеп</option>
+                                        </select>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">VIN номер<br> &nbsp;</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Номер ПТС<br>(без пробелов)</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Регистрационный  <br>  номер</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Год выпуска <br> &nbsp;</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="order_info_label">Пробег, в км.  <br> &nbsp;</div>
+                                      <div class="order_info_val edit_ edit_v1">
+                                        <input value=""/>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="6">
+                                      <div class="order_info_val wnw"><span class="color_red">Данные на автомобиль</span></div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4">
+                                      <ul class="uploaded_files">
+                                        <li>
+                                          <div class="uploaded_unit upload_error">
+                                            <div class="upload_status"></div>
+                                            <div class="upload_folder"></div>
+                                            <div class="upload_remove">&#10006;</div>
+                                            <div class="upload_file">Паспорт транспортного средства</div>
+                                            <div class="upload_date_v2"> </div>
+                                            <div class="upload_time"> </div>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="uploaded_unit">
+                                            <div class="upload_status"></div>
+                                            <div class="upload_folder"></div>
+                                            <div class="upload_remove">&#10006;</div>
+                                            <div class="upload_file">Свидетельство о регистрации</div>
+                                            <div class="upload_date_v2">27.08.2016</div>
+                                            <div class="upload_time">21:21:22</div>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="uploaded_unit">
+                                            <div class="upload_status"></div>
+                                            <div class="upload_folder"></div>
+                                            <div class="upload_remove">&#10006;</div>
+                                            <div class="upload_file">Доверенность (договор комиссии)</div>
+                                            <div class="upload_date_v2">27.08.2016</div>
+                                            <div class="upload_time">21:21:22</div>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </td>
+                                    <td colspan="2"></td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </form>
+                    </div>
+                  </div>
+                  <div id="tab_unit_2" class="tab_unit">
+                    <div class="tab_inner">
+                      <table class="credit_terms">
+                        <tr class="caption_row">
+                          <td><b class="color_red">Данные по автомобилю</b></td>
+                          <td class="text_right">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td><span>Стоимость автомобиля без учета скидок</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Стоимость автомобиля с учетом всех скидок</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Стоимость дополнительного оборудования  <br>  (за наличные)</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr class="caption_row">
+                          <td><b class="color_red">Данные КАСКО</b></td>
+                          <td class="text_right">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td><span>Стоимость КАСКО</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr class="caption_row">
+                          <td> <b class="color_red">Данные кредита</b></td>
+                          <td class="text_right">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td> <span>Сумма кредита</span></td>
+                          <td class="text_right"><b>237 150 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr>
+                          <td> <span>Срок кредита</span></td>
+                          <td class="text_right"><b>36 </b><span>мес.</span></td>
+                        </tr>
+                        <tr>
+                          <td> <span>Первоначальный взнос</span></td>
+                          <td class="text_right"><b>237 150 <span class="icon-rub"></span></b> <br> <b>50.0</b><span>% от суммы кредита</span></td>
+                        </tr>
+                        <tr class="caption_row">
+                          <td><b class="color_red">Данные банков</b></td>
+                          <td class="text_right">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td><span>Название банка</span></td>
+                          <td class="text_right"><b>Chery Finance</b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Название программы</span></td>
+                          <td class="text_right"><b>Русфинанс банк. Стандартное предложение (КАСКО + СЖ)</b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Ежемесячный платеж</span></td>
+                          <td class="text_right"><b>9 098 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Ставка банка</span></td>
+                          <td class="text_right"><b>15.50</b><span>%</span></td>
+                        </tr>
+                        <tr>
+                          <td><span>Маркетинговая ставка</span></td>
+                          <td class="text_right"><b>15.50</b><span>%</span></td>
+                        </tr>
+                        <tr>
+                          <td><span>Переплата</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                        <tr>
+                          <td><span>Стоимость страхования жизни<br>(в кредит)</span></td>
+                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div id="tab_unit_3" class="tab_unit">
                     <div class="tab_inner">
                       <form action="#">
                         <ul class="order_info_list">
@@ -363,9 +606,27 @@
                                         <div class="order_info_val select_w4 edit_v2">
                                           <select class="select2">
                                             <option disabled="" value=""></option>
-                                            <option value="Доверенность" selected="selected">Доверенность</option>
-                                            <option value="ПТС">ПТС</option>
+                                            <option value="Водительское удостоверение">Водительское удостоверение</option>
+                                            <option value="Военный билет">Военный билет</option>
+                                            <option value="Выписка о движении денежных средств">Выписка о движении денежных средств</option>
+                                            <option value="Гражданский паспорт">Гражданский паспорт</option>
+                                            <option value="Документ, подтверждающий собственность">Документ, подтверждающий собственность</option>
+                                            <option value="Документы об образовании">Документы об образовании</option>
+                                            <option value="ЕГРИП">ЕГРИП</option>
+                                            <option value="Загранпаспорт">Загранпаспорт</option>
+                                            <option value="Информация о доп. доходе от работы по совместительству">Информация о доп. доходе от работы по совместительству</option>
+                                            <option value="Информация о доп. доходе от сдачи имущества в аренду">Информация о доп. доходе от сдачи имущества в аренду</option>
+                                            <option value="Лицензия адвоката">Лицензия адвоката</option>
+                                            <option value="Лицензия нотариуса">Лицензия нотариуса</option>
+                                            <option value="Налоговая отчетность">Налоговая отчетность</option>
+                                            <option value="Пенсионное удостоверение">Пенсионное удостоверение</option>
+                                            <option value="ПТС автомобиля">ПТС автомобиля</option>
+                                            <option value="Свидетельство о постановке на учет в налоговом органе">Свидетельство о постановке на учет в налоговом органе</option>
                                             <option value="Свидетельство о регистрации ТС">Свидетельство о регистрации ТС</option>
+                                            <option value="Служебное удостоверение">Служебное удостоверение</option>
+                                            <option value="СНИЛС">СНИЛС</option>
+                                            <option value="Справка 2-НДФЛ (или по форме банка)">Справка 2-НДФЛ (или по форме банка)</option>
+                                            <option value="Трудовая книжка (трудовой договор)">Трудовая книжка (трудовой договор)</option>
                                           </select>
                                           <label class="file_label">
                                             <input type="file" class="hidden_input file_name"/><span>Выбрать файлы</span>
@@ -383,15 +644,85 @@
                                   <div class="order_info_val"><span class="color_red">Загруженные документы</span></div>
                                   <ul class="upload_list">
                                     <li>
-                                      <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
                                     </li>
                                     <li>
-                                      <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Военный билет</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
                                     </li>
                                     <li>
-                                      <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Выписка о движении денежных средств</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Гражданский паспорт</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Документ, подтверждающий собственность</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Документы об образовании</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">ЕГРИП</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Загранпаспорт</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Информация о доп. доходе от работы по совместительству</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Информация о доп. доходе от сдачи имущества в аренду</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Лицензия адвоката</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Лицензия нотариуса</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Налоговая отчетность</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Пенсионное удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">ПТС автомобиля</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Свидетельство о постановке на учет в налоговом органе</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Свидетельство о регистрации ТС</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Служебное удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">СНИЛС</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Справка 2-НДФЛ (или по форме банка)</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
+                                    </li>
+                                    <li>
+                                      <div class="upload_item"><span class="icon-check upload_success"></span><span class="upload_name"><a href="#" class="link_inherit">Трудовая книжка (трудовой договор)</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span><span class="icon-close upload_rm"></span></div>
                                     </li>
                                   </ul>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="orderInfoRow">
+                              <div style="display:block;" class="order_info_unit">
+                                <div class="edit_mode order_info_box infoBox">
+                                  <table class="order_info_table layout_fix">
+                                    <tr class="orderTableRow">
+                                      <td colspan="5">
+                                        <div class="order_info_label">Комментарии</div>
+                                        <div class="order_info_val edit_v3">
+                                          <textarea class="autogrow"></textarea>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
                                 </div>
                               </div>
                             </li>
@@ -399,227 +730,6 @@
                         </div>
                         <div class="step_controls"><a href="#" class="btn_v1 next_step_btn violet_btn_2">Сохранить</a></div>
                       </form>
-                    </div>
-                  </div>
-                  <div id="tab_unit_2" class="tab_unit">
-                    <div class="tab_inner">
-                      <form action="#">
-                        <ul class="order_info_list">
-                          <li class="orderInfoRow">
-                            <div style="display:block;" class="order_info_unit infoBlock">
-                              <div class="edit_mode order_info_box infoBox">
-                                <table class="order_info_table layout_fix">
-                                  <tr class="orderTableRow">
-                                    <td colspan="2">
-                                      <div class="order_info_label">Марка автомобиля</div>
-                                      <div class="order_info_val edit_ edit_v1">
-                                        <input value="Chery"/>
-                                      </div>
-                                    </td>
-                                    <td colspan="2">
-                                      <div class="order_info_label">Модель автомобиля</div>
-                                      <div class="order_info_val edit_ edit_v1">
-                                        <input value="Arrizo 7"/>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <div class="order_info_label">Комплектация</div>
-                                      <div class="order_info_val edit_ edit_v1">
-                                        <input value="1.6 CVT Luxury"/>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td colspan="5">
-                                      <ul class="car_features">
-                                        <li>
-                                          <label class="checkbox_emul_2">
-                                            <input type="radio" name="is_used" checked="checked" class="hidden_input"/><span class="check_text_2">НОВЫЙ</span>
-                                          </label>
-                                        </li>
-                                        <li>
-                                          <label class="checkbox_emul_2">
-                                            <input type="radio" name="is_used" class="hidden_input"/><span class="check_text_2">ПОДЕРЖАННЫЙ</span>
-                                          </label>
-                                        </li>
-                                      </ul>
-                                      <ul class="car_features">
-                                        <li><span class="check_text_2">КОММЕРЧЕСКИЙ</span></li>
-                                        <li>
-                                          <label class="checkbox_emul_2">
-                                            <input type="radio" name="is_commercial" class="hidden_input"/><span class="check_text_2">ДА</span>
-                                          </label>
-                                        </li>
-                                        <li>
-                                          <label class="checkbox_emul_2">
-                                            <input type="radio" name="is_commercial" checked="checked" class="hidden_input"/><span class="check_text_2">НЕТ</span>
-                                          </label>
-                                        </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                  <tr class="orderTableRow">
-                                    <td>
-                                      <div class="order_info_label">Тип транспортного средства</div>
-                                      <div class="order_info_val select_w4">
-                                        <select class="select2">
-                                          <option disabled="" value=""></option>
-                                          <option value="Автомобиль">Автомобиль</option>
-                                          <option value="Грузовая техника" selected="selected">Грузовая техника</option>
-                                          <option value="Мототехника">Мототехника</option>
-                                          <option value="Спецтехника и прицеп">Спецтехника и прицеп</option>
-                                        </select>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <div class="order_info_label">VIN номер<br> &nbsp;</div>
-                                      <div class="order_info_val edit_ edit_v1">
-                                        <input value=""/>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <div class="order_info_label">Номер ПТС<br>(без пробелов)</div>
-                                      <div class="order_info_val edit_ edit_v1">
-                                        <input value=""/>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <div class="order_info_label">Регистрационный номер</div>
-                                      <div class="order_info_val edit_ edit_v1">
-                                        <input value=""/>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <div class="order_info_label">Год выпуска <br> &nbsp;</div>
-                                      <div class="order_info_val edit_ edit_v1">
-                                        <input value=""/>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <div class="order_info_label">Пробег, в км.  <br> &nbsp;</div>
-                                      <div class="order_info_val edit_ edit_v1">
-                                        <input value=""/>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td colspan="5">
-                                      <div class="order_info_val wnw"><span class="color_red">Документы на автомобиль</span></div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td colspan="5">
-                                      <div class="order_info_label">Тип документа</div>
-                                      <div class="order_info_val select_w4 edit_v2">
-                                        <select class="select2">
-                                          <option disabled="" value=""></option>
-                                          <option value="Доверенность" selected="selected">Доверенность</option>
-                                          <option value="ПТС">ПТС</option>
-                                          <option value="Свидетельство о регистрации ТС">Свидетельство о регистрации ТС</option>
-                                        </select>
-                                        <label class="file_label">
-                                          <input type="file" class="hidden_input file_name"/><span>Выбрать файлы</span>
-                                        </label>
-                                      </div>
-                                      <div class="order_info_val"><span class="color_red">Загруженные документы</span></div>
-                                      <ul class="upload_list">
-                                        <li>
-                                          <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
-                                        </li>
-                                        <li>
-                                          <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
-                                        </li>
-                                        <li>
-                                          <div class="upload_item"><span class="icon-close upload_rm"></span><span class="upload_name"><a href="#" class="link_inherit">Водительское удостоверение</a></span><span class="upload_date">27.08.2016 21:21:22</span><span class="upload_post">Руководитель</span></div>
-                                        </li>
-                                      </ul>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                        <div class="step_controls"><a href="#" class="btn_v1 next_step_btn violet_btn_2">Сохранить</a></div>
-                      </form>
-                    </div>
-                  </div>
-                  <div id="tab_unit_3" class="tab_unit">
-                    <div class="tab_inner">
-                      <table class="credit_terms">
-                        <tr class="caption_row">
-                          <td><b class="color_red">Данные по автомобилю</b></td>
-                          <td class="text_right">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td><span>Стоимость автомобиля без учета скидок</span></td>
-                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
-                        </tr>
-                        <tr>
-                          <td><span>Стоимость автомобиля с учетом всех скидок</span></td>
-                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
-                        </tr>
-                        <tr>
-                          <td><span>Стоимость дополнительного оборудования  <br>  (за наличные)</span></td>
-                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
-                        </tr>
-                        <tr class="caption_row">
-                          <td><b class="color_red">Данные КАСКО</b></td>
-                          <td class="text_right">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td><span>Стоимость КАСКО</span></td>
-                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
-                        </tr>
-                        <tr class="caption_row">
-                          <td> <b class="color_red">Данные кредита</b></td>
-                          <td class="text_right">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td> <span>Сумма кредита</span></td>
-                          <td class="text_right"><b>237 150 <span class="icon-rub"></span></b></td>
-                        </tr>
-                        <tr>
-                          <td> <span>Срок кредита</span></td>
-                          <td class="text_right"><b>36 </b><span>мес.</span></td>
-                        </tr>
-                        <tr>
-                          <td> <span>Первоначальный взнос</span></td>
-                          <td class="text_right"><b>237 150 <span class="icon-rub"></span></b> <br> <b>50.0</b><span>% от суммы кредита</span></td>
-                        </tr>
-                        <tr class="caption_row">
-                          <td><b class="color_red">Данные банков</b></td>
-                          <td class="text_right">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td><span>Название банка</span></td>
-                          <td class="text_right"><b>Chery Finance</b></td>
-                        </tr>
-                        <tr>
-                          <td><span>Название программы</span></td>
-                          <td class="text_right"><b>Русфинанс банк. Стандартное предложение (КАСКО + СЖ)</b></td>
-                        </tr>
-                        <tr>
-                          <td><span>Ежемесячный платеж</span></td>
-                          <td class="text_right"><b>9 098 <span class="icon-rub"></span></b></td>
-                        </tr>
-                        <tr>
-                          <td><span>Ставка банка</span></td>
-                          <td class="text_right"><b>15.50</b><span>%</span></td>
-                        </tr>
-                        <tr>
-                          <td><span>Маркетинговая ставка</span></td>
-                          <td class="text_right"><b>15.50</b><span>%</span></td>
-                        </tr>
-                        <tr>
-                          <td><span>Переплата</span></td>
-                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
-                        </tr>
-                        <tr>
-                          <td><span>Стоимость страхования жизни<br>(в кредит)</span></td>
-                          <td class="text_right"><b>90 374 <span class="icon-rub"></span></b></td>
-                        </tr>
-                      </table>
                     </div>
                   </div>
                   <div id="tab_unit_4" class="tab_unit">
@@ -779,27 +889,6 @@
                         <div class="step_controls"><a href="#" class="btn_v1 next_step_btn violet_btn_2">Сохранить</a></div>
                       </form>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="order_p_status">
-                <div class="order_p_info">
-                  <div class="order_p_caption">статус в банках</div>
-                  <div class="order_p_box">
-                    <table class="order_status_table">
-                      <tr>
-                        <td><span class="order_status_bank">ВТБ24</span></td>
-                        <td><b class="color_gray">На рассмотрении</b></td>
-                      </tr>
-                      <tr>
-                        <td><span class="order_status_bank">Сетелем</span></td>
-                        <td><b class="color_red">Отказ</b></td>
-                      </tr>
-                      <tr>
-                        <td><span class="order_status_bank">Юникредит</span></td>
-                        <td><b class="color_green">Одобрено с условием</b></td>
-                      </tr>
-                    </table>
                   </div>
                 </div>
               </div>

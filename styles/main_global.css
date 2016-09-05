@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.main_menu_holder:after, .order_r_item:after, .order_controls:after, .pagination_block:after, .form_row:after, .tab_list_holder:after, .steps_holder:after, .step_controls:after, .unit_info:after, .order_panel:after, .upload_item:after {
+.main_menu_holder:after, .order_r_item:after, .order_controls:after, .pagination_block:after, .form_row:after, .tab_list_holder:after, .steps_holder:after, .step_controls:after, .unit_info:after, .order_panel:after, .uploaded_unit:after, .upload_item:after {
   position: static;
   display: block;
   height: 0;
@@ -238,7 +238,9 @@ textarea:focus::-moz-placeholder {
 }
 .icon-before:before, .ui-datepicker.datepicker_v1 .ui-datepicker-prev:before,
 .ui-datepicker.datepicker_v1 .ui-datepicker-next:before, .bank_icon:before,
-.programme_icon:before, .input_w.datepicker_holder .ui-datepicker-trigger:before, .btn_v2.control_btn:before, .select2-results__option[aria-selected=true]:before, .select_v1 .select2-selection--single .select2-selection__arrow:before, .select_v2 .select2-selection--single .select2-selection__arrow:before, .tab_link:before, .checkbox_emul_2 .check_text_2:before, .check_text:before, .ui-datepicker-prev .ui-icon:before, .ui-datepicker-next .ui-icon:before, .order_progress_step:before, .select_w3 .select2-results__option:before, .file_label:before {
+.programme_icon:before, .input_w.datepicker_holder .ui-datepicker-trigger:before, .btn_v2.control_btn:before, .select2-results__option[aria-selected=true]:before, .select_v1 .select2-selection--single .select2-selection__arrow:before, .select_v2 .select2-selection--single .select2-selection__arrow:before, .tab_link:before, .checkbox_emul_2 .check_text_2:before, .check_text:before, .ui-datepicker-prev .ui-icon:before, .ui-datepicker-next .ui-icon:before, .order_progress_step:before, .select_w3 .select2-results__option:before, .upload_folder:before,
+.upload_remove:before,
+.upload_status:before, .file_label:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'credit_it_icons' !important;
   speak: none;
@@ -254,8 +256,8 @@ textarea:focus::-moz-placeholder {
 
 @font-face {
   font-family: 'credit_it_icons';
-  src: url("../fonts/icons/credit_it_icons.eot?5kkemn");
-  src: url("../fonts/icons/credit_it_icons.eot?5kkemn#iefix") format("embedded-opentype"), url("../fonts/icons/credit_it_icons.ttf?5kkemn") format("truetype"), url("../fonts/icons/credit_it_icons.woff?5kkemn") format("woff"), url("../fonts/icons/credit_it_icons.svg?5kkemn#credit_it_icons") format("svg");
+  src: url("../fonts/icons/credit_it_icons.eot?5z1h9z");
+  src: url("../fonts/icons/credit_it_icons.eot?5z1h9z#iefix") format("embedded-opentype"), url("../fonts/icons/credit_it_icons.ttf?5z1h9z") format("truetype"), url("../fonts/icons/credit_it_icons.woff?5z1h9z") format("woff"), url("../fonts/icons/credit_it_icons.svg?5z1h9z#credit_it_icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -352,6 +354,10 @@ textarea:focus::-moz-placeholder {
 
 .icon-reload:before {
   content: "";
+}
+
+.icon-exclamation:before {
+  content: "";
 }
 
 .icon-rub:before {
@@ -2386,6 +2392,24 @@ b {
   cursor: pointer;
 }
 
+.btn_v4 {
+  height: 23px;
+}
+.btn_v4.order_edit_btn {
+  border-radius: 2px;
+  display: block;
+  font: 11px/25px "ArialBold", sans-serif;
+  padding: 0 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  min-width: 100px;
+}
+.btn_v4.order_edit_btn.disabled {
+  pointer-events: none;
+  opacity: .5;
+}
+
 .yellow_black_btn {
   -webkit-transition: background 0.3s, color 0.3s;
   -ms-transition: background 0.3s, color 0.3s;
@@ -2994,12 +3018,18 @@ b {
   width: 20%;
   min-height: 1px;
 }
+.order_panel_wide .order_p_client {
+  width: 23%;
+}
 
 .order_p_main {
   padding-left: 28px;
   float: left;
   width: 60%;
   min-height: 1px;
+}
+.order_panel_wide .order_p_main {
+  width: 77%;
 }
 
 .order_p_status {
@@ -3045,7 +3075,7 @@ b {
 .order_info_val {
   font-family: "ArialBold", sans-serif;
   padding: 6px 0;
-  margin-bottom: 19px;
+  margin-bottom: 25px;
 }
 .edit_mode .order_info_val {
   padding: 0;
@@ -3097,7 +3127,28 @@ b {
 }
 
 .order_main_tabs_w {
-  margin: 2px -4px 0;
+  margin: 2px -17px 0;
+  position: relative;
+}
+
+.tab_list_caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  font-size: 11px;
+  padding: 6px 17px 4px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #9d9d9d;
+}
+.tab_list_caption:before {
+  border-bottom: 1px solid #c8c8c8;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 19px;
+  left: 17px;
 }
 
 .order_main_tabs {
@@ -3108,21 +3159,26 @@ b {
 }
 .order_main_tabs li {
   display: table-cell;
-  vertical-align: top;
-  padding: 0 4px;
+  vertical-align: bottom;
+  padding: 0 17px;
 }
 
 .order_tab_btn {
   display: block;
   position: relative;
-  height: 43px;
+  height: 49px;
   font-size: 11px;
-  line-height: 38px;
+  line-height: 44px;
   color: #6b6b6b;
   border-radius: 2px;
   letter-spacing: .5px;
   padding: 2px 10px 0;
   text-transform: uppercase;
+}
+.small_cell .order_tab_btn {
+  height: 25px;
+  line-height: 20px;
+  text-transform: none;
 }
 .order_tab_btn:before {
   -webkit-transition: border 0.3s;
@@ -3151,7 +3207,7 @@ b {
 }
 
 .tab_inner {
-  padding-top: 63px;
+  padding-top: 20px;
 }
 
 .order_info_list {
@@ -3201,9 +3257,19 @@ b {
 }
 
 .order_info_box {
-  padding: 20px;
+  padding: 38px 30px 30px;
   font-size: 12px;
   position: relative;
+}
+
+.order_info_controls {
+  position: absolute;
+  top: 16px;
+  right: 28px;
+}
+.order_info_controls li {
+  float: left;
+  padding-right: 7px;
 }
 
 .order_info_edit {
@@ -3239,7 +3305,7 @@ b {
 }
 
 .edit_v1 > input {
-  max-width: 100px;
+  max-width: 145px;
 }
 
 .edit_v2 > .select2-container {
@@ -3364,6 +3430,92 @@ b {
   display: none;
 }
 
+.uploaded_files {
+  margin-top: -10px;
+  border-top: 1px solid #c8c8c8;
+}
+.uploaded_files li {
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.uploaded_unit {
+  color: #0d0d0d;
+  line-height: 39px;
+}
+.upload_error .uploaded_unit {
+  color: #9d9d9d;
+}
+.upload_error .uploaded_unit .upload_name {
+  font-style: italic;
+}
+
+.upload_folder,
+.upload_remove,
+.upload_status {
+  float: left;
+  width: 7%;
+  position: relative;
+  height: 39px;
+  font-size: 20px;
+}
+.upload_folder:before,
+.upload_remove:before,
+.upload_status:before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+.upload_error .upload_folder, .upload_error
+.upload_remove, .upload_error
+.upload_status {
+  color: #c8c8c8;
+}
+
+.upload_status {
+  color: #5e9d4c;
+}
+.upload_status:before {
+  content: "";
+}
+.upload_error .upload_status:before {
+  color: #f00;
+  content: "";
+}
+
+.upload_remove {
+  color: #f00;
+}
+
+.upload_folder {
+  color: #5e9d4c;
+}
+.upload_folder:before {
+  content: "";
+}
+
+.upload_file {
+  width: 40%;
+}
+
+.upload_date_v2 {
+  width: 18%;
+}
+
+.upload_time {
+  width: 21%;
+}
+
+.upload_time,
+.upload_date_v2,
+.upload_file {
+  float: left;
+}
+
+.upload_error .upload_file {
+  font-style: italic;
+  color: #c8c8c8;
+}
+
 .car_features {
   float: left;
   margin-left: -20px;
@@ -3371,7 +3523,7 @@ b {
 }
 .car_features li {
   float: left;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 .car_features .check_text_2 {
   display: none;
@@ -3419,7 +3571,7 @@ b {
 .upload_rm {
   cursor: pointer;
   float: left;
-  margin-right: 5px;
+  margin-left: 5px;
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -3428,6 +3580,24 @@ b {
   height: 12px;
 }
 .upload_rm:before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  font-size: 16px;
+}
+
+.upload_success {
+  cursor: pointer;
+  float: left;
+  margin-right: 5px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #32a609;
+  width: 16px;
+  height: 12px;
+}
+.upload_success:before {
   position: absolute;
   top: -2px;
   left: 0;

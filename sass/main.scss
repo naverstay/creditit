@@ -2,6 +2,7 @@ $gl_green: #32a609;
 $gl_blue: #00b1ff;
 $gl_blue_2: #009cb9;
 $gl_gray: #858585;
+$gl_gray_2: #c8c8c8;
 $gl_violet: #a658b1;
 $gl_yellow: #fecd05;
 $gl_red: #f00;
@@ -1080,7 +1081,26 @@ b {
     margin-right: 5px;
     cursor: pointer;
   }
+}
 
+.btn_v4 {
+  height: 23px;
+
+  &.order_edit_btn {
+    border-radius: 2px;
+    display: block;
+    font: 11px/25px $ArialBold;
+    padding: 0 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    min-width: 100px;
+
+    &.disabled {
+      pointer-events: none;
+      opacity: .5;
+    }
+  }
 }
 
 .yellow_black_btn {

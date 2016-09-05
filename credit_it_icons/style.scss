@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'credit_it_icons';
-  src:  url('#{$icomoon-font-path}/credit_it_icons.eot?5kkemn');
-  src:  url('#{$icomoon-font-path}/credit_it_icons.eot?5kkemn#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/credit_it_icons.ttf?5kkemn') format('truetype'),
-    url('#{$icomoon-font-path}/credit_it_icons.woff?5kkemn') format('woff'),
-    url('#{$icomoon-font-path}/credit_it_icons.svg?5kkemn#credit_it_icons') format('svg');
+  src:  url('#{$icomoon-font-path}/credit_it_icons.eot?5z1h9z');
+  src:  url('#{$icomoon-font-path}/credit_it_icons.eot?5z1h9z#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/credit_it_icons.ttf?5z1h9z') format('truetype'),
+    url('#{$icomoon-font-path}/credit_it_icons.woff?5z1h9z') format('woff'),
+    url('#{$icomoon-font-path}/credit_it_icons.svg?5z1h9z#credit_it_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -124,6 +124,11 @@
 .icon-reload {
   &:before {
     content: $icon-reload;
+  }
+}
+.icon-exclamation {
+  &:before {
+    content: $icon-exclamation;
   }
 }
 .icon-rub {

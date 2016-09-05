@@ -1,3 +1,5 @@
+- var docs = ['Водительское удостоверение', 'Военный билет', 'Выписка о движении денежных средств', 'Гражданский паспорт', 'Документ, подтверждающий собственность', 'Документы об образовании', 'ЕГРИП', 'Загранпаспорт', 'Информация о доп. доходе от работы по совместительству', 'Информация о доп. доходе от сдачи имущества в аренду', 'Лицензия адвоката', 'Лицензия нотариуса', 'Налоговая отчетность', 'Пенсионное удостоверение', 'ПТС автомобиля', 'Свидетельство о постановке на учет в налоговом органе', 'Свидетельство о регистрации ТС', 'Служебное удостоверение', 'СНИЛС', 'Справка 2-НДФЛ (или по форме банка)', 'Трудовая книжка (трудовой договор)'];
+
 mixin dev_head(page_title, index, new_order, orders)
     head
         title=page_title
@@ -355,50 +357,60 @@ mixin credit_terms()
                 b 90 374 
                     span.icon-rub
         
-mixin car_tab()
+mixin car_info()
     ul.order_info_list
         li.orderInfoRow
             .order_info_unit.infoBlock(style='display:block;')
                 .edit_mode.order_info_box.infoBox
+                    ul.order_info_controls
+                        li 
+                            a.btn_v4.order_edit_btn.violet_btn_2(href='#') Сохранить
+                        li 
+                            a.btn_v4.order_edit_btn.violet_btn_2.disabled(href='#') Редактировать
+                            
                     //-a.order_info_edit.editBtn(href='#') Редактировать
                     table.order_info_table.layout_fix
                         tr.orderTableRow
-                            td(colspan=2)
-                                .order_info_label Марка автомобиля
+                            td
+                                .order_info_label Марка
                                 .order_info_val.edit_.edit_v1
                                     input(value='Chery') 
-                            td(colspan=2)
-                                .order_info_label Модель автомобиля
+                            td
+                                .order_info_label Модель
                                 .order_info_val.edit_.edit_v1
                                     input(value='Arrizo 7') 
                             td
                                 .order_info_label Комплектация
                                 .order_info_val.edit_.edit_v1
                                     input(value='1.6 CVT Luxury') 
-
+                            td
+                            td
+                            td
                         tr
-                            td(colspan=5)
+                            td
                                 ul.car_features
                                     li
                                         label.checkbox_emul_2
                                             input.hidden_input(type='radio' name='is_used' checked)
-                                            span.check_text_2 НОВЫЙ
+                                            b.check_text_2 Новый
+                            td
+                                ul.car_features
                                     li
                                         label.checkbox_emul_2
                                             input.hidden_input(type='radio' name='is_used')
-                                            span.check_text_2 ПОДЕРЖАННЫЙ
-                            
+                                            b.check_text_2 Подержанный
+                            td(colspan=4)
                                 ul.car_features
                                     li
-                                        span.check_text_2 КОММЕРЧЕСКИЙ
+                                        b.check_text_2 Коммерческий
                                     li
                                         label.checkbox_emul_2
                                             input.hidden_input(type='radio' name='is_commercial')
-                                            span.check_text_2 ДА
+                                            b.check_text_2 Да
                                     li
                                         label.checkbox_emul_2
                                             input.hidden_input(type='radio' name='is_commercial' checked)
-                                            span.check_text_2 НЕТ
+                                            b.check_text_2 Нет
                             
                                 //-ul.car_features
                                     li
@@ -433,7 +445,7 @@ mixin car_tab()
                                 .order_info_val.edit_.edit_v1
                                     input(value='') 
                             td
-                                .order_info_label Регистрационный номер
+                                .order_info_label Регистрационный  <br>  номер
                                 .order_info_val.edit_.edit_v1
                                     input(value='')
                             td
@@ -460,12 +472,46 @@ mixin car_tab()
                             td
                             
                         tr
-                            td(colspan=5)
+                            td(colspan=6)
                                 .order_info_val.wnw
-                                    span.color_red Документы на автомобиль
+                                    span.color_red Данные на автомобиль
                                     
                         tr
-                            td(colspan=5)
+                            td(colspan=4)
+                                ul.uploaded_files
+                                    li
+                                        .uploaded_unit.upload_error
+                                            .upload_status
+                                            .upload_folder
+                                            .upload_remove &#10006;
+                                            .upload_file Паспорт транспортного средства
+                                            .upload_date_v2 
+                                            .upload_time 
+                                                
+                                    li
+                                        .uploaded_unit
+                                            .upload_status
+                                            .upload_folder
+                                            .upload_remove &#10006;
+                                            .upload_file Свидетельство о регистрации
+                                            .upload_date_v2 27.08.2016
+                                            .upload_time 21:21:22
+                                                
+                                    li
+                                        .uploaded_unit
+                                            .upload_status
+                                            .upload_folder
+                                            .upload_remove &#10006;
+                                            .upload_file Доверенность (договор комиссии)
+                                            .upload_date_v2 27.08.2016
+                                            .upload_time 21:21:22
+                                                
+                                                
+                            td(colspan=2)
+                                
+                                    
+                        //-tr
+                            td(colspan=6)
                                 .order_info_label Тип документа
                                 //-.order_info_val.edit_select_attach.select_w4(data-option='{\"Доверенность\":\"Доверенность\",\"ПТС\":\"ПТС\",\"Свидетельство о регистрации ТС\":\"Свидетельство о регистрации ТС\", \"selected\":[\"Доверенность\"]}') Доверенность
                                     
@@ -485,16 +531,17 @@ mixin car_tab()
                                     +loop_while(3)
                                         li
                                             .upload_item
-                                                span.icon-close.upload_rm
+                                                span.icon-check.upload_success
                                                 span.upload_name
                                                     a.link_inherit(href='#') Водительское удостоверение
                                                 span.upload_date 27.08.2016 21:21:22
                                                 span.upload_post Руководитель
-    
-    .step_controls
+                                                span.icon-close.upload_rm
+
+    //-.step_controls
         a.btn_v1.next_step_btn.violet_btn_2(href='#') Сохранить
 
-mixin order_tab()
+mixin client_info()
     ul.order_info_list
         li.orderInfoRow
             .order_info_caption.openOrderRow Личная информация
@@ -666,9 +713,9 @@ mixin order_tab()
                                     .order_info_val.select_w4.edit_v2
                                         select.select2()
                                             option(disabled='', value='')
-                                            option(value='Доверенность', selected='selected') Доверенность
-                                            option(value='ПТС') ПТС
-                                            option(value='Свидетельство о регистрации ТС') Свидетельство о регистрации ТС
+                                            - each doc in docs
+                                                option(value=doc)=doc
+                                                
                                         label.file_label
                                             input.hidden_input.file_name(type='file')
                                             span Выбрать файлы
@@ -679,14 +726,29 @@ mixin order_tab()
                         .order_info_val
                             span.color_red Загруженные документы
                         ul.upload_list
-                            +loop_while(3)
+                            - each doc in docs 
                                 li
                                     .upload_item
-                                        span.icon-close.upload_rm
+                                        span.icon-check.upload_success
                                         span.upload_name
-                                            a.link_inherit(href='#') Водительское удостоверение
+                                            a.link_inherit(href='#')=doc
                                         span.upload_date 27.08.2016 21:21:22
                                         span.upload_post Руководитель
+                                        span.icon-close.upload_rm
+                                    
+                                    
+
+            li.orderInfoRow
+                .order_info_unit(style='display:block;')
+                    .edit_mode.order_info_box.infoBox
+                        //-a.order_info_edit.editBtn(href='#') Редактировать
+                        table.order_info_table.layout_fix
+                            tr.orderTableRow
+                                td(colspan=5)
+                                    .order_info_label Комментарии
+                                    .order_info_val.edit_v3
+                                        textarea.autogrow
+                        
                                         
     .step_controls
         a.btn_v1.next_step_btn.violet_btn_2(href='#') Сохранить

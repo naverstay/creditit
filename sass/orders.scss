@@ -62,6 +62,10 @@
   float: left;
   width: 20%;
   min-height: 1px;
+
+  .order_panel_wide & {
+    width: 23%;
+  }  
 }
 
 .order_p_main {
@@ -69,6 +73,10 @@
   float: left;
   width: 60%;
   min-height: 1px;
+
+  .order_panel_wide & {
+    width: 77%;
+  }
 }
 
 .order_p_status {
@@ -116,7 +124,8 @@
 .order_info_val {
   font-family: $ArialBold;
   padding: 6px 0;
-  margin-bottom: 19px;
+  //margin-bottom: 19px;
+  margin-bottom: 25px;
 
   .edit_mode & {
     padding: 0;
@@ -173,8 +182,32 @@
   }
 }
 
+$order_tab_space: 34px;
+
 .order_main_tabs_w {
-  margin: 2px -4px 0;
+  margin: 2px (-$order_tab_space/2 0);
+  position: relative;
+}
+
+.tab_list_caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  font-size: 11px;
+  padding: 6px $order_tab_space/2 4px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #9d9d9d;
+
+  &:before {
+    border-bottom: 1px solid #c8c8c8;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 2 + $order_tab_space/2;
+    left: $order_tab_space/2;
+  }
 }
 
 .order_main_tabs {
@@ -185,24 +218,29 @@
 
   li {
     display: table-cell;
-    vertical-align: top;
-    padding: 0 4px;
+    vertical-align: bottom;
+    padding: 0 $order_tab_space/2;
   }
-
 }
 
 .order_tab_btn {
   display: block;
   position: relative;
-  height: 43px;
+  height: 49px;
   font-size: 11px;
-  line-height: 38px;
+  line-height: 44px;
   color: #6b6b6b;
   border-radius: 2px;
   letter-spacing: .5px;
   padding: 2px 10px 0;
   text-transform: uppercase;
 
+  .small_cell & {
+    height: 25px;
+    line-height: 20px;
+    text-transform: none;
+  }
+  
   &:before {
     @include transition_all(border .3s);
     content: '';
@@ -232,7 +270,7 @@
 }
 
 .tab_inner {
-  padding-top: 63px;
+  padding-top: 20px;
   //padding-bottom: 30px;
 }
 
@@ -288,9 +326,21 @@
 }
 
 .order_info_box {
-  padding: 20px;
+  //padding: 20px;
+  padding: 38px 30px 30px;
   font-size: 12px;
   position: relative;
+}
+
+.order_info_controls {
+  position: absolute;
+  top: 16px;
+  right: 28px;
+
+  li {
+    float: left;
+    padding-right: 7px;
+  }
 }
 
 .order_info_edit {
@@ -334,7 +384,7 @@
   
   > input {
     @extend %input_v2;
-    max-width: 100px;
+    max-width: 145px;
   }
 }
 
@@ -505,6 +555,102 @@
   display: none;
 }
 
+.uploaded_files {
+  margin-top: -10px;
+  border-top: 1px solid #c8c8c8;
+
+  li {
+    border-bottom: 1px solid #c8c8c8;
+  }
+}
+
+.uploaded_unit {
+  @extend %clearfix;
+  color: #0d0d0d;
+  line-height: 39px;
+
+  .upload_error & {
+    color: #9d9d9d;
+
+    .upload_name {
+      font-style: italic;
+    }
+  }
+}
+
+.upload_folder,
+.upload_remove,
+.upload_status {
+  @extend .icon-before;
+  float: left;
+  width: 7%;
+  position: relative;
+  height: 39px;
+  font-size: 20px;
+
+  &:before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+  }
+
+  .upload_error & {
+    color: $gl_gray_2;
+  }
+}
+
+.upload_status {
+  color: #5e9d4c;
+
+  &:before {
+    content: $icon-check2;
+  }
+
+  .upload_error & {
+    &:before {
+      color: $gl_red;
+      content: $icon-exclamation;
+    }
+  }
+}
+
+.upload_remove {
+  color: $gl_red;
+}
+
+.upload_folder {
+  color: #5e9d4c;
+
+  &:before {
+    content: $icon-folder-open;
+  }
+}
+
+.upload_file {
+  width: 40%;
+}
+
+.upload_date_v2 {
+  width: 18%;
+}
+
+.upload_time {
+  width: 21%;
+}
+
+.upload_time,
+.upload_date_v2,
+.upload_file {
+  float: left;
+}
+
+.upload_file {
+  .upload_error & {
+    font-style: italic;
+    color: $gl_gray_2;
+  }
+}
+
 .car_features {
   float: left;
   margin-left: -20px;
@@ -512,7 +658,7 @@
 
   li {
     float: left;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 
   .check_text_2 {
@@ -580,11 +726,30 @@
 .upload_rm {
   cursor: pointer;
   float: left;
-  margin-right: 5px;
+  margin-left: 5px;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   color: $gl_red;
+  width: 16px;
+  height: 12px;
+
+  &:before {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    font-size: 16px;
+  }
+}
+
+.upload_success {
+  cursor: pointer;
+  float: left;
+  margin-right: 5px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: $gl_green;
   width: 16px;
   height: 12px;
 
