@@ -44,6 +44,31 @@ mixin header(active_menu)
                     li.mb: a.menu_link(class = (active_menu == 3 ? 'active' : '') href='#') Статистика
  
 
+mixin header_chery(active_menu)
+    div.header
+        .section_inner
+            .main_menu_holder.no_bdr
+                .fl
+                    .mb: a.logo(href='index.html')
+                        img(src='i/logo_ecredit.png')
+
+                ul.fl.main_menu
+                    li.mb: a.menu_link(class = (active_menu == 1 ? 'active' : '') href='new_order.html') Новая заявка
+                    li.mb: a.menu_link(class = (active_menu == 2 ? 'active' : '') href='orders.html') Список заявок
+                    li.mb: a.menu_link(class = (active_menu == 3 ? 'active' : '') href='#') Заявки в работе
+                    li.mb: a.menu_link(class = (active_menu == 4 ? 'active' : '') href='#') Отчеты
+                    li.mb: a.menu_link(class = (active_menu == 5 ? 'active' : '') href='#') Банки и программы
+                .fr
+                    .user_auth_menu
+                        p 
+                            b Константинов Константин Константинович
+                        p Роль Руководитель марки
+                        p
+                            span Дилерский центр 
+                            b Чери Центр Велозаводский
+                        a.logout_link(href='#')
+ 
+
 
 mixin input_composer(w_cls, inp_id, inp_cls, inp_plc, inp_val, inp_disable, inp_data_format) 
     .input_w(class=w_cls)

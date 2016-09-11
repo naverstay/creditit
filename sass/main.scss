@@ -73,6 +73,10 @@ b {
   min-height: 100%;
   padding: 140px 0 0;
   overflow: hidden;
+
+  .chery_mode & {
+    padding-top: 70px;
+  }
 }
 
 .base {
@@ -111,6 +115,14 @@ b {
     display: block;
     max-width: 130px;
   }
+
+  .chery_mode & {
+    margin-right: 65px;
+
+    img {
+      max-width: 150px;
+    }
+  }
 }
 
 .slogan {
@@ -129,11 +141,70 @@ b {
   }
 }
 
+.user_auth_menu {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-right: 28px;
+
+  p {
+    text-align: right;
+    margin: 5px 0;
+    font-size: 10.5px;
+    line-height: normal;
+  }
+}
+
+.logout_link {
+  @extend .icon-before;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -15px;
+  height: 30px;
+  width: 26px;
+  color: #170000;
+
+  &:before {
+    content: $icon-exit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: right;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 .main_menu_holder {
   @extend %clearfix;
   line-height: 76px;
   min-height: 82px;
   border-bottom: 2px solid $gl_yellow;
+
+  &.no_bdr {
+    border: none;
+  }
+
+  .chery_mode & {
+    line-height: 86px;
+
+    .main_menu {
+      > li {
+        padding-left: 6px;
+      }
+
+      .menu_link {
+        padding: 8px 9px;
+
+        &.active {
+          border-color: #c41329;
+        }
+      }
+    }
+  }
 }
 
 .main_menu {
@@ -243,6 +314,44 @@ b {
 
 .filter_results {
   margin-bottom: 30px;
+}
+
+.order_status_switch_holder {
+  position: relative;
+  display: none;
+
+  + span {
+    position: relative;
+    z-index: 5;
+  }
+
+  .open_switch:hover & {
+    display: block;
+  }
+}
+
+.order_status_switch {
+  position: absolute;
+  top: -14px;
+  left: -15px;
+  z-index: 2;
+  width: 290px;
+  border: 2px solid $gl_yellow;
+  padding: 55px 10px 14px;
+  background: rgba(255, 255, 255, .85);
+}
+
+.order_status_list {
+  position: relative;
+
+  li {
+    margin-bottom: 9px;
+  }
+
+  .check_text {
+    padding-left: 22px;
+    font: 13px $ArialRegular;
+  }
 }
 
 .gl_table {
@@ -559,6 +668,21 @@ b {
         vertical-align: middle;
       }
     }
+  }
+}
+
+.chery_mode {
+  .checkbox_emul .hidden_input:checked + .check_text:before {
+    border-color: #c41329;
+    background: none;
+  }
+
+  .order_status_switch {
+    border-color: #c41329;
+  }
+
+  .gl_table.table_v2 th {
+    border-bottom-color: #c41329;
   }
 }
 
