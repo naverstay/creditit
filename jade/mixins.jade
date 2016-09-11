@@ -62,14 +62,23 @@ mixin header_chery(active_menu)
                     .user_auth_menu
                         p 
                             b Константинов Константин Константинович
-                        p Роль Руководитель марки
+                        p 
+                            span.mb Роль 
+                            span.select_w6
+                                select.select2()
+                                    option(value='1') Руководитель марки
+                                    option(value='2') Руководитель центра 
+                                    option(value='3') Руководитель просто
                         p
-                            span Дилерский центр 
-                            b Чери Центр Велозаводский
+                            span.mb Дилерский центр 
+                            span.select_w6
+                                select.select2()
+                                    option(value='1') Чери Центр Велозаводский
+                                    option(value='2') Центр Велозаводский
+                                    option(value='3') Чери Центр
+                                
                         a.logout_link(href='#')
  
-
-
 mixin input_composer(w_cls, inp_id, inp_cls, inp_plc, inp_val, inp_disable, inp_data_format) 
     .input_w(class=w_cls)
         input.f_input(id=inp_id || null class=inp_cls placeholder=inp_plc || null value=inp_val || null disabled = (inp_disable ? 'disabled' : null) data-format = inp_data_format || null)

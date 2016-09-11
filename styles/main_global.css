@@ -237,8 +237,8 @@ textarea:focus::-moz-placeholder {
   font-style: normal;
 }
 .icon-before:before, .ui-datepicker.datepicker_v1 .ui-datepicker-prev:before,
-.ui-datepicker.datepicker_v1 .ui-datepicker-next:before, .logout_link:before, .bank_icon:before,
-.programme_icon:before, .input_w.datepicker_holder .ui-datepicker-trigger:before, .btn_v2.control_btn:before, .select2-results__option[aria-selected=true]:before, .select_v1 .select2-selection--single .select2-selection__arrow:before, .select_v2 .select2-selection--single .select2-selection__arrow:before, .tab_link:before, .checkbox_emul_2 .check_text_2:before, .check_text:before, .ui-datepicker-prev .ui-icon:before, .ui-datepicker-next .ui-icon:before, .order_progress_step:before, .order_tab_btn:before, .order_check:before, .select_w3 .select2-results__option:before, .upload_save:before,
+.ui-datepicker.datepicker_v1 .ui-datepicker-next:before, .logout_link:before, .status_switch_icon:before, .bank_icon:before,
+.programme_icon:before, .input_w.datepicker_holder .ui-datepicker-trigger:before, .btn_v2.control_btn:before, .select2-results__option[aria-selected=true]:before, .select_v1 .select2-selection--single .select2-selection__arrow:before, .select_v2 .select2-selection--single .select2-selection__arrow:before, .tab_link:before, .checkbox_emul_2 .check_text_2:before, .check_text:before, .ui-datepicker-prev .ui-icon:before, .ui-datepicker-next .ui-icon:before, .order_progress_step:before, .order_tab_btn:before, .order_check:before, .select_w3 .select2-results__option:before, .select_w6 .select2-container .select2-selection--single .select2-selection__arrow:before, .upload_save:before,
 .upload_print:before,
 .upload_folder:before,
 .upload_remove:before,
@@ -1814,12 +1814,37 @@ b {
   position: relative;
   display: none;
 }
-.order_status_switch_holder + span {
+.open_switch:hover .order_status_switch_holder {
+  display: block;
+}
+
+.order_status_switch_label {
   position: relative;
   z-index: 5;
 }
-.open_switch:hover .order_status_switch_holder {
-  display: block;
+.order_status_switch_label span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.status_switch_icon {
+  position: relative;
+  margin-left: 4px;
+  width: 12px;
+  height: 12px;
+}
+.status_switch_icon:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+}
+.open_switch:hover .status_switch_icon:before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .order_status_switch {
@@ -2073,8 +2098,28 @@ b {
 .chery_mode .order_status_switch {
   border-color: #c41329;
 }
+.chery_mode .gl_table.table_v2 td {
+  height: 36px;
+}
+.chery_mode .gl_table.table_v2 .main_row.opened:not(.first_row) td {
+  height: 35px;
+}
 .chery_mode .gl_table.table_v2 th {
   border-bottom-color: #c41329;
+}
+.chery_mode .violet_btn {
+  border-color: #c41329;
+  color: #c41329;
+}
+.chery_mode .order_link .order_id {
+  border-bottom-color: #c41329;
+  color: #c41329;
+}
+.chery_mode .sort_order.order_left:before {
+  border-left-color: #c41329;
+}
+.chery_mode .sort_order.order_left.opened:before {
+  border-color: #c41329 transparent transparent transparent;
 }
 
 .order_link {
@@ -4127,6 +4172,54 @@ b {
   font: 12px/40px "ArialBold", sans-serif;
 }
 .select_w5 .select2-results__option {
+  line-height: normal;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.select_w6 {
+  display: inline-block;
+  vertical-align: middle;
+}
+.select_w6 .select2-selection__clear {
+  display: none;
+}
+.select_w6 .select2-container {
+  margin: -5px;
+}
+.select_w6 .select2-dropdown:before {
+  right: 0;
+  left: 0;
+  background: #c8c8c8;
+}
+.select_w6 .select2-dropdown {
+  border-color: #c8c8c8;
+}
+.select_w6 .select2-container .select2-selection--single {
+  height: 12px;
+  background: none;
+  border-radius: 0;
+  border: none;
+}
+.select_w6 .select2-container .select2-selection--single .select2-selection__arrow:before {
+  content: "";
+}
+.select_w6 .select2-container .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+.select_w6 .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 12px;
+  top: 50%;
+  margin-top: -6px;
+}
+.select_w6 .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #000;
+  padding-left: 0;
+  padding-right: 28px;
+  text-overflow: initial;
+  font: 12px/12px "ArialBold", sans-serif;
+}
+.select_w6 .select2-results__option {
   line-height: normal;
   padding-top: 4px;
   padding-bottom: 4px;
