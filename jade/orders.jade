@@ -38,15 +38,18 @@ html(lang='ru')
                             .order_p_client
                                 .order_p_info
                                     .order_p_caption Клиент
-                                    .order_p_box
+                                    .order_p_box.clearfix
                                         .order_client_id 55324876
-                                        .order_client_name: b Тихомиров  <br> Сергей Андреевич
-                                        
-                                        ul.order_client_contacts
-                                            li +7 903 256-3700
-                                            li +7 495 131-0098
-                                            li: a.link_inherit(href='mailto:mail@testmail.com') mail@testmail.com
+                                        .order_client_photo
+                                            img(src='i/client_1.png')
+                                        .order_client_info
+                                            .order_client_name: b Тихомиров  <br> Сергей Андреевич
                                             
+                                            ul.order_client_contacts
+                                                li +7 903 256-3700
+                                                li +7 495 131-0098
+                                                li: a.link_inherit(href='mailto:mail@testmail.com') mail@testmail.com
+                                                
                                     .order_p_caption Автомобиль
                                         
                                     .order_p_box
@@ -104,9 +107,8 @@ html(lang='ru')
                                         li.small_cell: a.order_tab_btn(href='#tab_unit_1'): span.order_tab_text 1. Автомобиль
                                         li.small_cell: a.order_tab_btn(href='#tab_unit_2'): span.order_tab_text 2. Параметры кредита
                                         li.small_cell: a.order_tab_btn(href='#tab_unit_3'): span.order_tab_text 3. Данные клиента
-                                        li: a.order_tab_btn(href='#tab_unit_4'): span.order_tab_text  рассмотрение заявки
-                                        li: a.order_tab_btn(href='#tab_unit_5'): span.order_tab_text Статус заявки
-                                        
+                                        li: a.order_tab_btn(href='#tab_unit_4'): span.order_tab_text  Рассмотрение  <br>  заявки
+                                        li: a.order_tab_btn(href='#tab_unit_5'): span.order_tab_text оформление  <br> кредита
                                             
                                 .tabBlock.tab_block(data-tab-context='#tab_list')
                                     #tab_unit_1.tab_unit
@@ -128,28 +130,5 @@ html(lang='ru')
                                     #tab_unit_5.tab_unit
                                         .tab_inner: form(action='#')
                                             +credit_management()
-                                            
-                            //-.order_p_status
-                                .order_p_info
-                                    .order_p_caption статус в банках
-                                    .order_p_box
-                                        table.order_status_table
-                                            tr
-                                                td
-                                                    span.order_status_bank ВТБ24
-                                                td
-                                                    b.color_gray На рассмотрении
-                                            tr
-                                                td
-                                                    span.order_status_bank Сетелем
-                                                td
-                                                    b.color_red Отказ
-                                            tr
-                                                td
-                                                    span.order_status_bank Юникредит
-                                                td
-                                                    b.color_green Одобрено с условием
-                                
-
                         
             +footer()

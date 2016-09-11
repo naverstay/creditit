@@ -12,7 +12,9 @@ mixin dev_head(page_title, index, new_order, orders)
         script(src='js/jquery-ui.js')
         script(src='js/script.js')
         - if (orders)
+            link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i" rel="stylesheet")
             script(src='js/jquery.jeditable.js')
+            script(src='js/jquery.inputmask.bundle.js')
             script(src='js/autogrow.min.js')
             script(src='js/orders.js')
             
@@ -65,6 +67,361 @@ mixin footer()
                 .mb: a.gl_link.color_violet(href='#') Статистика
 
 mixin credit_management()
+    .credit_block
+        .credit_history_steps
+            .order_steps.mod_6
+                ul.order_results.mod_2.bank_collapsed
+                    li.order_r_item.order_formalization
+                        .order_title.orderCollapseBtn
+                            .bank_name
+                                //-span.bank_icon.color_green
+                                span.collapse_icon
+                                span Авангард
+                            .bank_programmes
+                                .programme_name
+                                    //-span.programme_icon
+                                    span Каждому по “железному коню”
+                            .order_date
+                                span 13.12.16
+                                i 15:34
+                            .bank_answer
+                                b одобрено
+                            .get_credit
+                                
+                        .order_summary.orderSummary
+                            .order_get_inner
+                                .order_steps.mod_5
+                                    .credit_step.step_6
+                                        span Шаг 1. Назначить встречу
+                                        
+                                    .credit_step.step_7
+                                        .select_w4
+                                            select.select2()
+                                                option(disabled='', value='')
+                                                option(value='01.09.2016', selected='selected') 01.09.2016
+                                                option(value='02.09.2016') 02.09.2016
+                                                option(value='03.09.2016') 03.09.2016
+                                               
+                                    .credit_step.step_7
+                                        .select_w4
+                                            select.select2()
+                                                option(disabled='', value='')
+                                                option(value='11.15', selected='selected') 11.15
+                                                option(value='13.15') 13.15
+                                                option(value='14.15') 14.15
+                                               
+                                    .credit_step.step_5
+                                        a.credit_meeting_link(href='#'): i Назначить новую дату
+                                    .credit_step.step_4
+                                        a.btn_v4.order_edit_btn.violet_btn_2(href='#') сохранить
+                                    
+                                
+                                .order_steps.mod_5
+                                    .credit_step
+                                        span Шаг 2. оформить сделку
+                                        
+                                .formalization_block
+                                    .formalization_step
+                                        .formalization_docs
+                                            p 1. Загрузить документы для банка
+                                            ul.uploaded_files
+                                                li
+                                                    .uploaded_unit.upload_error
+                                                        .upload_file Договор купли-продажи	
+                                                        .upload_date_v2
+                                                        .upload_time
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Полис КАСКО
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Полис Страхование жизни
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 4
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                            
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 5
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                            
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 6
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                            
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 7
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                            
+                                            .formalization_controls
+                                                a.btn_v4.order_edit_btn.violet_btn_2(href='#') отправить
+    
+                                        .formalization_insurance
+                                            p Данные о страховке
+                                            ul.formalization_insurance_list
+                                                li
+                                                    .select_w4
+                                                        select.select2()
+                                                            option(disabled='', value='')
+                                                            option(value='11.15', selected='selected') Страховая компания
+                                                            option(value='14.15') 14.15
+                                                            
+                                                li
+                                                    .select_w4
+                                                        select.select2()
+                                                            option(disabled='', value='')
+                                                            option(value='11.15', selected='selected') Страховая компания
+                                                            option(value='14.15') 14.15
+                                                            
+                                                li
+                                                    .order_info_label Серия и номер полиса КАСКО
+                                                    .order_info_val.edit_.edit_v4
+                                                        input(value='123456789')
+                                                li
+                                                    .order_info_label Размер страхового покрытия
+                                                    .order_info_val.edit_.edit_v4
+                                                        input(value='123456789')
+                                                li
+                                                    .order_info_label Страховая премия
+                                                    .order_info_val.edit_.edit_v4
+                                                        input(value='123456789')
+                                    
+                                    .formalization_step
+                                        p Данные ПТС
+
+                                        .table_row
+                                            .table_cell.w_140
+                                                .order_info_label Марка
+                                                //-.order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Грузовая техника\"]}') Грузовая техника
+                                                .order_info_val.select_w4
+                                                    select.select2()
+                                                        option(disabled='', value='')
+                                                        option(value='Автомобиль') Автомобиль
+                                                        option(value='Грузовая техника', selected='selected') Грузовая техника
+                                                        option(value='Мототехника') Мототехника
+                                                        option(value='Спецтехника и прицеп') Спецтехника и прицеп
+
+                                            .table_cell.w_140
+                                                .order_info_label.wnw Модель ТС (как в ПТС)
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+                                            .table_cell.w_140
+                                                .order_info_label VIN 
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+                                            .table_cell.w_90
+                                                .order_info_label Серия ПТС 
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+
+                                            .table_cell.w_90
+                                                .order_info_label Номер ПТС
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+
+                                            .table_cell.w_95
+                                                .order_info_label Год выпуска 
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='' data-inputmask="'mask': '9999'")
+
+                                        .table_row
+                                            .table_cell.w_140
+                                                .order_info_label.wnw Модель двигателя
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+
+                                            .table_cell.w_140
+                                                .order_info_label.wnw Номер двигателя
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+
+                                            .table_cell.w_140
+                                                .order_info_label.wnw Номер кузова
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+
+                                            .table_cell.w_150
+                                                .order_info_label.wnw Наименование продавца
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+                                                    
+                                    .formalization_step.bank_info
+                                        p Выбрать реквизиты для перечисления денег банком
+                                        
+                                        .table_row
+                                            .table_cell.w_180
+                                                .order_info_label Банк
+                                                //-.order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Грузовая техника\"]}') Грузовая техника
+                                                .order_info_val.select_w4
+                                                    select.select2()
+                                                        option(disabled='', value='')
+                                                        option(value='Альфа-банк', selected='selected') Альфа-банк
+                                                        option(value='Альфа-банк 2') Альфа-банк 2
+                                                        option(value='Мототехника') Мототехника
+                                                        option(value='Спецтехника и прицеп') Спецтехника и прицеп
+                                        .table_row
+                                            .table_cell.w_220
+                                                .order_info_label.wnw Получатель
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='ООО "Первый российский дилер"')
+
+                                            .table_cell.w_300
+                                                .order_info_label.wnw Банк
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+
+                                            .table_cell.w_180
+                                                .order_info_label.wnw Расчетный счет
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+                                                        
+                                    .formalization_step
+                                        p 2. Документы от банка для сделки
+                                        
+                                        .formalization_docs: ul.uploaded_files
+                                            +loop_while(7)
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Кредитный договор
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time 21:21:22
+                                                        .upload_count 2 экз.
+                                                        .upload_print
+                                                        .upload_save
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Договор залога
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time 21:21:22
+                                                        .upload_count 2 экз.
+                                                        .upload_print
+                                                        .upload_save
+
+                                    .formalization_step
+                                        .formalization_docs
+                                            p 3. Загрузить подписанные документы банка для отправки
+
+                                            ul.uploaded_files
+                                                li
+                                                    .uploaded_unit.upload_error
+                                                        .upload_file Договор купли-продажи	
+                                                        .upload_date_v2
+                                                        .upload_time
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Полис КАСКО
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Полис Страхование жизни
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 4
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 5
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 6
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 7
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21:22
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+
+                                            .formalization_controls
+                                                a.btn_v4.order_edit_btn.violet_btn_2(href='#') отправить
+                                                
+                                .order_steps.mod_7
+                                    .credit_step
+                                        span.mb Шаг 3. делка профинансирована, деньги переведены дилеру
+                                        span.order_check
+                                    .credit_step.step_4
+                                        a.btn_v4.order_edit_btn.violet_btn_2(href='#') сохранить
+
+                                .order_steps.mod_7
+                                    .credit_step
+                                        span.mb Шаг 4. Оригиналы документов сданы в банк
+                                        span.order_check
+                                    .credit_step.step_4
+                                        a.btn_v4.order_edit_btn.violet_btn_2(href='#') сохранить
+
+                                .order_steps.mod_7
+                                    .credit_step
+                                        span.mb Шаг 5. Закрыть заявку и перенести в архив
+                                    .credit_step.step_4
+                                        a.btn_v4.order_edit_btn.violet_btn_2(href='#') закрыть заявку
+                                        
+
+
+mixin credit_management_old()
     .order_info_label Статус дилера:
     .order_info_val Новая заявка
         
@@ -182,61 +539,334 @@ mixin credit_management()
     .step_controls
         a.btn_v1.next_step_btn.violet_btn_2(href='#') Сохранить
 
+mixin order_summary(mode)
+    .order_summary_inner
+        - if (mode == 'declined')
+            .order_history
+                .order_history_row
+                    .order_history_step Заявка направлена 
+                    .order_history_time
+                        span 13.09.16
+                        i 15:34
+                .order_history_row
+                    .order_history_step Заявка направлена 
+                    .order_history_time
+                        span 13.09.16
+                        i 15:34
+                .order_history_row
+                    .order_history_step Отказ банка
+                    .order_history_time
+                        span 13.09.16
+                        i 15:34
+            
+        - if (mode == 'approved')
+            .order_history
+                .order_history_row
+                    .order_history_step Заявка направлена 
+                    .order_history_time
+                        span 13.09.16
+                        i 15:34
+        - if (mode == 'awaiting')
+            .order_request
+                p Банк запросил дополнительные данные:
+                ul.order_request_list
+                    li Документ 1
+                    li Документ 2
+                ul.uploaded_files
+                    li
+                        .uploaded_unit
+                            .upload_file Документ 1
+                            .upload_date_v2 27.08.2016
+                            .upload_time: i 21:21:22
+                            .upload_remove &#10006;
+                            .upload_folder
+                            .upload_status
+                    li
+                        .uploaded_unit.upload_error
+                            .upload_file Документ 2
+                            .upload_date_v2
+                            .upload_time
+                            .upload_remove &#10006;
+                            .upload_folder
+                            .upload_status
+                ul.order_request_controls
+                    li: a.btn_v4.order_edit_btn.violet_btn_2.orderStepBtn(href='#step_3') отправить
+
+        dl.order_summary_list
+            dt Название банка
+            dd Абсолют банк
+            dt Название программы
+            dd “Выгодный автокредит”
+            dt Ежемесячный платеж
+            dd 9 098 руб. 
+            dt Ставка банка
+            dd 15.50 %
+            dt Маркетинговая ставка
+            dd 15.50 %
+            dt Переплата
+            dd 90 374 руб. 
+            dt Стоимость страхования жизни (в кредит)
+            dd 90 374 руб.
+        
+mixin bank_prog()
+    .select_w4
+        select.select2.bankProgSelect()
+            option(disabled='', value='')
+            option(value='1') Каждому по “железному коню”
+            option(value='2') Автокредит (льготное кредиование)
+            option(value='3') Потребительский кредит
+            option(value='4') “Выгодный автокредит”
+            
 mixin credit_history()
-    ul.order_results
-        li.order_r_item
-            .bank_name
-                span.bank_icon.color_red
-                span Абсолют Банк
-            .bank_programmes
-                .programme_name
-                    span.programme_icon
-                    span Программа “Выгодный автокредит”
-            .bank_answer
-                b.color_red Отказ
+    .credit_block
+        //-.credit_steps
+            .credit_step.step_1.step_complited
+                span.order_check
+                span 1. Автомобиль
+            .credit_step.step_2.step_complited
+                span.order_check
+                span 2. Параметры кредита
+            .credit_step.step_3.step_complited
+                span.order_check
+                span 3. Данные клиента
+            .credit_step.step_4
+                a.btn_v4.order_edit_btn.violet_btn_2.disabled(href='#') Подать заявку заново
 
-        li.order_r_item
-            .bank_name
-                span.bank_icon.color_green
-                span Авангард
-            .bank_programmes
-                .programme_name
-                    span.programme_icon
-                    span Стандартный
-                span ;
-                .programme_name
-                    span.programme_icon
-                    span Абсолютно для всех
-            .bank_answer
-                b.color_green Одобрение
+        .credit_history_steps
+            #step_1.history_step.active
+                .order_steps.mod_5
+                    .credit_step
+                        span Выберите банк для отправки
+                    .credit_step.step_4
+                        a.btn_v4.order_edit_btn.violet_btn_2.orderStepBtn.disabled(href='#') Подать заявку заново
+                .order_steps.mod_5
+                    .credit_step.step_4
+                        a.btn_v4.order_edit_btn.violet_btn_2.orderStepBtn(href='#step_2') отправить заявку
+                        
+                    ul.order_results.mod_1
+                        li.order_r_item.bankProgRow
+                            .bank_name
+                                //-span.bank_icon.color_red
+                                span Абсолют Банк
+                            .bank_programmes
+                                .programme_name
+                                    //-span.programme_icon
+                                    +bank_prog()
+                            .bank_switch
+                                label.checkbox_emul_2
+                                    input.hidden_input.bankProgCheck(type='checkbox' name='bank' )
+                                    b.check_text_2
+                                    
+                        li.order_r_item.bankProgRow
+                            .bank_name
+                                //-span.bank_icon.color_red
+                                span Абсолют Банк
+                            .bank_programmes
+                                .programme_name
+                                    //-span.programme_icon
+                                    +bank_prog()
+                            .bank_switch
+                                label.checkbox_emul_2
+                                    input.hidden_input.bankProgCheck(type='checkbox' name='bank' )
+                                    b.check_text_2
+                                
+                        li.order_r_item.bankProgRow
+                            .bank_name
+                                //-span.bank_icon.color_red
+                                span Абсолют Банк
+                            .bank_programmes
+                                .programme_name
+                                    //-span.programme_icon
+                                    +bank_prog()
+                            .bank_switch
+                                label.checkbox_emul_2
+                                    input.hidden_input.bankProgCheck(type='checkbox' name='bank' )
+                                    span.check_text_2
+                                    
+                        li.order_r_item.bankProgRow
+                            .bank_name
+                                //-span.bank_icon.color_red
+                                span Абсолют Банк
+                            .bank_programmes
+                                .programme_name
+                                    //-span.programme_icon
+                                    +bank_prog()
+                            .bank_switch
+                                label.checkbox_emul_2
+                                    input.hidden_input.bankProgCheck(type='checkbox' name='bank' )
+                                    span.check_text_2
 
-        li.order_r_item
-            .bank_name
-                span.bank_icon
-                span Альфа Банк
-            .bank_programmes
-                .programme_name
-                    span.programme_icon
-                    span Каждому по “жедезному коню”
-                span ;
-                .programme_name
-                    span.programme_icon
-                    span Автокредит (льготное кредитование) 
-            .bank_answer
-                span Ожидание ответа
-
-        li.order_r_item
-            .bank_name
-                span.bank_icon
-                span Банк Возрождение
-            .bank_programmes
-                .programme_name
-                    span.programme_icon
-                    span Потребительский кредит
-            .bank_answer
-                span Ожидание ответа
-
-    .step_controls
+            #step_2.history_step
+                .order_steps.mod_5
+                    .credit_step
+                        span Выберите банк и отправьте 
+                    .credit_step.step_4
+                        a.btn_v4.order_edit_btn.violet_btn_2.orderStepBtn.disabled(href='#step_1') Подать заявку заново
+                .order_steps.mod_5
+                    ul.order_results.mod_2.bank_collapsed
+                        li.order_r_item.order_declined
+                            .order_title.orderCollapseBtn
+                                .bank_name
+                                    //-span.bank_icon.color_red
+                                    span.collapse_icon
+                                    span Абсолют Банк
+                                .bank_programmes
+                                    .programme_name
+                                        //-span.programme_icon
+                                        span “Выгодный автокредит”
+                                .order_date
+                                    span 13.12.16
+                                    i 15:34
+                                .bank_answer
+                                    b ОТКАЗ
+                            .order_summary.orderSummary
+                                +order_summary('declined')
+    
+                        li.order_r_item.order_approved
+                            .order_title.orderCollapseBtn
+                                .bank_name
+                                    //-span.bank_icon.color_green
+                                    span.collapse_icon
+                                    span Авангард
+                                .bank_programmes
+                                    .programme_name
+                                        //-span.programme_icon
+                                        span Каждому по “железному коню”
+        
+                                    //-.programme_name
+                                        //-span.programme_icon
+                                        span Абсолютно для всех
+                                .order_date
+                                    span 13.12.16
+                                    i 15:34
+                                .bank_answer
+                                    b одобрено
+                                .get_credit
+                                    a.btn_v4.order_edit_btn.violet_btn_2.orderStepBtn(href='#step_3') оформить кредит
+                            .order_summary.orderSummary
+                                +order_summary('approved')
+        
+                        li.order_r_item
+                            .order_title.orderCollapseBtn
+                                .bank_name
+                                    //-span.bank_icon
+                                    span.collapse_icon
+                                    span Альфа Банк
+                                .bank_programmes
+                                    .programme_name
+                                        //-span.programme_icon
+                                        span Каждому по “жедезному коню”
+                                    //-span ;
+                                    //-.programme_name
+                                        //-span.programme_icon
+                                        span Автокредит (льготное кредитование) 
+                                .order_date
+                                    span 13.12.16
+                                    i 15:34
+                                .bank_answer
+                                    span Ожидание
+                            .order_summary.orderSummary
+                                +order_summary('awaiting')
+    
+                        li.order_r_item.order_awaiting
+                            .order_title.orderCollapseBtn
+                                .bank_name
+                                    //-span.bank_icon
+                                    span.collapse_icon
+                                    span Банк Возрождение
+                                .bank_programmes
+                                    .programme_name
+                                        //-span.programme_icon
+                                        span Потребительский кредит
+                                .order_date
+                                    span 13.12.16
+                                    i 15:34
+                                .bank_answer
+                                    span ЗАПРОС БАНКА 
+                                .get_credit
+                                    a.btn_v4.order_edit_btn.yellow_black_btn_2.orderStepBtn(href='#step_3') Узнать
+                            .order_summary.orderSummary
+                                +order_summary('awaiting')
+                            
+            #step_3.history_step
+                .order_steps.mod_5
+                    .credit_step
+                        span Шаг 1. Выберите банк и отправьте заявку на рассмотрение
+                    .credit_step.step_4
+                        a.btn_v4.order_edit_btn.violet_btn_2.orderStepBtn.disabled(href='#step_2') Подать заявку заново
+                .order_steps.mod_5
+                    ul.order_results.mod_2
+                        li.order_r_item.color_red.order_declined
+                            .bank_name
+                                //-span.bank_icon.color_red
+                                span Абсолют Банк
+                            .bank_programmes
+                                .programme_name
+                                    //-span.programme_icon
+                                    span “Выгодный автокредит”
+                            .order_date 13.12.2016
+                            .bank_answer
+                                b ОТКАЗ
+                
+                        li.order_r_item.color_green.order_accepted
+                            .bank_name
+                                //-span.bank_icon.color_green
+                                span Авангард
+                            .bank_programmes
+                                .programme_name
+                                    //-span.programme_icon
+                                    span Каждому по “железному коню”
+            
+                                //-.programme_name
+                                    //-span.programme_icon
+                                    span Абсолютно для всех
+                            .order_date 13.12.2016
+                            .bank_answer
+                                b кредит оформлен
+                
+                        li.order_r_item
+                            .bank_name
+                                //-span.bank_icon
+                                span Альфа Банк
+                            .bank_programmes
+                                .programme_name
+                                    //-span.programme_icon
+                                    span Каждому по “жедезному коню”
+                                //-span ;
+                                //-.programme_name
+                                    //-span.programme_icon
+                                    span Автокредит (льготное кредитование) 
+                            .order_date 13.12.2016
+                            .bank_answer
+                                span Ожидание 
+                
+                        li.order_r_item
+                            .bank_name
+                                //-span.bank_icon
+                                span Банк Возрождение
+                            .bank_programmes
+                                .programme_name
+                                    //-span.programme_icon
+                                    span Потребительский кредит
+                            .order_date 13.12.2016
+                            .bank_answer
+                                span Ожидание 
+            
+                .order_steps.mod_2
+                    .credit_step 
+                        span.mb Шаг 4. Оригиналы документов сданы в банк
+                        span.order_check
+                    .credit_step.step_4
+                        a.btn_v4.order_edit_btn.violet_btn_2(href='#') сохранить
+                    
+                .order_steps.mod_2
+                    .credit_step 
+                        span.mb Шаг 5. Закрыть заявку и перенести в архив
+                    .credit_step.step_4
+                        a.btn_v4.order_edit_btn.violet_btn_2(href='#') закрыть заявку
+                
+                    
+    //-.step_controls
         a.btn_v1.next_step_btn.violet_btn_2(href='#') Сохранить
 
 mixin credit_terms()
@@ -369,8 +999,158 @@ mixin car_info()
                             a.btn_v4.order_edit_btn.violet_btn_2.disabled(href='#') Редактировать
                             
                     //-a.order_info_edit.editBtn(href='#') Редактировать
-                    table.order_info_table.layout_fix
-                        tr.orderTableRow
+                        
+                    .table_row
+                        .table_cell.w_180
+                            .order_info_label Марка
+                            .order_info_val.edit_.edit_v4
+                                input(value='Chery')
+                        .table_cell.w_180
+                            .order_info_label Модель
+                            .order_info_val.edit_.edit_v4
+                                input(value='Arrizo 7')
+                        .table_cell.w_320
+                            .order_info_label Комплектация
+                            .order_info_val.edit_.edit_v4
+                                input(value='1.6 CVT Luxury')
+                        
+                    .table_row
+                        .table_cell.w_180
+                            .order_info_label Тип транспортного  <br>  средства
+                            //-.order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Грузовая техника\"]}') Грузовая техника
+                            .order_info_val.select_w4
+                                select.select2()
+                                    option(disabled='', value='')
+                                    option(value='Автомобиль') Автомобиль
+                                    option(value='Грузовая техника', selected='selected') Грузовая техника
+                                    option(value='Мототехника') Мототехника
+                                    option(value='Спецтехника и прицеп') Спецтехника и прицеп
+                                    
+                        .table_cell.w_140
+                            .order_info_label Регистрационный  <br>  номер
+                            .order_info_val.edit_.edit_v4
+                                input(value='')
+                        .table_cell.w_100
+                            .order_info_label Пробег, <br> в км. 
+                            .order_info_val.edit_.edit_v4
+                                input(value='' data-inputmask="'alias': 'decimal', 'groupSeparator': ' ', 'autoGroup': true")
+                        .table_cell
+                            .order_info_label &nbsp;  <br> &nbsp;
+                            .order_info_val: label.checkbox_emul_2
+                                input.hidden_input(type='radio' name='is_used' checked)
+                                b.check_text_2 Новый
+                        .table_cell
+                            .order_info_label &nbsp;  <br> &nbsp;
+                            .order_info_val: label.checkbox_emul_2
+                                input.hidden_input(type='radio' name='is_used')
+                                b.check_text_2 Подержанный
+                        .table_cell
+                            .order_info_label &nbsp;  <br> &nbsp;
+                            .order_info_val: ul.car_features
+                                li
+                                    b.check_text_2 Коммерческий:
+                                li
+                                    label.checkbox_emul_2
+                                        input.hidden_input(type='radio' name='is_commercial')
+                                        b.check_text_2 Да
+                                li
+                                    label.checkbox_emul_2
+                                        input.hidden_input(type='radio' name='is_commercial' checked)
+                                        b.check_text_2 Нет
+
+                    .table_row
+                        .order_steps.mod_3: .credit_step
+                            span Данные ПТС
+                        
+                        .table_cell.w_140
+                            .order_info_label Марка
+                            //-.order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Грузовая техника\"]}') Грузовая техника
+                            .order_info_val.select_w4
+                                select.select2()
+                                    option(disabled='', value='')
+                                    option(value='Автомобиль') Автомобиль
+                                    option(value='Грузовая техника', selected='selected') Грузовая техника
+                                    option(value='Мототехника') Мототехника
+                                    option(value='Спецтехника и прицеп') Спецтехника и прицеп
+
+                        .table_cell.w_140
+                            .order_info_label.wnw Модель ТС (как в ПТС)
+                            .order_info_val.edit_.edit_v4
+                                input(value='')
+                        .table_cell.w_140
+                            .order_info_label VIN 
+                            .order_info_val.edit_.edit_v4
+                                input(value='')
+                        .table_cell.w_90
+                            .order_info_label Серия ПТС 
+                            .order_info_val.edit_.edit_v4
+                                input(value='')
+                                
+                        .table_cell.w_90
+                            .order_info_label Номер ПТС
+                            .order_info_val.edit_.edit_v4
+                                input(value='')
+                        
+                        .table_cell.w_95
+                            .order_info_label Год выпуска 
+                            .order_info_val.edit_.edit_v4
+                                input(value='' data-inputmask="'mask': '9999'")
+                        
+                    .table_row
+                        .table_cell.w_140
+                            .order_info_label.wnw Модель двигателя
+                            .order_info_val.edit_.edit_v4
+                                input(value='')
+                        
+                        .table_cell.w_140
+                            .order_info_label.wnw Номер двигателя
+                            .order_info_val.edit_.edit_v4
+                                input(value='')
+
+                        .table_cell.w_140
+                            .order_info_label.wnw Номер кузова
+                            .order_info_val.edit_.edit_v4
+                                input(value='')
+
+                        .table_cell.w_150
+                            .order_info_label.wnw Наименование продавца
+                            .order_info_val.edit_.edit_v4
+                                input(value='')
+                                
+                    .table_row
+                        .order_steps.mod_4: .credit_step
+                            span Данные на автомобиль
+                        .table_cell.w_540.cb: ul.uploaded_files
+                            li
+                                .uploaded_unit.upload_error
+                                    .upload_status
+                                    .upload_folder
+                                    .upload_remove &#10006;
+                                    .upload_file Паспорт транспортного средства
+                                    .upload_date_v2
+                                    .upload_time
+
+                            li
+                                .uploaded_unit
+                                    .upload_status
+                                    .upload_folder
+                                    .upload_remove &#10006;
+                                    .upload_file Свидетельство о регистрации
+                                    .upload_date_v2 27.08.2016
+                                    .upload_time 21:21:22
+
+                            li
+                                .uploaded_unit
+                                    .upload_status
+                                    .upload_folder
+                                    .upload_remove &#10006;
+                                    .upload_file Доверенность (договор комиссии)
+                                    .upload_date_v2 27.08.2016
+                                    .upload_time 21:21:22
+
+
+                    //-table.order_info_table.layout_fix_
+                        //-tr.orderTableRow
                             td
                                 .order_info_label Марка
                                 .order_info_val.edit_.edit_v1
@@ -386,7 +1166,7 @@ mixin car_info()
                             td
                             td
                             td
-                        tr
+                        //-tr
                             td
                                 ul.car_features
                                     li
@@ -424,7 +1204,7 @@ mixin car_info()
                                             input.hidden_input(type='radio' name='is_available')
                                             span.check_text_2 НЕТ
 
-                        tr.orderTableRow
+                        //-tr.orderTableRow
                             td
                                 .order_info_label Тип транспортного средства
                                 //-.order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Грузовая техника\"]}') Грузовая техника
@@ -474,7 +1254,7 @@ mixin car_info()
                         tr
                             td(colspan=6)
                                 .order_info_val.wnw
-                                    span.color_red Данные на автомобиль
+                                    span.color_red Документы на автомобиль
                                     
                         tr
                             td(colspan=4)

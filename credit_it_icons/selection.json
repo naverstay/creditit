@@ -31,7 +31,7 @@
         "code": 59666
       },
       "setIdx": 0,
-      "setId": 24,
+      "setId": 25,
       "iconIdx": 0
     },
     {
@@ -50,14 +50,14 @@
       "attrs": [],
       "properties": {
         "order": 2,
-        "id": 0,
+        "id": 1,
         "prevSize": 32,
         "code": 59654,
         "name": "check2"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 0
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 1
     },
     {
       "icon": {
@@ -77,14 +77,14 @@
       "attrs": [],
       "properties": {
         "order": 3,
-        "id": 1,
+        "id": 2,
         "prevSize": 32,
         "code": 59655,
         "name": "arrow_down"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 1
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 2
     },
     {
       "icon": {
@@ -108,14 +108,14 @@
       "attrs": [],
       "properties": {
         "order": 4,
-        "id": 2,
+        "id": 3,
         "prevSize": 32,
         "code": 59656,
         "name": "calendar"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 2
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 3
     },
     {
       "icon": {
@@ -137,14 +137,14 @@
       "attrs": [],
       "properties": {
         "order": 5,
-        "id": 3,
+        "id": 4,
         "prevSize": 32,
         "code": 59657,
         "name": "add_gaurantor"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 3
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 4
     },
     {
       "icon": {
@@ -167,14 +167,14 @@
       "attrs": [],
       "properties": {
         "order": 6,
-        "id": 4,
+        "id": 5,
         "prevSize": 32,
         "code": 59658,
         "name": "add_client"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 4
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 5
     },
     {
       "icon": {
@@ -196,14 +196,14 @@
       "attrs": [],
       "properties": {
         "order": 7,
-        "id": 5,
+        "id": 6,
         "prevSize": 32,
         "code": 59659,
         "name": "wallet"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 5
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 6
     },
     {
       "icon": {
@@ -229,14 +229,14 @@
       "attrs": [],
       "properties": {
         "order": 8,
-        "id": 6,
+        "id": 7,
         "prevSize": 32,
         "code": 59660,
         "name": "bank"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 6
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 7
     },
     {
       "icon": {
@@ -259,14 +259,14 @@
       "attrs": [],
       "properties": {
         "order": 9,
-        "id": 7,
+        "id": 8,
         "prevSize": 32,
         "code": 59661,
         "name": "wife"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 7
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 8
     },
     {
       "icon": {
@@ -290,14 +290,14 @@
       "attrs": [],
       "properties": {
         "order": 10,
-        "id": 8,
+        "id": 9,
         "prevSize": 32,
         "code": 59662,
         "name": "client"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 8
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 9
     },
     {
       "icon": {
@@ -315,14 +315,14 @@
       "attrs": [],
       "properties": {
         "order": 11,
-        "id": 9,
+        "id": 10,
         "prevSize": 32,
         "code": 59648,
         "name": "document"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 9
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 10
     },
     {
       "icon": {
@@ -340,14 +340,14 @@
       "attrs": [],
       "properties": {
         "order": 12,
-        "id": 10,
+        "id": 11,
         "prevSize": 32,
         "code": 59649,
         "name": "label"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 10
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 11
     },
     {
       "icon": {
@@ -366,14 +366,14 @@
       "attrs": [],
       "properties": {
         "order": 13,
-        "id": 11,
+        "id": 12,
         "prevSize": 32,
         "code": 59650,
         "name": "check"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 11
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 12
     },
     {
       "icon": {
@@ -393,14 +393,14 @@
       "attrs": [],
       "properties": {
         "order": 14,
-        "id": 12,
+        "id": 13,
         "prevSize": 32,
         "code": 59651,
         "name": "close"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 12
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 13
     },
     {
       "icon": {
@@ -419,14 +419,14 @@
       "attrs": [],
       "properties": {
         "order": 15,
-        "id": 13,
+        "id": 14,
         "prevSize": 32,
         "code": 59652,
         "name": "info2"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 13
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 14
     },
     {
       "icon": {
@@ -446,14 +446,14 @@
       "attrs": [],
       "properties": {
         "order": 18,
-        "id": 14,
+        "id": 15,
         "prevSize": 32,
         "code": 59663,
         "name": "arrow-left2"
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 14
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 15
     },
     {
       "icon": {
@@ -476,12 +476,12 @@
         "prevSize": 32,
         "ligatures": "arrow-right2, right4",
         "name": "arrow-right2",
-        "id": 15,
+        "id": 16,
         "code": 59653
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 15
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 16
     },
     {
       "icon": {
@@ -505,14 +505,14 @@
       ],
       "properties": {
         "order": 1,
-        "id": 16,
+        "id": 17,
         "name": "car",
         "prevSize": 32,
         "code": 59664
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 16
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 17
     },
     {
       "icon": {
@@ -536,12 +536,12 @@
         "prevSize": 32,
         "ligatures": "folder-open, directory2",
         "name": "folder-open",
-        "id": 17,
+        "id": 18,
         "code": 59665
       },
-      "setIdx": 1,
-      "setId": 23,
-      "iconIdx": 17
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 18
     },
     {
       "icon": {
@@ -566,14 +566,14 @@
       ],
       "properties": {
         "order": 1,
-        "id": 3,
+        "id": 19,
         "name": "reload",
         "prevSize": 32,
         "code": 59667
       },
-      "setIdx": 10,
-      "setId": 14,
-      "iconIdx": 0
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 19
     },
     {
       "icon": {
@@ -583,6 +583,7 @@
         "width": 1037.716049194336,
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "exclamation"
         ],
@@ -592,14 +593,14 @@
       "attrs": [],
       "properties": {
         "name": "exclamation",
-        "id": 266,
+        "id": 20,
         "order": 66,
         "prevSize": 32,
         "code": 61738
       },
-      "setIdx": 14,
-      "setId": 10,
-      "iconIdx": 266
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 20
     },
     {
       "icon": {
@@ -609,6 +610,7 @@
         "width": 1019.4280920028687,
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "rouble",
           "rub",
@@ -620,14 +622,14 @@
       "attrs": [],
       "properties": {
         "name": "rub",
-        "id": 309,
+        "id": 21,
         "order": 45,
         "prevSize": 32,
         "code": 61784
       },
-      "setIdx": 14,
-      "setId": 10,
-      "iconIdx": 309
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 21
     },
     {
       "icon": {
@@ -649,13 +651,103 @@
       ],
       "properties": {
         "order": 1,
-        "id": 2,
+        "id": 22,
         "name": "sun",
         "prevSize": 32,
         "code": 59668
       },
-      "setIdx": 21,
-      "setId": 3,
+      "setIdx": 0,
+      "setId": 25,
+      "iconIdx": 22
+    },
+    {
+      "icon": {
+        "paths": [
+          "M286.168 851.045h474.663v-135.618h-474.663v135.618zM286.168 512h474.663v-203.427h-84.762q-21.19 0-36.023-14.833t-14.833-36.023v-84.762h-339.045v339.045zM896.448 545.904q0-13.774-10.065-23.839t-23.839-10.065-23.839 10.065-10.065 23.839 10.065 23.839 23.839 10.065 23.839-10.065 10.065-23.839zM964.257 545.904v220.379q0 6.887-5.033 11.919t-11.919 5.033h-118.666v84.762q0 21.19-14.833 36.023t-36.023 14.833h-508.567q-21.19 0-36.023-14.833t-14.833-36.023v-84.762h-118.666q-6.887 0-11.919-5.033t-5.033-11.919v-220.379q0-41.851 29.932-71.783t71.783-29.932h33.904v-288.188q0-21.19 14.833-36.023t36.023-14.833h355.997q21.19 0 46.619 10.596t40.262 25.429l80.523 80.523q14.833 14.833 25.429 40.262t10.596 46.619v135.618h33.904q41.851 0 71.783 29.932t29.932 71.783z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 1047,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "print"
+        ],
+        "grid": 16
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 1,
+        "id": 11,
+        "name": "print",
+        "prevSize": 32,
+        "code": 59670
+      },
+      "setIdx": 7,
+      "setId": 18,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M299.571 877.714h438.857v-219.429h-438.857v219.429zM811.571 877.714h73.143v-512q0-8-5.714-22t-11.429-19.714l-160.571-160.571q-5.714-5.714-19.429-11.429t-22.286-5.714v237.714q0 22.857-16 38.857t-38.857 16h-329.143q-22.857 0-38.857-16t-16-38.857v-237.714h-73.143v731.429h73.143v-237.714q0-22.857 16-38.857t38.857-16h475.429q22.857 0 38.857 16t16 38.857v237.714zM592.142 347.429v-182.857q0-7.429-5.429-12.857t-12.857-5.429h-109.714q-7.429 0-12.857 5.429t-5.429 12.857v182.857q0 7.429 5.429 12.857t12.857 5.429h109.714q7.429 0 12.857-5.429t5.429-12.857zM957.856 365.714v530.286q0 22.857-16 38.857t-38.857 16h-768q-22.857 0-38.857-16t-16-38.857v-768q0-22.857 16-38.857t38.857-16h530.286q22.857 0 50.286 11.429t43.429 27.429l160 160q16 16 27.429 43.429t11.429 50.286z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 1038,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "floppy-o",
+          "save"
+        ],
+        "grid": 16
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 1,
+        "id": 10,
+        "name": "save",
+        "prevSize": 32,
+        "code": 59671
+      },
+      "setIdx": 7,
+      "setId": 18,
+      "iconIdx": 1
+    },
+    {
+      "icon": {
+        "paths": [
+          "M620.954 64c60.032 0 90.048 40.858 90.048 87.674 0 58.464-52.147 112.538-120.019 112.538-56.851 0-90.003-33.6-88.435-89.152 0-46.726 39.469-111.059 118.406-111.059zM436.243 960c-47.398 0-82.118-29.21-48.966-157.875l54.387-228.122c9.453-36.467 11.021-51.117 0-51.117-14.202 0-75.667 25.178-112.090 50.042l-23.654-39.424c115.226-97.933 247.789-155.322 304.685-155.322 47.354 0 55.238 57.030 31.584 144.704l-62.317 239.77c-11.021 42.336-6.317 56.941 4.749 56.941 14.202 0 60.794-17.562 106.579-54.074l26.88 36.467c-112.090 114.106-234.528 158.010-281.837 158.010z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "info"
+        ],
+        "grid": 16
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 1,
+        "id": 3,
+        "name": "info",
+        "prevSize": 32,
+        "code": 59669
+      },
+      "setIdx": 18,
+      "setId": 7,
       "iconIdx": 0
     }
   ],

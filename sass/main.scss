@@ -1087,6 +1087,7 @@ b {
   height: 23px;
 
   &.order_edit_btn {
+    text-align: center;
     border-radius: 2px;
     display: block;
     font: 11px/25px $ArialBold;
@@ -1097,7 +1098,7 @@ b {
     min-width: 100px;
 
     &.disabled {
-      pointer-events: none;
+      cursor: default;
       opacity: .5;
     }
   }
@@ -1106,7 +1107,13 @@ b {
 .yellow_black_btn {
   @include transition_all(background .3s, color .3s);
   color: $default_t_color;
-  background: $gl_yellow;
+  background: $gl_yellow; 
+}
+
+.yellow_black_btn_2 {
+  @include transition_all(background .3s, color .3s);
+  color: #4c4c4c;
+  background: #e7c247;
 }
 
 .violet_btn {
