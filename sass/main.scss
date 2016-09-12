@@ -73,10 +73,6 @@ b {
   min-height: 100%;
   padding: 140px 0 0;
   overflow: hidden;
-
-  .chery_mode & {
-    padding-top: 70px;
-  }
 }
 
 .base {
@@ -190,6 +186,7 @@ b {
 
   .chery_mode & {
     line-height: 86px;
+    padding: 20px 0;
 
     .main_menu {
       > li {
@@ -705,12 +702,25 @@ b {
     background: none;
   }
 
+  .wrapper {
+    padding-top: 110px;
+  }
+  
   .order_status_switch {
     border-color: #c41329;
   }
 
   .gl_table.table_v2 td {
     height: 36px;
+    color: #000;
+  }
+
+  .gl_table.table_v2 .col_5 {
+    white-space: nowrap;
+  }
+
+  .gl_table.table_v2 .col_6 {
+    width: 13.5%;
   }
 
   .gl_table.table_v2 .main_row.opened:not(.first_row) td {
@@ -721,22 +731,31 @@ b {
     border-bottom-color: #c41329;
   }
 
+  .pagination_block > li.pagination_next .gl_link span {
+    color: #c41329;
+  }
+
+  .pagination_block > li.active .gl_link {
+    background: gray;
+    border-color: gray;
+  }
+  
   .violet_btn {
     border-color: #c41329;
     color: #c41329;
   }
 
   .order_link .order_id {
-    border-bottom-color: #c41329;
-    color: #c41329;
+    border-bottom-color: #858585;
+    color: #858585;
   }
 
   .sort_order.order_left:before {
-    border-left-color: #c41329;
+    border-left-color: #858585;
   }
 
   .sort_order.order_left.opened:before {
-    border-color: #c41329 transparent transparent transparent;
+    border-color: #858585 transparent transparent transparent;
   }
   
 }

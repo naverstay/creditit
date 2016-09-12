@@ -21,7 +21,6 @@ html(lang='ru')
                                         th.col_2 Клиент
                                         th.col_3 Контактный телефон
                                         th.col_4 Сумма кредита
-                                        th.col_5 Deadline
                                         th.col_6.open_switch
                                             .order_status_switch_holder
                                                 .order_status_switch
@@ -78,13 +77,16 @@ html(lang='ru')
                                                 span Статус заявки 
                                                 span.status_switch_icon
 
-                                        th.col_7 Статус по банку
+                                        th.col_5 &nbsp;
+                                        th.col_7 Статус рассмотрения
                                         th.col_8 &nbsp;
                                     +tr('first_row')
+                                    +tr('' , true, true)
 
-                                    +loop_while(6)
+                                    +loop_while(4)
                                         +tr()
-                                            
+                                    +tr('' , true)
+
                             ul.pagination_block
                                 li.active: a.gl_link.first_link(href='#') 1
                                 li: a.gl_link(href='#') 2
@@ -94,7 +96,3 @@ html(lang='ru')
                                     span.icon_next.icon-before.icon-arrow-right2.color_violet
                                 li.pagination_counter
                                     span 1 – 20 из 140
-
-
-
-            +footer()

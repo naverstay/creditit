@@ -1567,19 +1567,28 @@ mixin client_info()
     .step_controls
         a.btn_v1.next_step_btn.violet_btn_2(href='#') Сохранить
 
-mixin tr(cls)
+mixin tr(cls, br, reject)
     tr.orderRowMain.main_row.openOrderBtn(class = cls)
         td.col_1
             a.order_link.openOrderBtn_(href='#')
                 span.sort_order.order_left
                 span.order_id 55483222
         td.col_2
-            p: b Константинопольский Константин Константинович
+            p
+                b
+                    | Константинопольский Константин
+                    - if (br)
+                        |  <br> 
+                    | Константинович
 
         td.col_3 + 7 (906) 123-45-67
         td.col_4 3 000 000 р.
-        td.col_5 30/07/2017
-        td.col_6 На рассмотрении
+        td.col_6
+            - if (reject)
+                | Отказ клиента от одобренного кредита
+            - else
+                | На рассмотрении
+        td.col_5 30.07.2017 15:22
         td.col_7
             span.tooltipMe.semaphore_item.semaphore_green(title='Авангард')
             span.tooltipMe.semaphore_item.semaphore_yellow(title='Альфа Банк')

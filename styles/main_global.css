@@ -1618,9 +1618,6 @@ b {
   padding: 140px 0 0;
   overflow: hidden;
 }
-.chery_mode .wrapper {
-  padding-top: 70px;
-}
 
 .base {
   padding-bottom: 50px;
@@ -1717,6 +1714,7 @@ b {
 }
 .chery_mode .main_menu_holder {
   line-height: 86px;
+  padding: 20px 0;
 }
 .chery_mode .main_menu_holder .main_menu > li {
   padding-left: 6px;
@@ -2095,11 +2093,21 @@ b {
   border-color: #c41329;
   background: none;
 }
+.chery_mode .wrapper {
+  padding-top: 110px;
+}
 .chery_mode .order_status_switch {
   border-color: #c41329;
 }
 .chery_mode .gl_table.table_v2 td {
   height: 36px;
+  color: #000;
+}
+.chery_mode .gl_table.table_v2 .col_5 {
+  white-space: nowrap;
+}
+.chery_mode .gl_table.table_v2 .col_6 {
+  width: 13.5%;
 }
 .chery_mode .gl_table.table_v2 .main_row.opened:not(.first_row) td {
   height: 35px;
@@ -2107,19 +2115,26 @@ b {
 .chery_mode .gl_table.table_v2 th {
   border-bottom-color: #c41329;
 }
+.chery_mode .pagination_block > li.pagination_next .gl_link span {
+  color: #c41329;
+}
+.chery_mode .pagination_block > li.active .gl_link {
+  background: gray;
+  border-color: gray;
+}
 .chery_mode .violet_btn {
   border-color: #c41329;
   color: #c41329;
 }
 .chery_mode .order_link .order_id {
-  border-bottom-color: #c41329;
-  color: #c41329;
+  border-bottom-color: #858585;
+  color: #858585;
 }
 .chery_mode .sort_order.order_left:before {
-  border-left-color: #c41329;
+  border-left-color: #858585;
 }
 .chery_mode .sort_order.order_left.opened:before {
-  border-color: #c41329 transparent transparent transparent;
+  border-color: #858585 transparent transparent transparent;
 }
 
 .order_link {
