@@ -247,7 +247,8 @@ $order_tab_space: 34px;
   height: 49px;
   font-size: 11px;
   line-height: 44px;
-  color: #6b6b6b;
+  //color: #6b6b6b;
+  color: #000;
   border-radius: 2px;
   //letter-spacing: .5px;
   padding: 2px 10px 0;
@@ -570,7 +571,7 @@ $order_tab_space: 34px;
   //border-width: 0 3px;
 
   .summary_opened & {
-    //border-width: 3px;
+  
   }
 }
 
@@ -635,7 +636,7 @@ $order_tab_space: 34px;
   position: relative;
 
   .upload_time {
-    text-align: left;
+    text-align: center;
   }
 
   .order_info_label {
@@ -702,6 +703,10 @@ $order_tab_space: 34px;
     background: #9d9d9d;
     width: 1px;
   }
+
+  .order_formalization & {
+    //margin-left: -24px;
+  }  
 }
 
 .order_history {
@@ -1457,6 +1462,7 @@ $order_tab_space: 34px;
 
 .upload_date_v2 {
   width: 16%;
+  text-align: right;
 }
 
 .upload_time {
@@ -1631,7 +1637,8 @@ $order_tab_space: 34px;
     border: solid #c8c8c8;
     border-width: 1px 0;
     padding: 10px 0;
-    color: #9d9d9d;
+    //color: #9d9d9d;
+    color: #000;
     font-size: 12px;
     vertical-align: middle;
   }

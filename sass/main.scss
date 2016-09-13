@@ -31,7 +31,6 @@ b {
   &:hover {
     text-decoration: underline;
   }
-
 }
 
 .hide {
@@ -182,11 +181,11 @@ b {
 
   &.no_bdr {
     border: none;
+    padding: 20px 0;
   }
 
   .chery_mode & {
     line-height: 86px;
-    padding: 20px 0;
 
     .main_menu {
       > li {
@@ -710,6 +709,20 @@ b {
     border-color: #c41329;
   }
 
+  .gl_table.table_v2 .bank_programmes {
+    width: 50%;
+  }
+
+  .bank_deadline {
+    width: 10.3%;
+    text-align: right;
+  }
+
+  .bank_status {
+    white-space: nowrap;
+    padding-left: 10px;
+  }
+  
   .gl_table.table_v2 td {
     height: 36px;
     color: #000;
@@ -915,6 +928,12 @@ b {
       }
     }
   }
+}
+
+.bank_answer_text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
 .semaphore_item {

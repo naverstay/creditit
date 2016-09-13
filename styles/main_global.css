@@ -1711,10 +1711,10 @@ b {
 }
 .main_menu_holder.no_bdr {
   border: none;
+  padding: 20px 0;
 }
 .chery_mode .main_menu_holder {
   line-height: 86px;
-  padding: 20px 0;
 }
 .chery_mode .main_menu_holder .main_menu > li {
   padding-left: 6px;
@@ -2099,6 +2099,17 @@ b {
 .chery_mode .order_status_switch {
   border-color: #c41329;
 }
+.chery_mode .gl_table.table_v2 .bank_programmes {
+  width: 50%;
+}
+.chery_mode .bank_deadline {
+  width: 10.3%;
+  text-align: right;
+}
+.chery_mode .bank_status {
+  white-space: nowrap;
+  padding-left: 10px;
+}
 .chery_mode .gl_table.table_v2 td {
   height: 36px;
   color: #000;
@@ -2272,6 +2283,12 @@ b {
 }
 .pagination_block > li.pagination_next .gl_link:before {
   display: none;
+}
+
+.bank_answer_text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
 .semaphore_item {
@@ -3374,7 +3391,7 @@ b {
   height: 49px;
   font-size: 11px;
   line-height: 44px;
-  color: #6b6b6b;
+  color: #000;
   border-radius: 2px;
   padding: 2px 10px 0;
   text-transform: uppercase;
@@ -3680,7 +3697,7 @@ b {
   position: relative;
 }
 .formalization_docs .upload_time {
-  text-align: left;
+  text-align: center;
 }
 .formalization_docs .order_info_label {
   font-size: 11px;
@@ -4329,6 +4346,7 @@ b {
 
 .upload_date_v2 {
   width: 16%;
+  text-align: right;
 }
 
 .upload_time {
@@ -4477,7 +4495,7 @@ b {
   border: solid #c8c8c8;
   border-width: 1px 0;
   padding: 10px 0;
-  color: #9d9d9d;
+  color: #000;
   font-size: 12px;
   vertical-align: middle;
 }
