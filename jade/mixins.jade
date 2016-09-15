@@ -150,296 +150,296 @@ mixin credit_management()
                                     a.credit_meeting_link(href='#'): i Назначить новую дату
                                 .credit_step.step_4
                                     a.btn_v4.order_edit_btn.violet_btn_2(href='#') сохранить
-                                
                             
-                            .order_steps.mod_5
-                                .credit_step
-                                    span Шаг 2. оформить сделку
-                                    
-                            .formalization_block
-                                .formalization_step
-                                    .formalization_docs
-                                        p 1. Загрузить документы для банка
-                                        ul.uploaded_files
-                                            li
-                                                .uploaded_unit.upload_error
-                                                    .upload_file Договор купли-продажи	
-                                                    .upload_date_v2
-                                                    .upload_time
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Полис КАСКО
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-                                            
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Полис Страхование жизни
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Документ 4
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-                                                        
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Документ 5
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-                                                        
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Документ 6
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-                                                        
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Документ 7
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
+                            .orderInfoRow
+                                .order_steps.mod_5.openOrderRow.collapse_mod
+                                    .credit_step
+                                        span Шаг 2. оформить сделку
                                         
-                                        //-.formalization_controls
-                                            a.btn_v4.order_edit_btn.violet_btn_2(href='#') отправить
-
-                                    .formalization_insurance
-                                        p Данные о страховке
-                                        ul.formalization_insurance_list
-                                            li
-                                                .select_w4
-                                                    select.select2()
-                                                        option(disabled='', value='')
-                                                        option(value='11.15', selected='selected') Страховая компания
-                                                        option(value='14.15') 14.15
-                                                        
-                                            li
-                                                .select_w4
-                                                    select.select2()
-                                                        option(disabled='', value='')
-                                                        option(value='11.15', selected='selected') Страховая компания
-                                                        option(value='14.15') 14.15
-                                                        
-                                            li
-                                                .order_info_label Серия и номер полиса КАСКО
-                                                .order_info_val.edit_.edit_v4
-                                                    input(value='123456789')
-                                            li
-                                                .order_info_label Размер страхового покрытия
-                                                .order_info_val.edit_.edit_v4
-                                                    input(value='123456789')
-                                            li
-                                                .order_info_label Страховая премия
-                                                .order_info_val.edit_.edit_v4
-                                                    input(value='123456789')
-                                
-                                .formalization_step
-                                    p Данные ПТС
-
-                                    .table_row
-                                        .table_cell.w_140
-                                            .order_info_label Марка
-                                            //-.order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Грузовая техника\"]}') Грузовая техника
-                                            .order_info_val.select_w4
-                                                select.select2()
-                                                    option(disabled='', value='')
-                                                    option(value='Автомобиль') Автомобиль
-                                                    option(value='Грузовая техника', selected='selected') Грузовая техника
-                                                    option(value='Мототехника') Мототехника
-                                                    option(value='Спецтехника и прицеп') Спецтехника и прицеп
-
-                                        .table_cell.w_140
-                                            .order_info_label.wnw Модель ТС (как в ПТС)
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='')
-                                        .table_cell.w_140
-                                            .order_info_label VIN 
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='')
-                                        .table_cell.w_90
-                                            .order_info_label Серия ПТС 
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='')
-
-                                        .table_cell.w_90
-                                            .order_info_label Номер ПТС
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='')
-
-                                        .table_cell.w_95
-                                            .order_info_label Год выпуска 
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='' data-inputmask="'mask': '9999'")
-
-                                    .table_row
-                                        .table_cell.w_140
-                                            .order_info_label.wnw Модель двигателя
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='')
-
-                                        .table_cell.w_140
-                                            .order_info_label.wnw Номер двигателя
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='')
-
-                                        .table_cell.w_140
-                                            .order_info_label.wnw Номер кузова
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='')
-
-                                        .table_cell.w_150
-                                            .order_info_label.wnw Наименование продавца
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='')
-
-                                .formalization_step.bank_info
-                                    p Выбрать реквизиты для перечисления денег банком
-                                    
-                                    .table_row
-                                        .table_cell.w_180
-                                            .order_info_label Банк
-                                            //-.order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Грузовая техника\"]}') Грузовая техника
-                                            .order_info_val.select_w4
-                                                select.select2()
-                                                    option(disabled='', value='')
-                                                    option(value='Альфа-банк', selected='selected') Альфа-банк
-                                                    option(value='Альфа-банк 2') Альфа-банк 2
-                                                    option(value='Мототехника') Мототехника
-                                                    option(value='Спецтехника и прицеп') Спецтехника и прицеп
-                                    .table_row
-                                        .table_cell.w_220
-                                            .order_info_label.wnw Получатель
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='ООО "Первый российский дилер"')
-
-                                        .table_cell.w_300
-                                            .order_info_label.wnw Банк
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='')
-
-                                        .table_cell.w_180
-                                            .order_info_label.wnw Расчетный счет
-                                            .order_info_val.edit_.edit_v4
-                                                input(value='')
-
-                                    .table_row
-                                        .table_cell.w_190
-                                            .order_info_label.wnw &nbsp;
-                                            a.btn_v4.order_edit_btn.violet_btn_2(href='#') отправить
-
-                                .formalization_step
-                                    p 2. Документы от банка для сделки
-                                    
-                                    .formalization_docs: ul.uploaded_files
-                                        +loop_while(7)
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Кредитный договор
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time 21:21
-                                                    .upload_count 2 экз.
-                                                    .upload_print
-                                                    .upload_save
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Договор залога
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time 21:21
-                                                    .upload_count 2 экз.
-                                                    .upload_print
-                                                    .upload_save
-
-                                .formalization_step
-                                    .formalization_docs
-                                        p 3. Загрузить подписанные документы банка для отправки
-
-                                        ul.uploaded_files
-                                            li
-                                                .uploaded_unit.upload_error
-                                                    .upload_file Договор купли-продажи	
-                                                    .upload_date_v2
-                                                    .upload_time
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Полис КАСКО
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Полис Страхование жизни
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Документ 4
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Документ 5
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Документ 6
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-
-                                            li
-                                                .uploaded_unit
-                                                    .upload_file Документ 7
-                                                    .upload_date_v2 27.08.2016
-                                                    .upload_time: i 21:21
-                                                    .upload_remove &#10006;
-                                                    .upload_folder
-                                                    .upload_status
-
-                                        .formalization_controls
-                                            a.btn_v4.order_edit_btn.violet_btn_2(href='#') отправить
+                                .formalization_block.infoBlock
+                                    .formalization_step
+                                        .formalization_docs
+                                            p 1. Загрузить документы для банка
+                                            ul.uploaded_files
+                                                li
+                                                    .uploaded_unit.upload_error
+                                                        .upload_file Договор купли-продажи	
+                                                        .upload_date_v2
+                                                        .upload_time
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Полис КАСКО
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Полис Страхование жизни
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 4
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                            
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 5
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                            
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 6
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                            
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 7
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
                                             
+                                            //-.formalization_controls
+                                                a.btn_v4.order_edit_btn.violet_btn_2(href='#') отправить
+    
+                                        .formalization_insurance
+                                            p Данные о страховке
+                                            ul.formalization_insurance_list
+                                                li
+                                                    .select_w4
+                                                        select.select2()
+                                                            option(disabled='', value='')
+                                                            option(value='11.15', selected='selected') Страховая компания
+                                                            option(value='14.15') 14.15
+                                                            
+                                                li
+                                                    .select_w4
+                                                        select.select2()
+                                                            option(disabled='', value='')
+                                                            option(value='11.15', selected='selected') Страховая компания
+                                                            option(value='14.15') 14.15
+                                                            
+                                                li
+                                                    .order_info_label Серия и номер полиса КАСКО
+                                                    .order_info_val.edit_.edit_v4
+                                                        input(value='123456789')
+                                                li
+                                                    .order_info_label Размер страхового покрытия
+                                                    .order_info_val.edit_.edit_v4
+                                                        input(value='123456789')
+                                                li
+                                                    .order_info_label Страховая премия
+                                                    .order_info_val.edit_.edit_v4
+                                                        input(value='123456789')
+                                    
+                                    .formalization_step
+                                        p Данные ПТС
+    
+                                        .table_row
+                                            .table_cell.w_140
+                                                .order_info_label Марка
+                                                //-.order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Грузовая техника\"]}') Грузовая техника
+                                                .order_info_val.select_w4
+                                                    select.select2()
+                                                        option(disabled='', value='')
+                                                        option(value='Автомобиль') Автомобиль
+                                                        option(value='Грузовая техника', selected='selected') Грузовая техника
+                                                        option(value='Мототехника') Мототехника
+                                                        option(value='Спецтехника и прицеп') Спецтехника и прицеп
+    
+                                            .table_cell.w_140
+                                                .order_info_label.wnw Модель ТС (как в ПТС)
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+                                            .table_cell.w_140
+                                                .order_info_label VIN 
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+                                            .table_cell.w_90
+                                                .order_info_label Серия ПТС 
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+    
+                                            .table_cell.w_90
+                                                .order_info_label Номер ПТС
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+    
+                                            .table_cell.w_95
+                                                .order_info_label Год выпуска 
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='' data-inputmask="'mask': '9999'")
+    
+                                        .table_row
+                                            .table_cell.w_140
+                                                .order_info_label.wnw Модель двигателя
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+    
+                                            .table_cell.w_140
+                                                .order_info_label.wnw Номер двигателя
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+    
+                                            .table_cell.w_140
+                                                .order_info_label.wnw Номер кузова
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+    
+                                            .table_cell.w_150
+                                                .order_info_label.wnw Наименование продавца
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+    
+                                    .formalization_step.bank_info
+                                        p Выбрать реквизиты для перечисления денег банком
+                                        
+                                        .table_row
+                                            .table_cell.w_180
+                                                .order_info_label Банк
+                                                //-.order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Грузовая техника\"]}') Грузовая техника
+                                                .order_info_val.select_w4
+                                                    select.select2()
+                                                        option(disabled='', value='')
+                                                        option(value='Альфа-банк', selected='selected') Альфа-банк
+                                                        option(value='Альфа-банк 2') Альфа-банк 2
+                                                        option(value='Мототехника') Мототехника
+                                                        option(value='Спецтехника и прицеп') Спецтехника и прицеп
+                                        .table_row
+                                            .table_cell.w_220
+                                                .order_info_label.wnw Получатель
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='ООО "Первый российский дилер"')
+    
+                                            .table_cell.w_300
+                                                .order_info_label.wnw Банк
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+    
+                                            .table_cell.w_180
+                                                .order_info_label.wnw Расчетный счет
+                                                .order_info_val.edit_.edit_v4
+                                                    input(value='')
+    
+                                        .table_row
+                                            .table_cell.w_190
+                                                .order_info_label.wnw &nbsp;
+                                                a.btn_v4.order_edit_btn.violet_btn_2(href='#') отправить
+    
+                                    .formalization_step
+                                        p 2. Документы от банка для сделки
+                                        
+                                        .formalization_docs: ul.uploaded_files
+                                            +loop_while(7)
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Кредитный договор
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time 21:21
+                                                        .upload_count 2 экз.
+                                                        .upload_print
+                                                        .upload_save
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Договор залога
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time 21:21
+                                                        .upload_count 2 экз.
+                                                        .upload_print
+                                                        .upload_save
+    
+                                    .formalization_step
+                                        .formalization_docs
+                                            p 3. Загрузить подписанные документы банка для отправки
+    
+                                            ul.uploaded_files
+                                                li
+                                                    .uploaded_unit.upload_error
+                                                        .upload_file Договор купли-продажи	
+                                                        .upload_date_v2
+                                                        .upload_time
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Полис КАСКО
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+    
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Полис Страхование жизни
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 4
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+    
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 5
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+    
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 6
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+    
+                                                li
+                                                    .uploaded_unit
+                                                        .upload_file Документ 7
+                                                        .upload_date_v2 27.08.2016
+                                                        .upload_time: i 21:21
+                                                        .upload_remove &#10006;
+                                                        .upload_folder
+                                                        .upload_status
+    
+                                            .formalization_controls
+                                                a.btn_v4.order_edit_btn.violet_btn_2(href='#') отправить
+                                                
                             .order_steps.mod_7
                                 .credit_step
                                     span.mb Шаг 3. Сделка профинансирована, деньги переведены дилеру
