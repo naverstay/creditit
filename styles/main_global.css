@@ -3738,6 +3738,7 @@ b {
 
 .formalization_block {
   padding: 44px 30px 0 55px;
+  display: none;
 }
 .formalization_block p {
   color: #b479bd;
@@ -4052,6 +4053,26 @@ b {
 }
 .order_steps .order_edit_btn {
   min-width: 172px;
+}
+.order_steps.collapse_mod {
+  position: relative;
+  cursor: pointer;
+}
+.order_steps.collapse_mod:before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 17px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #a658b1;
+}
+.order_steps.collapse_mod.opened:before {
+  top: 8px;
+  border-bottom: none;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #a658b1;
 }
 
 .credit_step {
