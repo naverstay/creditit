@@ -15,7 +15,7 @@
     <script src="js/autogrow.min.js"></script>
     <script src="js/orders.js"></script>
   </head>
-  <body>
+  <body class="order_page">
     <div class="wrapper">
       <div class="rect_1024"></div>
       <div class="base">
@@ -150,11 +150,18 @@
               </div>
               <div class="order_p_main">
                 <div class="order_main_tabs_w">
-                  <div class="tab_list_caption">Заполнить заявку</div>
+                  <ul class="tab_stage_list">
+                    <li>
+                      <div class="stage_caption">Заполнить заявку</div>
+                    </li>
+                    <li>
+                      <div class="stage_caption">? статус кредита ? </div>
+                    </li>
+                  </ul>
                   <ul id="tab_list" class="order_main_tabs">
-                    <li class="small_cell"><a href="#tab_unit_1" class="order_tab_btn"><span class="order_tab_text">1. Автомобиль</span></a></li>
-                    <li class="small_cell"><a href="#tab_unit_2" class="order_tab_btn"><span class="order_tab_text">2. Параметры кредита</span></a></li>
-                    <li class="small_cell"><a href="#tab_unit_3" class="order_tab_btn"><span class="order_tab_text">3. Данные клиента</span></a></li>
+                    <li><a href="#tab_unit_1" class="order_tab_btn"><span class="order_tab_text">1. Автомобиль</span></a></li>
+                    <li><a href="#tab_unit_2" class="order_tab_btn"><span class="order_tab_text">2. Параметры кредита</span></a></li>
+                    <li><a href="#tab_unit_3" class="order_tab_btn"><span class="order_tab_text">3. Данные клиента</span></a></li>
                     <li><a href="#tab_unit_4" class="order_tab_btn"><span class="order_tab_text"> Рассмотрение  <br>  заявки</span></a></li>
                     <li><a href="#tab_unit_5" class="order_tab_btn"><span class="order_tab_text">оформление  <br> кредита</span></a></li>
                   </ul>

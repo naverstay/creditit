@@ -9,7 +9,19 @@
   top: 0;
   bottom: 0;
   left: 0;
-  background: #f7f7f7;
+  background: #ededed;
+  pointer-events: none;
+
+  &:before {
+    z-index: 2;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 5000px;
+    background: rgba(255, 255, 255, .5);
+  }  
 }
 
 .order_progress_table {
@@ -17,7 +29,9 @@
   width: 100%;
 
   td {
-    padding: 10px;
+    padding: 13px 10px;
+    border-top: 1px solid #9d9d9d;
+    border-bottom: 2px solid #c52e3d;
 
     &:first-child {
       .order_progress_step {
@@ -99,7 +113,7 @@
   padding: 8px 12px 3px;
   font-size: 11px;
   letter-spacing: .25px;
-  font-weight: bold;
+  font-weight: 400;
   text-transform: uppercase;
   border-bottom: 1px solid #c8c8c8;
 }
@@ -126,7 +140,8 @@
 }
 
 .order_info_val {
-  font-family: $ArialBold;
+  font-family: $Roboto;
+  font-weight: 400;
   padding: 6px 0;
   //margin-bottom: 19px;
   margin-bottom: 12px;
@@ -206,6 +221,30 @@ $order_tab_space: 34px;
   position: relative;
 }
 
+.tab_stage_list {
+  @extend %clearfix;
+
+  li {
+    float: left;
+    width: 40%;
+    padding: 0 17px;
+    position: relative;
+    margin-bottom: 7px;
+    
+    &:first-child {
+      width: 60%;
+    }
+  }
+}
+
+.stage_caption {
+  text-transform: uppercase;
+  font: 11px/1 $Roboto;
+  color: #c52e3d;
+  padding: 6px 0 3px;
+  border-bottom: 1px solid #c52e3d;
+}
+
 .tab_list_caption {
   position: absolute;
   top: 0;
@@ -248,7 +287,9 @@ $order_tab_space: 34px;
   font-size: 11px;
   line-height: 44px;
   //color: #6b6b6b;
-  color: #000;
+  color: #0d0d0d;
+  background: #ededed;
+  font-weight: 400;
   border-radius: 2px;
   //letter-spacing: .5px;
   padding: 2px 10px 0;
@@ -292,10 +333,11 @@ $order_tab_space: 34px;
 
   .ui-state-active & {
     cursor: default;
-    font-family: $ArialBold;
+    color: #c52e3d;
 
     &:after {
-      border: 3px solid #e8c541;
+      //border: 3px solid #e8c541;
+      border: 2px solid #c52e3d;
     }
   }
 }
@@ -509,7 +551,8 @@ $order_tab_space: 34px;
 
       .bank_answer {
         color: #e7c247;
-        font-family: $ArialBold;
+        font-family: $Roboto;
+        font-weight: 400;
       }
     }
 
@@ -525,7 +568,8 @@ $order_tab_space: 34px;
 
     &.order_accepted {
       background: #ededed;
-      font-family: $ArialBold;
+      font-family: $Roboto;
+      font-weight: 400;
 
       &:before {
         content: '';
@@ -553,7 +597,8 @@ $order_tab_space: 34px;
     &.order_formalization {
       .order_title {
         @extend .color_green;
-        font-family: $ArialBold;
+        font-family: $Roboto;
+        font-weight: 400;
         padding: 14px 0;
       }
     }
@@ -622,7 +667,8 @@ $order_tab_space: 34px;
   p {
     color: #b479bd;
     margin-bottom: 8px;
-    font: 12px $ArialBold;
+    font: 12px $Roboto;
+    font-weight: 400; 
   }
 
   .uploaded_files {
@@ -734,7 +780,8 @@ $order_tab_space: 34px;
   p {
     color: #b479bd;
     margin-bottom: 10px;
-    font: 12px $ArialBold;
+    font: 12px $Roboto;
+    font-weight: 400; 
   }
 
   .upload_time {
@@ -769,7 +816,8 @@ $order_tab_space: 34px;
 .order_history_time {
   float: right;
   color: #0d0d0d;
-  font-family: $ArialBold;
+  font-family: $Roboto;
+  font-weight: 400;
 }
 
 .order_summary_list {
@@ -858,7 +906,8 @@ $order_tab_space: 34px;
 
     .bank_answer {
       width: 15%;
-      font-family: $ArialBold;
+      font-family: $Roboto;
+      font-weight: 400;
       text-transform: uppercase;
     }
 
@@ -989,7 +1038,8 @@ $order_tab_space: 34px;
   }
 
   .credit_step {
-    font-family: $ArialBold;
+    font-family: $Roboto;
+    font-weight: 400;
     text-transform: uppercase;
     color: #b479bd;
   }
@@ -1002,7 +1052,8 @@ $order_tab_space: 34px;
 .credit_step {
   float: left;
   //padding-left: 8px;
-  font: 12px/24px $ArialBold;
+  font: 12px/24px $Roboto;
+  font-weight: 400; 
   color: #6ca140;
   position: relative;
 
@@ -1177,7 +1228,8 @@ $order_tab_space: 34px;
   .select2-results__option--highlighted[aria-selected] {
     color: #0d0d0d;
     background: none !important;
-    font-family: $ArialBold;
+    font-family: $Roboto;
+    font-weight: 400;
   }
 
 }
@@ -1243,7 +1295,8 @@ $order_tab_space: 34px;
     }
 
     .select2-selection__rendered {
-      font: 12px/20px $ArialBold;
+      font: 12px/20px $Roboto;
+      font-weight: 400; 
     }
   }
   .select2-results__option {
@@ -1292,7 +1345,8 @@ $order_tab_space: 34px;
 
     .select2-selection__rendered {
       color: #000;
-      font: 12px/40px $ArialBold;
+      font: 12px/40px $Roboto;
+      font-weight: 400; 
     }
   }
   .select2-results__option {
@@ -1358,7 +1412,8 @@ $order_tab_space: 34px;
       padding-left: 0;
       padding-right: 28px;
       text-overflow: initial;
-      font: 12px/12px $ArialBold;
+      font: 12px/12px $Roboto;
+      font-weight: 400; 
     }
   }
   .select2-results__option {

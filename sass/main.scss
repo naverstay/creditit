@@ -17,12 +17,12 @@ html {
 }
 
 body {
-  font: 14px/1 $ArialRegular;
+  font: 300 14px/1 $Roboto;
   color: $default_t_color;
 }
 
 b {
-  font-family: $ArialBold;
+  font-family: $Roboto; font-weight: 400;
 }
 
 .gl_link {
@@ -220,7 +220,7 @@ b {
     display: block;
     height: 37px;
     padding: 10px 0;
-    font: 16px/17px $ArialBold;
+    font: 16px/17px  $Roboto; font-weight: 400; 
     color: $default_t_color;
 
     &.active {
@@ -300,6 +300,10 @@ b {
 
 .main_content {
   padding-top: 22px;
+  
+  .order_page & {
+    padding-top: 5px;
+  }
 }
 
 .page_title {
@@ -385,7 +389,7 @@ b {
   &.table_v1 {
 
     th {
-      font: 13px $ArialBold;
+      font: 13px  $Roboto; font-weight: 400; 
       color: #858585;
       height: 30px;
       vertical-align: middle;
@@ -506,7 +510,7 @@ b {
 
   &.table_v2 {
     th {
-      font: 11px $ArialBold;
+      font: 11px  $Roboto; font-weight: 400; 
       color: #858585;
       height: 30px;
       vertical-align: middle;
@@ -780,7 +784,7 @@ b {
   .order_id {
     display: inline-block;
     vertical-align: middle;
-    font-family: $ArialBold;
+    font-family: $Roboto; font-weight: 400;
     color: $gl_violet;
     border-bottom: 1px dashed $gl_violet;
   }
@@ -1084,7 +1088,7 @@ b {
 %input_v2 {
   border: 1px solid #c8c8c8;
   padding: 3px 4px;
-  font: 12px/14px $ArialBold;
+  font: 12px/14px  $Roboto; font-weight: 400; 
 
   &:disabled {
     color: #cdcdcd;
@@ -1101,11 +1105,13 @@ b {
     @extend %input_v1;
 
     &::-webkit-input-placeholder {
-      font-family: $ArialItalic;
+      //font-family: $ArialItalic;
+      font-style: italic;
     }
 
     &::-moz-placeholder {
-      font-family: $ArialItalic;
+      //font-family: $ArialItalic;
+      font-style: italic;
     }
   }
 
@@ -1232,7 +1238,7 @@ b {
     margin-left: -2px;
     position: relative;
     z-index: 1;
-    font: 14px/38px $ArialBold;
+    font: 14px/38px  $Roboto; font-weight: 400; 
   }
 
   &.next_step_btn {
@@ -1242,7 +1248,7 @@ b {
     cursor: pointer;
     border-radius: 2px;
     z-index: 1;
-    font: 14px/38px $ArialBold;
+    font: 14px/38px  $Roboto; font-weight: 400; 
     text-decoration: none;
   }
 }
@@ -1284,7 +1290,7 @@ b {
   &.attach_btn {
     border-radius: 2px;
     float: left;
-    font: 13px/26px $ArialBold;
+    font: 13px/26px  $Roboto; font-weight: 400; 
     padding: 0 11px;
     margin: 10px 0;
     cursor: pointer;
@@ -1293,7 +1299,7 @@ b {
   &.open_order_btn {
     border-radius: 2px;
     float: left;
-    font: 13px/26px $ArialBold;
+    font: 13px/26px  $Roboto; font-weight: 400; 
     padding: 0 11px;
     margin-right: 5px;
     cursor: pointer;
@@ -1307,7 +1313,7 @@ b {
     text-align: center;
     border-radius: 2px;
     display: block;
-    font: 11px/25px $ArialBold;
+    font: 11px/25px  $Roboto; font-weight: 400; 
     padding: 0 14px;
     cursor: pointer;
     text-transform: uppercase;
@@ -1455,7 +1461,7 @@ b {
       line-height: 30px;
       padding-left: 0;
       color: #000;
-      font-family: $ArialBold;
+      font-family: $Roboto; font-weight: 400;
     }
 
     .select2-selection__arrow {

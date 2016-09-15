@@ -3,7 +3,7 @@ doctype html
 html(lang='ru')
     +dev_head('CreditIt заявки', false, false, true)
 
-    body
+    body.order_page
         .wrapper
             .rect_1024
             .base
@@ -103,11 +103,13 @@ html(lang='ru')
                                                     
                             .order_p_main
                                 .order_main_tabs_w
-                                    .tab_list_caption Заполнить заявку
+                                    ul.tab_stage_list
+                                        li: .stage_caption Заполнить заявку
+                                        li: .stage_caption ? статус кредита ? 
                                     ul#tab_list.order_main_tabs
-                                        li.small_cell: a.order_tab_btn(href='#tab_unit_1'): span.order_tab_text 1. Автомобиль
-                                        li.small_cell: a.order_tab_btn(href='#tab_unit_2'): span.order_tab_text 2. Параметры кредита
-                                        li.small_cell: a.order_tab_btn(href='#tab_unit_3'): span.order_tab_text 3. Данные клиента
+                                        li: a.order_tab_btn(href='#tab_unit_1'): span.order_tab_text 1. Автомобиль
+                                        li: a.order_tab_btn(href='#tab_unit_2'): span.order_tab_text 2. Параметры кредита
+                                        li: a.order_tab_btn(href='#tab_unit_3'): span.order_tab_text 3. Данные клиента
                                         li: a.order_tab_btn(href='#tab_unit_4'): span.order_tab_text  Рассмотрение  <br>  заявки
                                         li: a.order_tab_btn(href='#tab_unit_5'): span.order_tab_text оформление  <br> кредита
                                             

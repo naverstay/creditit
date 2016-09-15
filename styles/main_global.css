@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.main_menu_holder:after, .order_r_item:after, .order_controls:after, .pagination_block:after, .form_row:after, .tab_list_holder:after, .steps_holder:after, .step_controls:after, .unit_info:after, .order_panel:after, .table_row:after, .formalization_step:after, .formalization_block:after, .formalization_insurance_list:after, .order_summary_inner:after, .order_history_row:after, .order_request_controls:after, .order_title:after, .credit_steps:after, .order_steps:after, .uploaded_unit:after, .upload_item:after {
+.main_menu_holder:after, .order_r_item:after, .order_controls:after, .pagination_block:after, .form_row:after, .tab_list_holder:after, .steps_holder:after, .step_controls:after, .unit_info:after, .order_panel:after, .tab_stage_list:after, .table_row:after, .formalization_step:after, .formalization_block:after, .formalization_insurance_list:after, .order_summary_inner:after, .order_history_row:after, .order_request_controls:after, .order_title:after, .credit_steps:after, .order_steps:after, .uploaded_unit:after, .upload_item:after {
   position: static;
   display: block;
   height: 0;
@@ -1564,12 +1564,13 @@ html {
 }
 
 body {
-  font: 14px/1 "ArialRegular", sans-serif;
+  font: 300 14px/1 "Roboto", sans-serif;
   color: #000;
 }
 
 b {
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 .gl_link {
@@ -1738,7 +1739,8 @@ b {
   display: block;
   height: 37px;
   padding: 10px 0;
-  font: 16px/17px "ArialBold", sans-serif;
+  font: 16px/17px "Roboto", sans-serif;
+  font-weight: 400;
   color: #000;
 }
 .main_menu .menu_link.active {
@@ -1796,6 +1798,9 @@ b {
 
 .main_content {
   padding-top: 22px;
+}
+.order_page .main_content {
+  padding-top: 5px;
 }
 
 .page_title {
@@ -1864,7 +1869,7 @@ b {
 }
 .order_status_list .check_text {
   padding-left: 22px;
-  font: 13px "ArialRegular", sans-serif;
+  font: 13px "Roboto", sans-serif;
 }
 
 .gl_table {
@@ -1872,7 +1877,8 @@ b {
   border-collapse: collapse;
 }
 .gl_table.table_v1 th {
-  font: 13px "ArialBold", sans-serif;
+  font: 13px "Roboto", sans-serif;
+  font-weight: 400;
   color: #858585;
   height: 30px;
   vertical-align: middle;
@@ -1955,7 +1961,8 @@ b {
   vertical-align: middle;
 }
 .gl_table.table_v2 th {
-  font: 11px "ArialBold", sans-serif;
+  font: 11px "Roboto", sans-serif;
+  font-weight: 400;
   color: #858585;
   height: 30px;
   vertical-align: middle;
@@ -2155,7 +2162,8 @@ b {
 .order_link .order_id {
   display: inline-block;
   vertical-align: middle;
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   color: #a658b1;
   border-bottom: 1px dashed #a658b1;
 }
@@ -2407,7 +2415,8 @@ b {
 .edit_v1 > input, .edit_v2 > input, .edit_v3 > textarea, .edit_v3 > input, .edit_v4 > textarea, .edit_v4 > input {
   border: 1px solid #c8c8c8;
   padding: 3px 4px;
-  font: 12px/14px "ArialBold", sans-serif;
+  font: 12px/14px "Roboto", sans-serif;
+  font-weight: 400;
 }
 .edit_v1 > input:disabled, .edit_v2 > input:disabled, .edit_v3 > textarea:disabled, .edit_v3 > input:disabled, .edit_v4 > textarea:disabled, .edit_v4 > input:disabled {
   color: #cdcdcd;
@@ -2419,10 +2428,10 @@ b {
   width: 100%;
 }
 .f_input.input_v1::-webkit-input-placeholder {
-  font-family: "ArialItalic", sans-serif;
+  font-style: italic;
 }
 .f_input.input_v1::-moz-placeholder {
-  font-family: "ArialItalic", sans-serif;
+  font-style: italic;
 }
 
 .gender_toggler .radio_emul {
@@ -2534,7 +2543,8 @@ b {
   margin-left: -2px;
   position: relative;
   z-index: 1;
-  font: 14px/38px "ArialBold", sans-serif;
+  font: 14px/38px "Roboto", sans-serif;
+  font-weight: 400;
 }
 .btn_v1.next_step_btn {
   text-align: center;
@@ -2543,7 +2553,8 @@ b {
   cursor: pointer;
   border-radius: 2px;
   z-index: 1;
-  font: 14px/38px "ArialBold", sans-serif;
+  font: 14px/38px "Roboto", sans-serif;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -2576,7 +2587,8 @@ b {
 .btn_v3.attach_btn {
   border-radius: 2px;
   float: left;
-  font: 13px/26px "ArialBold", sans-serif;
+  font: 13px/26px "Roboto", sans-serif;
+  font-weight: 400;
   padding: 0 11px;
   margin: 10px 0;
   cursor: pointer;
@@ -2584,7 +2596,8 @@ b {
 .btn_v3.open_order_btn {
   border-radius: 2px;
   float: left;
-  font: 13px/26px "ArialBold", sans-serif;
+  font: 13px/26px "Roboto", sans-serif;
+  font-weight: 400;
   padding: 0 11px;
   margin-right: 5px;
   cursor: pointer;
@@ -2597,7 +2610,8 @@ b {
   text-align: center;
   border-radius: 2px;
   display: block;
-  font: 11px/25px "ArialBold", sans-serif;
+  font: 11px/25px "Roboto", sans-serif;
+  font-weight: 400;
   padding: 0 14px;
   cursor: pointer;
   text-transform: uppercase;
@@ -2724,7 +2738,8 @@ b {
   line-height: 30px;
   padding-left: 0;
   color: #000;
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 .select_v2 .select2-selection--single .select2-selection__arrow {
   height: 28px;
@@ -2905,7 +2920,8 @@ b {
   vertical-align: bottom;
   height: 100px;
   padding-bottom: 12px;
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   line-height: 1.2;
 }
 
@@ -2968,7 +2984,8 @@ b {
   letter-spacing: .35px;
   color: #000;
   height: 42px;
-  font: 13px/36px "ArialBold", sans-serif;
+  font: 13px/36px "Roboto", sans-serif;
+  font-weight: 400;
   padding: 0 20px 0 28px;
   max-width: 170px;
 }
@@ -3010,7 +3027,8 @@ b {
 }
 
 .form_row_caption {
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   margin-bottom: 23px;
 }
 .form_row_caption span {
@@ -3021,7 +3039,8 @@ b {
   margin-bottom: 9px;
   font-size: 13px;
   letter-spacing: -.15px;
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   white-space: nowrap;
 }
 .form_label span.color_red, .form_label .credit_block .order_r_item.order_declined span.order_title, .credit_block .order_r_item.order_declined .form_label span.order_title {
@@ -3181,7 +3200,18 @@ b {
   top: 0;
   bottom: 0;
   left: 0;
-  background: #f7f7f7;
+  background: #ededed;
+  pointer-events: none;
+}
+.order_progress_val:before {
+  z-index: 2;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 5000px;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .order_progress_table {
@@ -3189,7 +3219,9 @@ b {
   width: 100%;
 }
 .order_progress_table td {
-  padding: 10px;
+  padding: 13px 10px;
+  border-top: 1px solid #9d9d9d;
+  border-bottom: 2px solid #c52e3d;
 }
 .order_progress_table td:first-child .order_progress_step {
   padding-left: 0;
@@ -3258,7 +3290,7 @@ b {
   padding: 8px 12px 3px;
   font-size: 11px;
   letter-spacing: .25px;
-  font-weight: bold;
+  font-weight: 400;
   text-transform: uppercase;
   border-bottom: 1px solid #c8c8c8;
 }
@@ -3283,7 +3315,8 @@ b {
 }
 
 .order_info_val {
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   padding: 6px 0;
   margin-bottom: 12px;
 }
@@ -3353,6 +3386,25 @@ b {
   position: relative;
 }
 
+.tab_stage_list li {
+  float: left;
+  width: 40%;
+  padding: 0 17px;
+  position: relative;
+  margin-bottom: 7px;
+}
+.tab_stage_list li:first-child {
+  width: 60%;
+}
+
+.stage_caption {
+  text-transform: uppercase;
+  font: 11px/1 "Roboto", sans-serif;
+  color: #c52e3d;
+  padding: 6px 0 3px;
+  border-bottom: 1px solid #c52e3d;
+}
+
 .tab_list_caption {
   position: absolute;
   top: 0;
@@ -3391,7 +3443,9 @@ b {
   height: 49px;
   font-size: 11px;
   line-height: 44px;
-  color: #000;
+  color: #0d0d0d;
+  background: #ededed;
+  font-weight: 400;
   border-radius: 2px;
   padding: 2px 10px 0;
   text-transform: uppercase;
@@ -3432,10 +3486,10 @@ b {
 }
 .ui-state-active .order_tab_btn {
   cursor: default;
-  font-family: "ArialBold", sans-serif;
+  color: #c52e3d;
 }
 .ui-state-active .order_tab_btn:after {
-  border: 3px solid #e8c541;
+  border: 2px solid #c52e3d;
 }
 
 .ui-state-active ~ .ui-state-default .order_tab_btn:before,
@@ -3609,14 +3663,16 @@ b {
 }
 .credit_block .order_r_item.order_awaiting .bank_answer {
   color: #e7c247;
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 .credit_block .order_r_item.order_declined .bank_answer {
   text-transform: uppercase;
 }
 .credit_block .order_r_item.order_accepted {
   background: #ededed;
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 .credit_block .order_r_item.order_accepted:before {
   content: '';
@@ -3633,7 +3689,8 @@ b {
   text-transform: uppercase;
 }
 .credit_block .order_r_item.order_formalization .order_title {
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   padding: 14px 0;
 }
 .credit_block .order_r_item.summary_opened {
@@ -3685,7 +3742,8 @@ b {
 .formalization_block p {
   color: #b479bd;
   margin-bottom: 8px;
-  font: 12px "ArialBold", sans-serif;
+  font: 12px "Roboto", sans-serif;
+  font-weight: 400;
 }
 .formalization_block .uploaded_files {
   margin-top: 15px;
@@ -3781,7 +3839,8 @@ b {
 .order_request p {
   color: #b479bd;
   margin-bottom: 10px;
-  font: 12px "ArialBold", sans-serif;
+  font: 12px "Roboto", sans-serif;
+  font-weight: 400;
 }
 .order_request .upload_time {
   text-align: left;
@@ -3809,7 +3868,8 @@ b {
 .order_history_time {
   float: right;
   color: #0d0d0d;
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 .order_summary_list {
@@ -3876,7 +3936,8 @@ b {
 }
 .order_results.bank_collapsed .bank_answer {
   width: 15%;
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
 }
 .order_results.bank_collapsed .bank_name {
@@ -3984,7 +4045,8 @@ b {
   margin: 0 0 40px;
 }
 .order_steps .credit_step {
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
   color: #b479bd;
 }
@@ -3994,7 +4056,8 @@ b {
 
 .credit_step {
   float: left;
-  font: 12px/24px "ArialBold", sans-serif;
+  font: 12px/24px "Roboto", sans-serif;
+  font-weight: 400;
   color: #6ca140;
   position: relative;
 }
@@ -4119,7 +4182,8 @@ b {
 .select_w3 .select2-results__option--highlighted[aria-selected] {
   color: #0d0d0d;
   background: none !important;
-  font-family: "ArialBold", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 .select2-selection.select_v3 {
@@ -4166,7 +4230,8 @@ b {
   height: 22px;
 }
 .select_w4 .select2-container--default .select2-selection--single .select2-selection__rendered {
-  font: 12px/20px "ArialBold", sans-serif;
+  font: 12px/20px "Roboto", sans-serif;
+  font-weight: 400;
 }
 .select_w4 .select2-results__option {
   line-height: normal;
@@ -4201,7 +4266,8 @@ b {
 }
 .select_w5 .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: #000;
-  font: 12px/40px "ArialBold", sans-serif;
+  font: 12px/40px "Roboto", sans-serif;
+  font-weight: 400;
 }
 .select_w5 .select2-results__option {
   line-height: normal;
@@ -4249,7 +4315,8 @@ b {
   padding-left: 0;
   padding-right: 28px;
   text-overflow: initial;
-  font: 12px/12px "ArialBold", sans-serif;
+  font: 12px/12px "Roboto", sans-serif;
+  font-weight: 400;
 }
 .select_w6 .select2-results__option {
   line-height: normal;

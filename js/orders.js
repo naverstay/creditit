@@ -87,10 +87,10 @@ $(function ($) {
         select: true,
         width: '100px',
         height: '22px',
+        cssclass: 'edit_v1',
         onblur: 'ignore',
         event: "dblclick",
         placeholder: '',
-        cssclass: 'edit_v1',
         callback: function (value, settings) {
 
         },
