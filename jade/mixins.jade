@@ -117,7 +117,7 @@ mixin credit_management()
                                     span Каждому по “железному коню”
                             .order_date
                                 span 13.12.16
-                                i 15:34
+                                span 15:34
                             .bank_answer
                                 b одобрено
                             .get_credit
@@ -232,15 +232,15 @@ mixin credit_management()
                                                     .select_w4
                                                         select.select2()
                                                             option(disabled='', value='')
-                                                            option(value='11.15', selected='selected') Страховая компания
-                                                            option(value='14.15') 14.15
+                                                            option(value='1', selected='selected') Страховая компания
+                                                            option(value='2') Страховая компания 2
                                                             
                                                 li
                                                     .select_w4
                                                         select.select2()
                                                             option(disabled='', value='')
-                                                            option(value='11.15', selected='selected') Страховая компания
-                                                            option(value='14.15') 14.15
+                                                            option(value='1', selected='selected') Страховая программа
+                                                            option(value='2') Страховая программа 2
                                                             
                                                 li
                                                     .order_info_label Серия и номер полиса КАСКО
@@ -322,27 +322,35 @@ mixin credit_management()
                                                 .order_info_label Банк
                                                 //-.order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Грузовая техника\"]}') Грузовая техника
                                                 .order_info_val.select_w4
-                                                    select.select2()
+                                                    select.select2.unReadonly(data-readonly='.readonly_1')
                                                         option(disabled='', value='')
                                                         option(value='Альфа-банк', selected='selected') Альфа-банк
                                                         option(value='Альфа-банк 2') Альфа-банк 2
                                                         option(value='Мототехника') Мототехника
                                                         option(value='Спецтехника и прицеп') Спецтехника и прицеп
+                                                        option(value='custom') Внести вручную
+                                                        
+                                            .table_cell
+                                                .order_info_label &nbsp;
+                                                //-.order_info_val.edit_select.select_w4(data-option='{\"Автомобиль\":\"Автомобиль\",\"Грузовая техника\":\"Грузовая техника\",\"Мототехника\":\"Мототехника\",\"Спецтехника и прицеп\":\"Спецтехника и прицеп\", \"selected\":[\"Грузовая техника\"]}') Грузовая техника
+                                                //-.order_info_val
+                                                    a.credit_meeting_link.unReadonly(href='#' data-readonly='readonly_1'): i Внести реквизиты вручную
+
                                         .table_row
                                             .table_cell.w_220
                                                 .order_info_label.wnw Получатель
                                                 .order_info_val.edit_.edit_v4
-                                                    input(value='ООО "Первый российский дилер"')
+                                                    input.readonly_1(value='ООО "Первый российский дилер"' readonly)
     
                                             .table_cell.w_300
-                                                .order_info_label.wnw Банк
-                                                .order_info_val.edit_.edit_v4
-                                                    input(value='')
-    
-                                            .table_cell.w_180
                                                 .order_info_label.wnw Расчетный счет
                                                 .order_info_val.edit_.edit_v4
-                                                    input(value='')
+                                                    input.readonly_1(value='' readonly)
+    
+                                            .table_cell.w_180
+                                                .order_info_label.wnw БИК
+                                                .order_info_val.edit_.edit_v4
+                                                    input.readonly_1(value='' readonly)
     
                                         .table_row
                                             .table_cell.w_190
@@ -437,9 +445,37 @@ mixin credit_management()
                                                         .upload_folder
                                                         .upload_status
     
-                                            .formalization_controls
+                                            //-.formalization_controls
                                                 a.btn_v4.order_edit_btn.violet_btn_2(href='#') отправить
                                                 
+                                            .table_row
+                                                .table_cell
+                                                    .order_info_label &nbsp;
+                                                    .order_info_val
+                                                        label.checkbox_emul_2
+                                                            input.hidden_input(type='radio' name='is_used')
+                                                            b.check_text_2 Отправить заявку на гарнтийное письмо
+                                            .table_row
+                                                .table_cell.w_190
+                                                    .order_info_label.wnw &nbsp;
+                                                    .order_info_val
+                                                        a.btn_v4.order_edit_btn.violet_btn_2(href='#') отправить
+
+                                    .formalization_step
+                                        .formalization_docs
+                                            p 4. Распечатать гарантийное письмо от банка
+                                            
+                                            .formalization_docs
+                                                ul.uploaded_files
+                                                    li
+                                                        .uploaded_unit
+                                                            .upload_file Гарантийное письмо
+                                                            .upload_date_v2 27.08.2016
+                                                            .upload_time 21:21
+                                                            .upload_count &nbsp;
+                                                            .upload_print
+                                                            .upload_save
+                                                                
                             .order_steps.mod_7
                                 .credit_step
                                     span.mb Шаг 3. Сделка профинансирована, деньги переведены дилеру
@@ -587,17 +623,17 @@ mixin order_summary(mode)
                     .order_history_step Заявка направлена 
                     .order_history_time
                         span 13.09.16
-                        i 15:34
+                        span 15:34
                 .order_history_row
                     .order_history_step Заявка направлена 
                     .order_history_time
                         span 13.09.16
-                        i 15:34
+                        span 15:34
                 .order_history_row
                     .order_history_step Отказ банка
                     .order_history_time
                         span 13.09.16
-                        i 15:34
+                        span 15:34
             
         - if (mode == 'approved')
             .order_history
@@ -605,7 +641,7 @@ mixin order_summary(mode)
                     .order_history_step Заявка направлена 
                     .order_history_time
                         span 13.09.16
-                        i 15:34
+                        span 15:34
         - if (mode == 'awaiting')
             .order_request
                 p Банк запросил дополнительные данные:
@@ -757,7 +793,7 @@ mixin credit_history()
                                 .order_date
                                     span 13.12.16 
                                     | &nbsp;&nbsp;
-                                    i 15:34
+                                    span 15:34
                                 .bank_answer
                                     b ОТКАЗ
                             .order_summary.orderSummary
@@ -780,11 +816,11 @@ mixin credit_history()
                                 .order_date
                                     span 13.12.16
                                     | &nbsp;&nbsp;
-                                    i 15:34
+                                    span 15:34
                                 .bank_answer
                                     b одобрено
                                 .get_credit
-                                    a.btn_v4.order_edit_btn.violet_btn_2.orderStepBtn_(href='#step_3') оформить кредит
+                                    a.btn_v4.order_edit_btn.violet_btn_2.goTab(href='#tab_unit_5') оформить кредит
                             .order_summary.orderSummary
                                 +order_summary('approved')
         
@@ -805,9 +841,9 @@ mixin credit_history()
                                 .order_date
                                     span 13.12.16
                                     | &nbsp;&nbsp;
-                                    i 15:34
+                                    span 15:34
                                 .bank_answer
-                                    span Ожидание
+                                    span Рассмотрение
                             .order_summary.orderSummary
                                 +order_summary('awaiting')
     
@@ -824,7 +860,7 @@ mixin credit_history()
                                 .order_date
                                     span 13.12.16
                                     | &nbsp;&nbsp;
-                                    i 15:34
+                                    span 15:34
                                 .bank_answer
                                     span ЗАПРОС БАНКА 
                                 .get_credit
@@ -1368,6 +1404,12 @@ mixin car_info()
 
 mixin client_info()
     ul.order_info_list
+        li: .clearfix.order_info_caption
+            ul.order_info_controls
+                li
+                    a.btn_v4.order_edit_btn.violet_btn_2(href='#') Сохранить
+                li
+                    a.btn_v4.order_edit_btn.violet_btn_2.disabled(href='#') Редактировать
         li.orderInfoRow
             .order_info_caption.openOrderRow Личная информация
             .order_info_unit.infoBlock

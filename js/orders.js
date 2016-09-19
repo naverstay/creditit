@@ -72,12 +72,30 @@ $(function ($) {
         return false;
     });
 
-    $('.orderCollapseBtn').on('click', function () {
+    $('.unReadonly').on('change', function () {
+        var firedEl = $(this), target = $(firedEl.attr('data-readonly'));
+
+        if (this.value == 'custom') {
+            target.addClass('edit').attr("readonly", false);
+
+            setTimeout(function () {
+                target.removeClass('edit');
+            }, 400);
+        } else {
+            target.attr("readonly", true);
+        }
+
+    });
+
+    $('.orderCollapseBtn').on('click', function (e) {
         var firedEl = $(this);
 
-        firedEl.parent().toggleClass('summary_opened').find('.orderSummary').slideToggle();
+        if (!$(e.target).hasClass('goTab')) {
+            firedEl.parent().toggleClass('summary_opened').find('.orderSummary').slideToggle();
 
-        return false;
+            return false;
+        }
+       
     });
 
     $('.edit').editable(function (value, settings) {

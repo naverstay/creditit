@@ -51,6 +51,12 @@ $(function ($) {
         }
     });
 
+    $('.goTab').on ('click', function (e) {
+        var firedEl = $(this);
+        $('a[href="' + firedEl.attr('href') + '"]').not(firedEl).click();
+        return false;
+    });
+    
     $('.openOrderBtn').on('click', function () {
         var firedEl = $(this);
         firedEl.find('.sort_order').toggleClass('opened').closest('.orderRowMain').toggleClass('opened').next('.orderRowInfo').toggle().toggleClass('opened');

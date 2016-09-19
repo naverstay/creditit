@@ -380,30 +380,33 @@ $order_tab_space: 34px;
   font-size: 12px;
   letter-spacing: .5px;
   border-bottom: 1px solid #c8c8c8;
-  cursor: pointer;
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    margin-top: -4px;
-    left: 0;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    border-left: 4px solid #a658b1;
-  }
-
-  &.opened {
-    text-transform: uppercase;
-    color: #a658b1;
-    border-bottom: 1px solid #a658b1;
+  .orderInfoRow & {
+    cursor: pointer;
 
     &:before {
-      margin-top: -2px;
-      border-bottom: none;
-      border-left: 4px solid transparent;
-      border-right: 4px solid transparent;
-      border-top: 4px solid #a658b1;
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -4px;
+      left: 0;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 4px solid #a658b1;
+    }
+
+    &.opened {
+      text-transform: uppercase;
+      color: #a658b1;
+      border-bottom: 1px solid #a658b1;
+
+      &:before {
+        margin-top: -2px;
+        border-bottom: none;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #a658b1;
+      }
     }
   }
 }
@@ -421,9 +424,13 @@ $order_tab_space: 34px;
 }
 
 .order_info_controls {
-  position: absolute;
-  top: 16px;
-  right: 28px;
+  float: right;
+
+  .order_info_box & {
+    position: absolute;
+    top: 16px;
+    right: 28px;
+  }
 
   li {
     float: left;
@@ -708,7 +715,7 @@ $order_tab_space: 34px;
   @extend %clearfix;
   margin-left: -10px;
 
-  li {
+  > li {
     float: left;
     width: 50%;
     padding-left: 10px;
@@ -724,6 +731,15 @@ $order_tab_space: 34px;
     padding: 0;
     margin: 0;
   }
+}
+
+.readonly_1 {
+  @include transition_all(border .3s);
+
+  &.edit {
+    border-color: #a658b1;
+  }
+
 }
 
 .credit_meeting_link {
